@@ -65,6 +65,16 @@ nav .glyphicon-option-horizontal{
   top: 4px
 }
 
+.icon-menu-dots{
+  display: inline-block;
+  width: 18px;
+  height: 5px;
+  background: url(../img/sprites.svg),none;
+  background-repeat: no-repeat;
+  background-position: -50px -100px;
+  margin-right: 18px;
+}
+
 .top-menu:hover > .sub-menu{
   display: block;
 }
@@ -134,18 +144,19 @@ nav .glyphicon-option-horizontal{
 }
 
 .logo{
-  margin-top: 13px;
-}
-
-.logo img{
   width: 115px;
   height: 30px;
+  background: url(../img/sprites.svg),none;
+  vertical-align: middle;
+  margin-top: 13px
 }
 
 .form{
   margin-left: 37px;
   position: relative;
   top: -1px;
+  margin-top: 12px;
+  vertical-align: middle;
 }
 
 .btn-all-image{
@@ -397,7 +408,6 @@ nav .glyphicon-option-horizontal{
 footer{
   background: #fafafa;
   border-top: 1px solid #eee;
-  margin-top: 35px;
   position:relative;
   bottom:0;
   width:100%;
