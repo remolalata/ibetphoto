@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Document</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="https://use.fontawesome.com/f72bb5f718.js"></script>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media-queries.css">
+  <link rel="stylesheet" href="css/nat-style.css">
+    <link rel="stylesheet" href="css/nat-mq.css">
+      <link rel="stylesheet" href="css/css.css">
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+  </head>
+  <body>
+      <!--[if lt IE 8]>
+          <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+      <![endif]-->
+      <header class="clearfix">
+        <div class="header-wrapper clearfix">
+          <div class="header-logo-form pull-left">
+            <div class="logo"></div>
+            <div class="dropdown form hidden-xs">
+              <form class="form-inline">
+                <button class="btn-all-image" data-toggle="dropdown">All Images <i class="fa fa-caret-down"> </i></button>
+                <div class="dropdown-menu inner-form">
+                  <div class="row">
+                    <div class="col-md-3"><p>Media type</p></div>
+                    <div class="col-md-9">
+                      <div class="radio">
+                        <label>
+                          <input type="radio" name="media-type" checked > All Images
+                        </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                          <input type="radio" name="media-type"> Photos
+                        </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                          <input type="radio" name="media-type"> Vector graphics
+                        </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                          <input type="radio" name="media-type"> Illustrations
+                        </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                          <input type="radio" name="media-type"> Videos
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-3"><p>Orientation</p></div>
+                    <div class="col-md-9">
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox" name="orientation"checked > Horizontal
+                        </label>
+                      </div>
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox" name="orientation"> Vertical
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-3"><p>Category</p></div>
+                    <div class="col-md-9">
+                      <select name="category">
+                        <option value="">Animals</option>
+                        <option value="">Education</option>
+                        <option value="">Emotions</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-3"><p>Larger than</p></div>
+                    <div class="col-md-9">
+                      <input type="text" placeholder="Width"> x <input type="text" placeholder="Height"> px
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-3"><p>Color</p></div>
+                    <div class="col-md-9">
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox" name="color"> Transparent
+                        </label>
+                      </div>
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox" name="color"> Black and White
+                        </label>
+                      </div>
+                      <div class="colors">
+                        <span class="color red"></span>
+                        <span class="color orange"></span>
+                        <span class="color yellow"></span>
+                        <span class="color green"></span>
+                        <span class="color turquoise"></span>
+                        <span class="color blue"></span>
+                        <span class="color violet"></span>
+                        <span class="color pink"></span>
+                        <span class="color white"></span>
+                        <span class="color gray"></span>
+                        <span class="color black"></span>
+                        <span class="color brown"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-3"><a href="#innerFormMore" data-toggle="collapse">more...</a></div>
+                    <div class="col-md-9">
+                      <div class="collapse" id="innerFormMore">
+                        <div>You can use AND, OR, NOT and () to refine your search results:</div>
+                        <div>flower AND (red OR blue) NOT rose</div><br>
+
+                        <div>Search in user portfolios:</div>
+                        <div>user:stux flower</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <input type="text" class="main-textbox" placeholder="Search images, vectors and videos">
+                <button type="button" class="btn-search"><i class="fa fa-search"></i></button>
+              </form>
+            </div>
+          </div>
+          <div class="header-nav  pull-right">
+            <nav class="hidden-sm hidden-xs">
+              <ul>
+                <li class="top-menu"><a href="#" class="active">Explore <i class="fa fa-caret-down"> </i></a>
+                  <ul class="sub-menu">
+                    <li><a href="#">Edito's Choice</a></li>
+                    <li><a href="#">Images</a></li>
+                    <li class="separator"><a href="#">Videos</a></li>
+                    <li><a href="#">Photographers</a></li>
+                    <li><a href="#">Cameras</a></li>
+                  </ul>
+                </li>
+                <li><a href="signup.html">Sign up</a></li>
+                <li><a href="login.html">Log in</a></li>
+                <li class="top-menu"><a href="#"><div class="icon-menu-dots"></div></a>
+                  <ul class="sub-menu">
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Forum</a></li>
+                    <li><a href="#">Blog</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+
+            <nav class="hidden-lg hidden-md">
+              <ul>
+                <li><a href="#" data-toggle="dropdown"><i class="fa fa-user"></i></a>
+                  <ul class="mobile-dropdown-menu dropdown-menu">
+                    <li><a href="signup.html">Sign up</a></li>
+                    <li><a href="login.html">Log in</a></li>
+                  </ul>
+                </li>
+                <li class="hidden-sm"><a href="#inner-form2" data-toggle="collapse"><i class="fa fa-search"></i></a></li>
+                <li><a href="#" data-toggle="dropdown"><i class="fa fa-bars"></i></a>
+                  <ul class="mobile-dropdown-menu mobile-dropdown-menu2 dropdown-menu">
+                    <li><a href="#">Editor's Choice</a></li>
+                    <li><a href="#">Images</a></li>
+                    <li class="separator"><a href="#">Videos</a></li>
+                    <li><a href="#">Photographers</a></li>
+                    <li class="separator"><a href="#">Cameras</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Forum</a></li>
+                    <li><a href="#">Blog</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="collapse hidden-lg hidden-md hidden-sm inner-form2" id="inner-form2">
+          <form class="form-inline">
+            <button type="button" class="btn-all-image" data-toggle="dropdown">All images <i class="fa fa-caret-down"> </i></button>
+            <div class="dropdown-menu inner-form inner2-form2">
+              <div class="row">
+                <div class="col-md-3"><p>Media type</p></div>
+                <div class="col-md-9">
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="media-type" checked > All Images
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="media-type"> Photos
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="media-type"> Vector graphics
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="media-type"> Illustrations
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="media-type"> Videos
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-3"><p>Orientation</p></div>
+                <div class="col-md-9">
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox" name="orientation"checked > Horizontal
+                    </label>
+                  </div>
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox" name="orientation"> Vertical
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-3"><p>Category</p></div>
+                <div class="col-md-9">
+                  <select name="category">
+                    <option value="">Animals</option>
+                    <option value="">Education</option>
+                    <option value="">Emotions</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-3"><p>Larger than</p></div>
+                <div class="col-md-9">
+                  <input type="text" placeholder="Width"> x <input type="text" placeholder="Height"> px
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-3"><p>Color</p></div>
+                <div class="col-md-9">
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox" name="color"> Transparent
+                    </label>
+                  </div>
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox" name="color"> Black and White
+                    </label>
+                  </div>
+                  <div class="colors">
+                    <span class="color red"></span>
+                    <span class="color orange"></span>
+                    <span class="color yellow"></span>
+                    <span class="color green"></span>
+                    <span class="color turquoise"></span>
+                    <span class="color blue"></span>
+                    <span class="color violet"></span>
+                    <span class="color pink"></span>
+                    <span class="color white"></span>
+                    <span class="color gray"></span>
+                    <span class="color black"></span>
+                    <span class="color brown"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-3"><a href="#innerFormMore" data-toggle="collapse">more...</a></div>
+                <div class="col-md-9">
+                  <div class="collapse" id="innerFormMore">
+                    <div>You can use AND, OR, NOT and () to refine your search results:</div>
+                    <div>flower AND (red OR blue) NOT rose</div><br>
+
+                    <div>Search in user portfolios:</div>
+                    <div>user:stux flower</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <input type="text" class="main-textbox" placeholder="Search images, vectors and videos">
+            <button type="button" class="btn-search"><i class="fa fa-search"></i></button>
+          </form>
+        </div>
+      </header>
+
+      <!-- content -->
+      <div class="container">
+        <div class="row main-content">
+    <div class="">
+      <div id="sign_in_out" style="padding:10px">
+    <div class="window" style="padding:0;margin:5% auto 0">
+        <div style="padding:20px 25px">
+            <h1>Join Pixabay</h1>
+
+
+            <div class="pure-g">
+                <div class="social_auth pure-u-1 pure-u-md-5-12">
+                    <div style="margin-right:25px" class="no-margin-right-md">
+                        <a href="https://www.facebook.com/dialog/oauth?client_id=114593902037957&amp;redirect_uri=https%3A%2F%2Fpixabay.com%2Faccounts%2Fauth%2Ffacebook%2F&amp;scope=email" class="pure-button" style="background-color:#3b5998"><em><i class="icon icon_facebook_fff"></i></em> Facebook</a>
+                        <a href="https://accounts.google.com/o/oauth2/auth?redirect_uri=https%3A%2F%2Fpixabay.com%2Faccounts%2Fauth%2Fgoogle%2F&amp;response_type=code&amp;client_id=575185734362.apps.googleusercontent.com&amp;scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email" class="pure-button" style="background-color:#d73d32"><em><i class="icon icon_google_plus_fff"></i></em> Google</a>
+                        <a href="https://login.live.com/oauth20_authorize.srf?client_id=00000000480E5F42&amp;scope=wl.emails&amp;response_type=code&amp;redirect_uri=http%3A%2F%2Fpixabay.com%2Faccounts%2Fauth%2Fmicrosoft%2F" class="pure-button" style="background-color:#00adef"><em><i class="icon icon_microsoft_fff"></i></em> Microsoft</a>
+                    </div>
+                </div>
+                <div class="pure-u-1 pure-u-md-7-12">
+                    <form spellcheck="false" class="right_side pure-form" action="." method="post">
+                        <p> <input type="text" name="username" data-autofocus="" required="" placeholder="Username" id="id_username" maxlength="100"></p>
+                        <p> <input type="text" name="f-a94e32cc9e2a44424a35-email" required="" placeholder="Email address" class="data" id="id_email"></p>
+                        <p> <input type="password" name="password" required="" placeholder="Password" id="id_password"></p>
+                        <input type="hidden" name="next" value="">
+                        <div><input style="text-align:center" class="pure-button button-green" type="submit" value="Sign up"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div style="margin:1px;padding:20px 25px;background:#f7f7f7;font-size:13px;line-height:1.7">
+
+
+                    <div style="margin-right:25px" class="no-margin-right-md">
+                        <a href="login.html">Already have an account? </a>
+                    </div>
+                    <div style="margin-right:25px" class="no-margin-right-md">
+                        <li class="dropup">Select your languange : <a href="#" data-toggle="dropdown">Language <i class="fa fa-caret-down"> </i></a>
+                <ul class="dropdown-menu dropdown-menu-language">
+                  <li><a href="#">Čeština</a></li>
+                  <li><a href="#">Deutsch</a></li>
+                  <li><a href="#">Español</a></li>
+                  <li><a href="#">Indonesia</a></li>
+                  <li><a href="#">Magyar</a></li>
+                  <li><a href="#">Norsk</a></li>
+                  <li><a href="#">Português</a></li>
+                  <li><a href="#">Slovenčina</a></li>
+                  <li><a href="#">Svenska</a></li>
+                  <li><a href="#">Việt</a></li>
+                  <li><a href="#">Български</a></li>
+                  <li><a href="#">Ελληνική</a></li>
+                  <li><a href="#">한국어</a></li>
+                  <li><a href="#">Dansk</a></li>
+                  <li><a href="#">English</a></li>
+                  <li><a href="#">Français</a></li>
+                  <li><a href="#">Italiano</a></li>
+                  <li><a href="#">Nederlands</a></li>
+                  <li><a href="#">Polski</a></li>
+                  <li><a href="#">Română</a></li>
+                  <li><a href="#">Suomi</a></li>
+                  <li><a href="#">Türkçe</a></li>
+                  <li><a href="#">ไทย</a></li>
+                  <li><a href="#">Русский</a></li>
+                  <li><a href="#">日本語</a></li>
+                  <li><a href="#">简体中文</a></li>
+                </ul>
+              </li>
+                    </div>
+                    <div style="margin-right:25px" class="no-margin-right-md">
+                        By joining Pixabay,you agree to our <a href="Tos.html">Terms of Service </a>
+                    </div>
+
+
+
+        </div>
+    </div>
+</div>
+    </div>
+        </div>
+      </div>
+
+  <svg id="bg_svg" viewBox="0 0 1440 480" preserveAspectRatio="xMidYMid slice"><filter id="blur"><feGaussianBlur stdDeviation="5"></feGaussianBlur></filter>
+    <image xlink:href="img/login/bg.jpg" width="1440" height="480" filter="url(#blur)"></image>
+  </svg>
+
+
+      <!-- conten end -->
+
+<!-- back to top -->
+<div class="back">
+<a href="#" id="back-to-top" class="back-to-top" title="Back to top">▲</a>
+</div>
+<!-- end of back to top -->
+      <footer>
+        <div class="footer-wrapper clearfix">
+          <div class="footer-nav pull-left">
+            <ul>
+              <li>&copy; 2017 Pixabay</li>
+              <li class="hidden-sm hidden-xs dropup"><a href="#" data-toggle="dropdown">Free Downloads <i class="fa fa-caret-down"> </i></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Free Images</a></li>
+                  <li><a href="#">Free photos</a></li>
+                  <li><a href="#">Free vector graphics</a></li>
+                  <li><a href="#">Free illustration</a></li>
+                  <li><a href="">Free Videos</a></li>
+                </ul>
+              </li>
+              <li class="dropup"><a href="#" data-toggle="dropdown">Language <i class="fa fa-caret-down"> </i></a>
+                <ul class="dropdown-menu dropdown-menu-language">
+                  <li><a href="#">Čeština</a></li>
+                  <li><a href="#">Deutsch</a></li>
+                  <li><a href="#">Español</a></li>
+                  <li><a href="#">Indonesia</a></li>
+                  <li><a href="#">Magyar</a></li>
+                  <li><a href="#">Norsk</a></li>
+                  <li><a href="#">Português</a></li>
+                  <li><a href="#">Slovenčina</a></li>
+                  <li><a href="#">Svenska</a></li>
+                  <li><a href="#">Việt</a></li>
+                  <li><a href="#">Български</a></li>
+                  <li><a href="#">Ελληνική</a></li>
+                  <li><a href="#">한국어</a></li>
+                  <li><a href="#">Dansk</a></li>
+                  <li><a href="#">English</a></li>
+                  <li><a href="#">Français</a></li>
+                  <li><a href="#">Italiano</a></li>
+                  <li><a href="#">Nederlands</a></li>
+                  <li><a href="#">Polski</a></li>
+                  <li><a href="#">Română</a></li>
+                  <li><a href="#">Suomi</a></li>
+                  <li><a href="#">Türkçe</a></li>
+                  <li><a href="#">ไทย</a></li>
+                  <li><a href="#">Русский</a></li>
+                  <li><a href="#">日本語</a></li>
+                  <li><a href="#">简体中文</a></li>
+                </ul>
+              </li>
+              <li class="dropup"><a href="#" data-toggle="dropdown">Service <i class="fa fa-caret-down"> </i></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Blog</a></li>
+                  <li><a href="#">Forum</a></li>
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Privacy Policys</a></li>
+                </ul>
+              </li>
+              <li><a href="#">API</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Terms</a></li>
+            </ul>
+          </div>
+          <div class="footer-social pull-right hidden-xs">
+            <ul>
+              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+
+
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+    <script type="text/javascript">
+$(document).ready(function(){
+    $("#resetpassword").click(function(){
+        $("#myModal").modal('show');
+    });
+});
+</script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+    <script type="text/javascript">
+$('.tab_menu li').click(function(){
+  $(this).tab('show');
+})
+
+// Select tab by name
+$('.tab_menu a[href="#home"]').tab('show')
+
+// Select first tab
+$('.tab_menu a:first').tab('show')
+
+// Select last tab
+$('.tab_menu a:last').tab('show')
+
+// Select fourth tab (zero-based)
+$('.tab_menu li:eq(0)').tab('show')
+</script>
+    <script>
+
+    // back to top script
+  if ($('#back-to-top').length) {
+      var scrollTrigger = 100, // px
+          backToTop = function () {
+              var scrollTop = $(window).scrollTop();
+              if (scrollTop > scrollTrigger) {
+                  $('#back-to-top').addClass('show');
+              } else {
+                  $('#back-to-top').removeClass('show');
+              }
+          };
+      backToTop();
+      $(window).on('scroll', function () {
+          backToTop();
+      });
+      $('#back-to-top').on('click', function (e) {
+          e.preventDefault();
+          $('html,body').animate({
+              scrollTop: 0
+          }, 700);
+      });
+  }
+  </script>
+  </body>
+</html>
