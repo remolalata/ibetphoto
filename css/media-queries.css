@@ -82,6 +82,9 @@
     top: 15%;
     width: 340px;
   }
+  .footer-nav .dropdown-menu{
+    left: -48px
+  }
 }
 
 @media only screen and (min-width: 375px){

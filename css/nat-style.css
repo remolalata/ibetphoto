@@ -205,7 +205,9 @@ color: #FFF;
 }
 
 
-
+.pure-u-1 {
+    width: 100%;
+}
 .pure-u-xl-1-5 {
     width: 20%;
 }
@@ -296,4 +298,80 @@ color: #FFF;
 .wrapper{
   min-height: 100%;
     margin: 0 auto;
+}
+
+
+#bg_svg {
+    position: fixed;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+.window {
+    background: #fff;
+    padding: 20px 25px;
+    margin: 50px auto;
+    max-width: 640px;
+    overflow: hidden;
+    border-radius: 2px;
+    border: 2px solid rgba(0,0,0,.3);
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+}
+h1, .pseudo_h1 {
+    font-size: 26px;
+    font-weight: normal;
+    line-height: 1.5;
+    margin: 0 0 25px;
+}
+
+:invalid {
+    color: #555 !important;
+}
+
+:required {
+    border-color: #129fea !important;
+}
+
+input, textarea, select {
+    border-radius: 2px !important;
+    resize: none;
+}
+
+html, button, input, select, textarea, .pure-g [class *="pure-u"], h1, h2, h3 {
+    color: #555;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.pure-form input[type=text],
+.pure-form input[type=password],
+.pure-form input[type=email],
+.pure-form input[type=url],
+.pure-form input[type=date],
+.pure-form input[type=month],
+.pure-form input[type=time],
+.pure-form input[type=datetime],
+.pure-form input[type=datetime-local],
+.pure-form input[type=week],
+.pure-form input[type=number],
+.pure-form input[type=search],
+.pure-form input[type=tel],
+.pure-form input[type=color],
+.pure-form select,
+.pure-form textarea {
+    padding: .5em .6em;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 3px #ddd;
+    border-radius: 4px;
+    vertical-align: middle;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
