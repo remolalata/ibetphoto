@@ -1684,7 +1684,24 @@ table td p{
     font-size: 16px;
     padding: 0;
 }
+.tab_menu li, .tab_menu a {
+    display: inline-block;
+    padding: 10px 0;
+    margin: 0 15px;
+    cursor: pointer;
+    color: #71767a;
+    border-bottom: 2px solid transparent;
+    line-height: 24px;
+    font-size: 16px;
 
+}
+
+.tab_menu .selected {
+    color: #0a88d3;
+    border-bottom: 2px solid #0a88d3;
+}
+.tab_menu li:hover, .tab_menu a:hover {
+    color: #0a88d3;
 
 #sidebar_box p {
   font-size: 14px;
