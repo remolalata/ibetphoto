@@ -16,12 +16,14 @@
       <link rel="stylesheet" href="css/css.css">
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     <style media="screen">
-    @media only screen and (min-width: 768px)
-    {
-    footer {
-          position: absolute !important;
-    }
-    }
+    h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 30px 0 15px;
+  padding-top: 30px;
+  border-top: 1px dotted #ccc !important;
+}
+
     </style>
   </head>
   <body>
@@ -307,56 +309,64 @@
       </header>
 
       <!-- content -->
-      <div class="container">
-        <div class="row main-content">
-          <div id="content" class="clearfix" style="text-align:center;">
-          <div style="margin:0 10px">
-              <div style="
-              margin: 4% auto 0;
-              max-width: 800px;
-              padding: 40px;
-              background: rgba(0,0,0,.6);
-              border-radius: 2px;
-              margin-top: 70px;
-              ">
-                  <table width="100%">
-                      <tbody><tr><td>
-                          <div style="text-align:center;color:#fff;font-weight:bold;font-size:30px;text-shadow:0 1px 10px rgba(0,0,0,.7)">
-                              You are now logged out
-                          </div>
-                      </td></tr>
-                      <tr><td>
-                          <p style="margin:40px 0 5px">Buy us a cup of coffee</p>
-                          <form id="pp_form" name="_xclick" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display:none">
-                              <input type="hidden" name="cmd" value="_donations">
-                              <input type="hidden" name="return" value="https://pixabay.com/en/service/donated/">
-                              <input type="hidden" name="currency_code" value="USD">
-                              <input type="hidden" name="lc" value="US">
-                              <input type="hidden" name="item_name" value="Support Pixabay">
-                              <input type="hidden" name="business" value="YZWGTDY6PEANJ">
-                              <input type="submit">
-                          </form>
-                          <span class="pure-button" onclick="$('#pp_form').submit();" style="min-width:100px;font-size:18px"><img src="/img/logout/paypal.svg" style="vertical-align:middle;height:24px" alt=""> Coffee</span>
-                      </td></tr>
-                      <tr><td>
-                          <p style="margin:40px 0 5px">Like Pixabay on Facebook</p>
-                          <div style="margin:0 0 40px" class="fb-like fb_iframe_widget" data-href="https://www.facebook.com/pixabay" data-layout="button_count" data-share="true" data-show-faces="false" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=114593902037957&amp;container_width=640&amp;href=https%3A%2F%2Fwww.facebook.com%2Fpixabay&amp;layout=button_count&amp;locale=en_US&amp;sdk=joey&amp;share=true&amp;show_faces=false"><span style="vertical-align: bottom; width: 125px; height: 20px;"><iframe name="f1d6db829222208" width="1000px" height="1000px" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" title="fb:like Facebook Social Plugin" src="https://www.facebook.com/v2.5/plugins/like.php?app_id=114593902037957&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter%2Fr%2F87XNE1PC38r.js%3Fversion%3D42%23cb%3Df3f1b28c6df86d%26domain%3Dpixabay.com%26origin%3Dhttps%253A%252F%252Fpixabay.com%252Ff3e217ca18f66f%26relation%3Dparent.parent&amp;container_width=640&amp;href=https%3A%2F%2Fwww.facebook.com%2Fpixabay&amp;layout=button_count&amp;locale=en_US&amp;sdk=joey&amp;share=true&amp;show_faces=false" style="border: none; visibility: visible; width: 125px; height: 20px;" class=""></iframe></span></div>
-                      </td></tr>
-                      <tr><td>
-                          <p style="margin:0 0 5px">Follow us</p>
-                          <div style="text-indent: 0px; margin: 0px; padding: 0px; background: transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 119px; height: 20px;" id="___follow_0"><iframe ng-non-bindable="" frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 119px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 20px;" tabindex="0" vspace="0" width="100%" id="I0_1494053887469" name="I0_1494053887469" src="https://apis.google.com/u/0/_/widget/render/follow?usegapi=1&amp;annotation=bubble&amp;rel=publisher&amp;origin=https%3A%2F%2Fpixabay.com&amp;url=https%3A%2F%2Fplus.google.com%2F%2BPixabay&amp;gsrc=3p&amp;ic=1&amp;jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.en.Y9HFCAV4rcU.O%2Fm%3D__features__%2Fam%3DEQ%2Frt%3Dj%2Fd%3D1%2Frs%3DAGLTcCOX0i01D5CrX0BTJhAh_Im_SQREdw#_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart%2Concircled%2Cdrefresh%2Cerefresh%2Conload&amp;id=I0_1494053887469&amp;parent=https%3A%2F%2Fpixabay.com&amp;pfname=&amp;rpctoken=11886715" data-gapiattached="true"></iframe></div>
-                          &nbsp; &nbsp; <iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" class="twitter-follow-button twitter-follow-button-rendered" style="position: static; visibility: visible; width: 156px; height: 20px;" title="Twitter Follow Button" src="https://platform.twitter.com/widgets/follow_button.5b6375bb17bd9edb2f4e7f8f12971999.en.html#dnt=false&amp;id=twitter-widget-0&amp;lang=en&amp;screen_name=pixabay&amp;show_count=true&amp;show_screen_name=false&amp;size=m&amp;time=1494053887782" data-screen-name="pixabay"></iframe>
-                      </td></tr>
-                  </tbody></table>
+      <div class="wrapper">
+
+
+          <h1 style="margin:40px auto 20px;padding:0 20px;max-width:1040px">Terms of Service</h1>
+          <div class="pure-g hover_links" style="margin:auto;padding:0 20px;max-width:1040px;font-size:14px">
+              <div class="pure-u-1 pure-u-md-3-4">
+                  <div class="no-margin-right-md" style="margin:0 50px 30px 0">
+      <p>The following is a legal agreement between you ("You") and the owners and operators ("We") of pixabay.com ("Website" or "Pixabay"). These terms of service ("TOS") govern your access to and use of the Website and its content.</p>
+      <p>"Content" shall refer collectively to images and videos available under Creative Commons CC0 from the Pixabay website. "Image(s)" means photographs, vectors, drawings and the like. "Videos" means any moving images, animations, films, footage or other audio/visual representations, excluding still images, recorded in any format.</p>
+      <p>This agreement may be revised or updated without notice. By using the Website You agree to be bound by these TOS.</p>
+
+      <h2 id="usage">Using Images and Videos</h2>
+      <p>
+          Images and Videos on Pixabay are released under <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.en" target="_blank">Creative Commons CC0</a>.
+          To the extent possible under law, uploaders of Pixabay have waived their copyright and related or neighboring rights to these Images and Videos.
+          You are free to adapt and use them for commercial purposes without attributing the original author or source.
+          Although not required, a link back to Pixabay is appreciated.
+      </p>
+      <p>Limitations:</p>
+      <p>a) Images and Videos depicting identifiable persons may not be used for pornographic, unlawful or other immoral purposes, or in a way that can give a bad name to people, or to imply endorsement of products and services by those persons, brands, organisations, etc.</p>
+      <p>b) Since Pixabay does not require a written Model Release for each Image or Video that shows identifiable people, We cannot guarantee that You will be able to use the Content for any purpose You like.
+      </p><p>c) Certain Images or Videos may be subject to additional copyrights, property rights, trademarks etc. and may require the consent of a third party or the license of these rights. Pixabay does not represent or make any warranties that it owns or licenses any of the mentioned, nor does it grant them.</p>
+
+      <h2 id="upload">Uploading Images</h2>
+      <p>You may upload photographs or graphics to the Website, and Pixabay will screen these uploads to see if they are suitable for distribution. Pixabay does not accept any adult oriented images.</p>
+      <p>By uploading, You release Images under <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.en" target="_blank">Creative Commons CC0</a> into the public domain. This applies worldwide. In case this is not legally possible, You grant anyone the right to use this work for any purpose, without any conditions, unless such conditions are required by law.</p>
+      <p>You are solely responsible for the Images You upload. You warrant that You own all proprietary rights regarding the Image, and You are obliged to obtain a non-exclusive, perpetual, irrevocable, worldwide, and royalty-free Model and/or Property Release and/or any other permission necessary concerning the use of this work for any purpose, without any conditions, unless such conditions are required by law.</p>
+      <p>Furthermore, You acknowledge that Pixabay does not allow the upload of Images that infringe on any copyright, property right, trademark or any other applicable right.</p>
+      <p>You accept that even though We do our best to prevent it from happening, Pixabay cannot be held responsible for the misuse or abuse of any Image.</p>
+      <p>We also reserve the right to remove any Image at any time if We believe it's defective, of poor quality, or in violation of any rights.</p>
+
+      <h2>Termination</h2>
+      <p>We may terminate or suspend your account immediately, without prior notice or liability, for any reason whatsoever, including without limitation if You breach the TOS. Upon termination, your right to use the Website will immediately cease.</p>
+
+      <h2>Indemnification for breach of terms</h2>
+      <p>You agree to indemnify and hold harmless Pixabay from and against any and all loss, expenses, damages, and costs, including without limitation reasonable attorneys fees, resulting, whether directly or indirectly, from your violation of the TOS. You also agree to indemnify and hold harmless Pixabay from and against any and all claims brought by third parties arising out of your use of the Website.</p>
+
+      <h2>Warranty and liability</h2>
+      <p>THE WEBSITE AND ITS CONTENT ARE PROVIDED "AS IS". WE OFFER NO WARRANTY, EXPLICIT OR IMPLIED, REGARDING ANY CONTENT, THE WEBSITE, THE ACCURACY OF ANY INFORMATION, OR ANY RIGHTS OR LICENSES UNDER THIS AGREEMENT INCLUDING, WITHOUT LIMITATION, ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE. PIXABAY DOES NOT REPRESENT OR WARRANT THAT THE WEBSITE OR ITS CONTENT WILL MEET YOUR REQUIREMENTS OR THAT THEIR USE WILL BE UNINTERRUPTED OR ERROR FREE.</p>
+      <p>PIXABAY SHALL NOT BE LIABLE TO YOU OR TO ANY OTHER PERSON OR ENTITY FOR ANY GENERAL, PUNITIVE, SPECIAL, INDIRECT, CONSEQUENTIAL OR INCIDENTAL DAMAGES, OR LOST PROFITS OR ANY OTHER DAMAGES, COSTS OR LOSSES ARISING OUT OF YOUR USE OF THE WEBSITE OR ITS CONTENT.</p>
+      </div>
               </div>
-          </div>
-          </div>
-        </div>
+              <div class="pure-u-1 pure-u-md-1-4">
+                  <div id="sidebar_box">
+
+          <p><a href="https://pixabay.com/blog/posts/id-4/">About public domain images</a></p>
+          <p><a href="https://pixabay.com/blog/posts/id-29/">Using images on Facebook</a></p>
+
+                      <p><a href="#">Privacy Policy</a></p>
+                      <p><a href="#">About Us</a></p>
+                      <p><a href="#">FAQ</a></p>
+                      <p><a href="#">Forum</a></p>
+                  </div>
+              </div>
+
       </div>
 
-  <svg id="bg_svg" viewBox="0 0 1440 480" preserveAspectRatio="xMidYMid slice"><filter id="blur"><feGaussianBlur stdDeviation="5"></feGaussianBlur></filter>
-    <image xlink:href="img/login/bg.jpg" width="1440" height="480" filter="url(#blur)"></image>
-  </svg>
+      </div>
 
 
       <!-- conten end -->

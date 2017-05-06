@@ -1650,7 +1650,9 @@ select {
   color: #23527c;
 text-decoration: none;
 }
-
+.no-margin-right-md p {
+font-size: 14px;
+}
 .social_auth a em {
     display: inline-block;
     width: 26px;
@@ -1681,4 +1683,9 @@ table td p{
     vertical-align: middle;
     font-size: 16px;
     padding: 0;
+}
+
+
+#sidebar_box p {
+  font-size: 14px;
 }
