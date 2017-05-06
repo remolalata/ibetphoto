@@ -1317,7 +1317,7 @@ select {
 }
 
 .button-green {
-    background-color: #57b057;
+    background-color: #57b057 !important;
     color: #fff
 }
 
