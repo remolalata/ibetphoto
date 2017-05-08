@@ -67,6 +67,23 @@
   .footer-nav .dropdown-menu-language{
     left: -60px
   }
+
+  .cats-r div{
+    display: block;
+    width: 100%
+  }
+
+  .cover .top h1{
+    font-size: 38px;
+  }
+
+  .cover{
+    height: 534px;
+  }
+
+  .cover-form-text{
+    width: 70%
+  }
 }
 
 @media only screen and (min-width: 360px){
@@ -82,8 +99,13 @@
     top: 15%;
     width: 340px;
   }
+
+  .cover{
+    height: 491px
+  }
   .footer-nav .dropdown-menu{
     left: -48px
+
   }
 }
 
@@ -94,6 +116,10 @@
 
   .inner2-form2 {
     width: 353px;
+  }
+
+  .cover-form-text{
+    width: 75%
   }
 }
 
@@ -110,6 +136,11 @@
     top: 13.5%;
     width: 390px;
   }
+
+  .cover{
+    height: 465px;
+  }
+
 }
 
 @media only screen and (min-width: 414px){
@@ -135,6 +166,11 @@
   .inner2-form2 {
     top: 30.5%;
   }
+
+  .cover-form-btn2{
+    display: inline-block;
+    margin-right: -25px;
+  }
 }
 
 @media only screen and (min-width: 640px){
@@ -149,11 +185,20 @@
   .inner2-form2 {
     top: 27%;
   }
+
+  .cover-form-btn2{
+    display: inline-block;
+    margin-right: -35px;
+  }
 }
 
 @media only screen and (min-width: 667px){
   .inner-form2 .main-textbox {
     width: 494px;
+  }
+
+  .cover-form-btn2{
+    margin-right: -45px;
   }
 }
 
@@ -164,6 +209,10 @@
 
   .inner2-form2 {
     top: 23.5%;
+  }
+
+  .cover-form-btn2 {
+    margin-right: -60px;
   }
 }
 
@@ -202,6 +251,10 @@
     top: 0px;
     border-radius: 0 2px 2px 0;
   }
+
+  .cover-form-btn2 {
+    display: none;
+  }
 }
 
 @media only screen and (min-width: 992px){
@@ -219,6 +272,44 @@
 
   nav a{
     padding: 18px 20px;
+  }
+
+  .flex_grid{
+    padding: 0
+  }
+
+  .flex_grid .item{
+    width: auto;
+    height: auto;
+    margin: 5 ;
+    margin-bottom: 10px
+  }
+
+  .flex_grid img{
+    display: block;
+    width: auto;
+    height: auto;
+  }
+
+  .cats-r div{
+    display: inline-block;
+    width: 20%
+  }
+
+  .cover{
+    height: 421px
+  }
+
+  .cover .top h1{
+    font-size: 50px;
+  }
+
+  .cover-form-text{
+    width: 70%
+  }
+
+  .cover-form-btn2{
+    margin-right: -35px;
   }
 
 }
@@ -239,6 +330,15 @@
   nav li:last-child {
     width: 55px;
   }
+
+  .cover-form {
+    width: 62%;
+  }
+
+  .cover-form-btn2{
+    margin-right: -35px;
+  }
+
 }
 
 @media only screen and (min-width: 1200px){
@@ -248,6 +348,14 @@
 
   .form .main-textbox{
     width: 480px;
+  }
+
+  .cover-form {
+    width: 35%;
+  }
+
+  .cover-form-btn2{
+    margin-right: -35px;
   }
 }
 
