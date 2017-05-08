@@ -1665,17 +1665,19 @@ list-style: none;
 
 .pure-button {
     font-family: inherit;
-    font-size: 100%;
-    padding: .5em 1em;
-    color: #444;
-    color: rgba(0,0,0,.8);
+    font-size: 16px;
+        padding: .5em 1.3em;
+    /*color: #444;
+    color: rgba(0,0,0,.8);*/
     border: 1px solid #999;
     border: 0 rgba(0,0,0,0);
     background-color: #E6E6E6;
     text-decoration: none;
     border-radius: 2px;
 }
-
+.pure-button, .button-green a:focus, a:hover {
+    color: #FFF ;
+}
 
 table td p{
     color: #fff;
@@ -1702,7 +1704,14 @@ table td p{
 }
 .tab_menu li:hover, .tab_menu a:hover {
     color: #0a88d3;
-
+}
 #sidebar_box p {
   font-size: 14px;
+}
+
+ .profile_image {
+    position: relative;
+    width: 32px;
+    height: 32px;
+    border-radius: 32px;
 }
