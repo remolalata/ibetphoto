@@ -1708,10 +1708,195 @@ table td p{
 #sidebar_box p {
   font-size: 14px;
 }
-
+#sidebar_box a:focus, a:hover {
+    color: #337ab7;
+}
  .profile_image {
     position: relative;
     width: 32px;
     height: 32px;
     border-radius: 32px;
+}
+
+#search_logs a:hover {
+    background: #888;
+    color: #fff;
+}
+
+#search_logs a {
+    background: #fafafa;
+    display: inline-block;
+    padding: 3px 7px;
+    margin: 0 5px 5px 0;
+    border: 1px solid #eee;
+    font-size: 13px;
+    text-decoration: none;
+    color: #555;
+}
+
+.messages_menu a {
+    display: block;
+    color: #333;
+    padding: 12px;
+    font-size: 14px;
+    background: #f7f7f7;
+}
+
+.messages_menu a.selected {
+    background: #dedede !important;
+}
+
+.messages_menu a:hover {
+    background: #efefef;
+}
+
+.messages_menu form {
+    font-size: 14px;
+    margin: 15px 0 35px;
+    display: block;
+    overflow: hidden;
+}
+
+.tiny_search {
+    display: inline-block;
+    position: relative;
+    font-size: 16px;
+    min-width: 0;
+}
+
+.messages_menu form [type="text"] {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    padding: 5px 12px;
+}
+
+.tiny_search.active input {
+    width: 220px;
+    opacity: 1;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    border-radius: 0 !important;
+    padding: 2px 28px 2px 2px;
+    background: transparent;
+}
+.tiny_search label {
+    z-index: 10;
+    display: inline-block !important;
+    margin: 0 !important;
+    background: url(/img/sprites.png);
+    background: url(/img/sprites.svg),none;
+    background-position: -200px 0;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 1px;
+    opacity: .7;
+}
+.tiny_search.active input {
+    width: 250px;
+    opacity: 1;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    border-radius: 0 !important;
+    padding: 2px 28px 2px 2px;
+    background: transparent;
+}
+
+.tiny_search [type="submit"] {
+    position: absolute;
+    left: -9999px;
+}
+
+button, html input[type=button], input[type=reset], input[type=submit] {
+    -webkit-appearance: button;
+    cursor: pointer;
+}
+.tiny_search [type="text"] {
+    transition: .3s;
+    width: 0;
+    opacity: 0;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    border-radius: 0 !important;
+    padding: 2px 28px 2px 2px;
+  }
+
+  .pure-form-aligned .pure-control-group label {
+    text-align: right;
+    display: inline-block;
+    vertical-align: middle;
+    width: 10em;
+    margin: 0 1em 0 0;
+}
+
+input[type="text"] {
+    width: 55%;
+    max-width: 400px;
+}
+
+textarea, input[type="url"], input[type="email"] {
+    width: 55%;
+    max-width: 500px;
+}
+
+.pure-form-aligned .pure-control-group label {
+    text-align: right;
+    display: inline-block;
+    vertical-align: middle;
+    width: 10em;
+    margin: 0 1em 0 0;
+    font-weight: normal;
+        font-size: 16px;
+}
+.pure-form-aligned .pure-control-group {
+    margin-bottom: .5em;
+}
+.pure-control-group {
+    margin: 20px 0 0;
+}
+form ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+#id_options label {
+    width: auto;
+    white-space: normal;
+}
+.profile_image_button {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 5px;
+    opacity: 1;
+    border-radius: 0;
+    transition: .2s;
+    color: black;
+}
+.button-md {
+    padding: 8px 17px;
+    font-size: 13px;
+}
+.button-sm {
+    padding: 6px 12px;
+    font-size: 12px;
+    position: relative;
+    top: -2px;
+    color: black;
+}
+.bubble, .dd_box+div {
+    display: none;
+    position: absolute;
+    z-index: 999;
+    background: #fff;
+    border: 1px solid #d3d3d3;
+    padding: 10px;
+    border-radius: 2px;
+    box-shadow: 0 1px 5px rgba(0,0,0,.2);
+    font-size: 13px;
+    line-height: 1.6;
 }
