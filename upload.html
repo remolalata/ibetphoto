@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Document</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="https://use.fontawesome.com/f72bb5f718.js"></script>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media-queries.css">
+    <link rel="stylesheet" href="css/nat-style.css">
+    <link rel="stylesheet" href="css/nat-mq.css">
+    <link rel="stylesheet" href="css/css.css">
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <style media="screen">
+        h2 {
+            font-size: 16px;
+            font-weight: bold;
+            margin: 30px 0 15px;
+            padding-top: 30px;
+            border-top: 1px dotted #ccc !important;
+        }
+
+        @media only screen and (min-width: 320px) {
+            nav li:first-child {
+                margin-right: 0px;
+            }
+            .main-content {
+                min-height: 0px;
+            }
+            nav li {
+                list-style: none;
+                display: inline-block;
+                vertical-align: middle;
+                margin-left: -4px;
+                padding: 10px 0;
+            }
+            .mobile-dropdown-menu {
+                min-width: auto;
+                left: -4px;
+                top: 49px;
+                border-radius: 0;
+                border: 0 !important;
+                border-top: 1px solid #ddd !important;
+                border-left: 1px solid #eee !important;
+                box-shadow: 1px 2px 3px rgba(0, 0, 0, .3) !important;
+            }
+        }
+
+        @media only screen and (min-width: 768px) {
+            .mobile-dropdown-menu {
+                min-width: auto;
+                left: -78px;
+                top: 49px;
+                border-radius: 0;
+                border: 0 !important;
+                border-top: 1px solid #ddd !important;
+                border-left: 1px solid #eee !important;
+                box-shadow: 1px 2px 3px rgba(0, 0, 0, .3) !important;
+            }
+            footer {
+                position: absolute !important;
+            }
+        }
+
+        @media only screen and (min-width: 1024px) {
+
+            .sub-menu li {
+                display: block;
+                margin-left: 0;
+                padding: 8px 0px;
+            }
+        }
+
+        @media only screen and (min-width: 1200px) {
+            .mobile-dropdown-menu {
+                min-width: auto;
+                left: -4px;
+                top: 51px;
+                border-radius: 0;
+                border: 0 !important;
+                border-top: 1px solid #ddd !important;
+                border-left: 1px solid #eee !important;
+                box-shadow: 1px 2px 3px rgba(0, 0, 0, .3) !important;
+            }
+            .sub-menu li {
+                display: block;
+                margin-left: 0;
+                padding: 8px 6px;
+            }
+            .sub-menu a {
+                padding: 10px 12px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!--[if lt IE 8]>
+          <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+      <![endif]-->
+    <header class="clearfix">
+        <div class="header-wrapper clearfix">
+            <div class="header-logo-form pull-left">
+                <div class="logo"></div>
+                <div class="dropdown form hidden-xs">
+                    <form class="form-inline">
+                        <button class="btn-all-image" data-toggle="dropdown">All Images <i class="fa fa-caret-down"> </i></button>
+                        <div class="dropdown-menu inner-form">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <p>Media type</p>
+                                </div>
+                                <div class="col-md-9">
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="media-type" checked> All Images
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="media-type"> Photos
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="media-type"> Vector graphics
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="media-type"> Illustrations
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="media-type"> Videos
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <p>Orientation</p>
+                                </div>
+                                <div class="col-md-9">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="orientation" checked> Horizontal
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="orientation"> Vertical
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <p>Category</p>
+                                </div>
+                                <div class="col-md-9">
+                                    <select name="category">
+                                        <option value="">Animals</option>
+                                        <option value="">Education</option>
+                                        <option value="">Emotions</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <p>Larger than</p>
+                                </div>
+                                <div class="col-md-9">
+                                    <input type="text" placeholder="Width"> x
+                                    <input type="text" placeholder="Height"> px
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <p>Color</p>
+                                </div>
+                                <div class="col-md-9">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="color"> Transparent
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="color"> Black and White
+                                        </label>
+                                    </div>
+                                    <div class="colors">
+                                        <span class="color red"></span>
+                                        <span class="color orange"></span>
+                                        <span class="color yellow"></span>
+                                        <span class="color green"></span>
+                                        <span class="color turquoise"></span>
+                                        <span class="color blue"></span>
+                                        <span class="color violet"></span>
+                                        <span class="color pink"></span>
+                                        <span class="color white"></span>
+                                        <span class="color gray"></span>
+                                        <span class="color black"></span>
+                                        <span class="color brown"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3"><a href="#innerFormMore" data-toggle="collapse">more...</a></div>
+                                <div class="col-md-9">
+                                    <div class="collapse" id="innerFormMore">
+                                        <div>You can use AND, OR, NOT and () to refine your search results:</div>
+                                        <div>flower AND (red OR blue) NOT rose</div>
+                                        <br>
+
+                                        <div>Search in user portfolios:</div>
+                                        <div>user:stux flower</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="text" class="main-textbox" placeholder="Search images, vectors and videos">
+                        <button type="button" class="btn-search"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="header-nav  pull-right">
+                <nav class="hidden-sm hidden-xs">
+                    <ul>
+                        <li class="top-menu"><a href="#">Explore <i class="fa fa-caret-down"> </i></a>
+                            <ul class="sub-menu">
+                                <li><a href="#">Edito's Choice</a></li>
+                                <li><a href="#">Images</a></li>
+                                <li class="separator"><a href="#">Videos</a></li>
+                                <li><a href="#">Photographers</a></li>
+                                <li><a href="#">Cameras</a></li>
+                            </ul>
+                        </li>
+                        <li class="top-menu">
+                            <a href="#" class="hidden-lg">
+                                <img class="profile_image" src="img/profile_image_dummy.svg" alt="">
+                            </a>
+                            <a href="profile.html" class="hidden-md hidden-sm">
+                                <img class="profile_image" src="img/profile_image_dummy.svg" alt="">
+                            </a>
+                            <ul class="sub-menu">
+                                <li><a href="myimages.html">My Images</a></li>
+                                <li><a href="upload.html">Upload</a></li>
+                                <li><a href="favorites.html">Favorites</a></li>
+                                <li><a href="following.html">Following</a></li>
+                                <li><a href="message.html">Messages</a></li>
+                                <li class="separator"><a href="settings.html">Settings</a></li>
+                                <li class="separator hidden-md hidden-sm"><a href="quality.html">Quality Rating</a></li>
+                                <li class="separator hidden-lg"><a href="profile.html">My Profile</a></li>
+                                <li><a href="logout.html">Logout</a></li>
+                            </ul>
+                        </li>
+                        <li class="top-menu">
+                            <a href="#">
+                                <div class="icon-menu-dots"></div>
+                            </a>
+                            <ul class="sub-menu">
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">Forum</a></li>
+                                <li><a href="#">Blog</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+
+                <nav class="hidden-lg hidden-md">
+                    <ul>
+                        <li>
+                            <a href="#" data-toggle="dropdown"> <img class="profile_image" src="img/profile_image_dummy.svg" alt=""></a>
+                            <ul class="mobile-dropdown-menu dropdown-menu">
+                                <li><a href="myimages.html">My Images</a></li>
+                                <li><a href="upload.html">Upload</a></li>
+                                <li><a href="favorites.html">Favorites</a></li>
+                                <li><a href="following.html">Following</a></li>
+                                <li><a href="message.html">Messages</a></li>
+                                <li><a href="settings.html">Settings</a></li>
+                                <li class="separator"><a href="profile.html">My Profile</a></li>
+                                <li><a href="logout.html">Logout</a></li>
+                            </ul>
+
+                        </li>
+                        <li class="hidden-sm"><a href="#inner-form2" data-toggle="collapse"><i class="fa fa-search"></i></a></li>
+                        <li><a href="#" data-toggle="dropdown"><i class="fa fa-bars"></i></a>
+                            <ul class="mobile-dropdown-menu mobile-dropdown-menu2 dropdown-menu">
+                                <li><a href="#">Editor's Choice</a></li>
+                                <li><a href="#">Images</a></li>
+                                <li class="separator"><a href="#">Videos</a></li>
+                                <li><a href="#">Photographers</a></li>
+                                <li class="separator"><a href="#">Cameras</a></li>
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">Forum</a></li>
+                                <li><a href="#">Blog</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="collapse hidden-lg hidden-md hidden-sm inner-form2" id="inner-form2">
+            <form class="form-inline">
+                <button type="button" class="btn-all-image" data-toggle="dropdown">All images <i class="fa fa-caret-down"> </i></button>
+                <div class="dropdown-menu inner-form inner2-form2">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <p>Media type</p>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="media-type" checked> All Images
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="media-type"> Photos
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="media-type"> Vector graphics
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="media-type"> Illustrations
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="media-type"> Videos
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <p>Orientation</p>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="orientation" checked> Horizontal
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="orientation"> Vertical
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <p>Category</p>
+                        </div>
+                        <div class="col-md-9">
+                            <select name="category">
+                                <option value="">Animals</option>
+                                <option value="">Education</option>
+                                <option value="">Emotions</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <p>Larger than</p>
+                        </div>
+                        <div class="col-md-9">
+                            <input type="text" placeholder="Width"> x
+                            <input type="text" placeholder="Height"> px
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <p>Color</p>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="color"> Transparent
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="color"> Black and White
+                                </label>
+                            </div>
+                            <div class="colors">
+                                <span class="color red"></span>
+                                <span class="color orange"></span>
+                                <span class="color yellow"></span>
+                                <span class="color green"></span>
+                                <span class="color turquoise"></span>
+                                <span class="color blue"></span>
+                                <span class="color violet"></span>
+                                <span class="color pink"></span>
+                                <span class="color white"></span>
+                                <span class="color gray"></span>
+                                <span class="color black"></span>
+                                <span class="color brown"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3"><a href="#innerFormMore" data-toggle="collapse">more...</a></div>
+                        <div class="col-md-9">
+                            <div class="collapse" id="innerFormMore">
+                                <div>You can use AND, OR, NOT and () to refine your search results:</div>
+                                <div>flower AND (red OR blue) NOT rose</div>
+                                <br>
+
+                                <div>Search in user portfolios:</div>
+                                <div>user:stux flower</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <input type="text" class="main-textbox" placeholder="Search images, vectors and videos">
+                <button type="button" class="btn-search"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+    </header>
+
+    <!-- content -->
+    <div class="wrapper">
+
+        <div class="">
+
+            <div id="account_tabs" class="tab_menu hide-xs hide-sm hide-md" style="margin:30px auto;border-top:0">
+                <div style="max-width:1440px;margin:auto;padding:0 5px;text-align:left">
+                    <a style="float:right" href="#">My profile</a>
+                    <a href="myimages.html">My images</a>
+                    <a href="upload.html" class=" selected">Upload</a>
+
+                    <a href="favorites.html">Favorites</a>
+                    <a class="hide-lg" href="following.html">Following</a>
+                    <a href="message.html">Messages</a>
+                    <a href="settings.html">Settings</a>
+                </div>
+
+            </div>
+            <div class="" style="max-width:1408px;margin:auto;    padding: 10px 20px 15px;">
+
+                <div class="pure-g">
+                    <div class="pure-u-1 pure-u-md-1-3">
+                        <div class="no-margin-right-md" style="margin-right:40px">
+                            <p style="    font-size: 16px;font-weight: bold;">Upload files</p>
+                            <div id="regulations" style="font-size:14px">
+                                <p>
+                                    JPG, PNG, PSD, AI, and SVG images up to 40 MB with at least 1920 pixels along one side.
+                                    <a href="https://pixabay.com/blog/posts/id-22/" target="_blank">Image Quality Guidelines...</a>
+                                </p>
+                                <p>
+                                    MPEG, MOV, and AVI videos up to 300 MB and a minimum resolution of 1920x800 pixels. Clips should be no longer than 60 seconds.
+                                    <a href="https://pixabay.com/blog/posts/id-68/" target="_blank">Video Quality Guidelines...</a>
+                                </p>
+                            </div>
+
+                            <div style="font-size:14px;margin:20px 0 0">
+                                <p>As a new member you can upload up to 10 images right away. As soon as they are approved, you may continue uploading more images.</p>
+                                <p><b>Remaining uploads: <span id="remaining_uploads">10</span></b></p>
+                            </div>
+
+                            <div id="upload_button" class="pure-button pure-button-primary" style="margin: 30px 0px 0px; display: block; max-width: 180px; position: relative; overflow: hidden; direction: ltr;">Select files
+                                <input multiple="multiple" accept="image/jpeg,image/png,image/svg+xml,.psd,application/photoshop,application/psd,image/psd,.ai,application/illustrator,application/ai,application/postscript,video/mpeg,video/mp4,video/quicktime,video/avi,video/x-msvideo" type="file" name="file" style="position: absolute; right: 0px; top: 0px; font-family: Arial; font-size: 118px; margin: 0px; padding: 0px; cursor: pointer; opacity: 0;">
+                            </div>
+                            <div id="file_uploader">
+                                <div class="qq-uploader">
+                                    <div class="qq-upload-button"></div>
+                                    <ul class="qq-upload-list"></ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pure-u-1 pure-u-md-2-3">
+                        <hr class="hide-md hide-lg hide-xl" style="margin:30px 0 40px">
+                        <div id="tagging_section" style="display:none;margin-bottom:50px">
+                            <h2>Tag images</h2>
+                            <div id="tagging_tips" style="font-size:14px;margin:0 0 20px">
+                                <p>
+                                    Tags are keywords that describe your image. Without accurate tags, the image cannot be found. Therefore, each tag is as important as the image itself.
+                                    <a href="https://pixabay.com/blog/posts/id-54/" target="_blank">Tagging Tutorial...</a>
+                                </p>
+                            </div>
+                            <hr>
+                            <div id="tag_boxes">
+                                <div id="complete_target"></div>
+
+                            </div>
+                        </div>
+
+                        <p style="font-size: 16px;font-weight: bold;">Important tags we need more images for</p>
+                        <div id="search_logs"><a href="/en/photos/panoseuraa/" target="search_log">panoseuraa</a>
+                            <a href="/en/photos/cinco%20de%20mayo/" target="search_log">cinco de mayo</a>
+                            <a href="/en/photos/dna/" target="search_log">dna</a>
+                            <a href="/en/photos/mental%20health/" target="search_log">mental health</a>
+                            <a href="/en/photos/fiesta/" target="search_log">fiesta</a>
+                            <a href="/en/photos/small%20business/" target="search_log">small business</a>
+                            <a href="/en/photos/checklist/" target="search_log">checklist</a>
+                            <a href="/en/photos/may%20day/" target="search_log">may day</a>
+                            <a href="/en/photos/credit%20card/" target="search_log">credit card</a>
+                            <a href="/en/photos/ecommerce/" target="search_log">ecommerce</a>
+                            <a href="/en/photos/feedback/" target="search_log">feedback</a>
+                            <a href="/en/photos/margarita/" target="search_log">margarita</a>
+                            <a href="/en/photos/hiring/" target="search_log">hiring</a>
+                            <a href="/en/photos/marijuana/" target="search_log">marijuana</a>
+                            <a href="/en/photos/call%20center/" target="search_log">call center</a>
+                            <a href="/en/photos/exam/" target="search_log">exam</a>
+                            <a href="/en/photos/virtual%20reality/" target="search_log">virtual reality</a>
+                            <a href="/en/photos/headache/" target="search_log">headache</a>
+                            <a href="/en/photos/stomach/" target="search_log">stomach</a>
+                            <a href="/en/photos/diabetes/" target="search_log">diabetes</a>
+                            <a href="/en/photos/analytics/" target="search_log">analytics</a>
+                            <a href="/en/photos/hacker/" target="search_log">hacker</a>
+                            <a href="/en/photos/about%20us/" target="search_log">about us</a>
+                            <a href="/en/photos/ramadan/" target="search_log">ramadan</a>
+                            <a href="/en/photos/divorce/" target="search_log">divorce</a>
+                            <a href="/en/photos/essential%20oils/" target="search_log">essential oils</a>
+                            <a href="/en/photos/resume/" target="search_log">resume</a>
+                            <a href="/en/photos/grandparents/" target="search_log">grandparents</a>
+                            <a href="/en/photos/back%20pain/" target="search_log">back pain</a>
+                            <a href="/en/photos/cyber/" target="search_log">cyber</a>
+                            <a href="/en/photos/sombrero/" target="search_log">sombrero</a>
+                            <a href="/en/photos/labor%20day/" target="search_log">labor day</a>
+                            <a href="/en/photos/taco/" target="search_log">taco</a>
+                            <a href="/en/photos/tacos/" target="search_log">tacos</a>
+                            <a href="/en/photos/tornado/" target="search_log">tornado</a>
+                            <a href="/en/photos/cloud%20computing/" target="search_log">cloud computing</a>
+                            <a href="/en/photos/cannabis/" target="search_log">cannabis</a>
+                            <a href="/en/photos/megaphone/" target="search_log">megaphone</a>
+                            <a href="/en/photos/mentor/" target="search_log">mentor</a>
+                            <a href="/en/photos/plumber/" target="search_log">plumber</a>
+                            <a href="/en/photos/closet/" target="search_log">closet</a>
+                            <a href="/en/photos/job%20interview/" target="search_log">job interview</a>
+                            <a href="/en/photos/blueprint/" target="search_log">blueprint</a>
+                            <a href="/en/photos/quiz/" target="search_log">quiz</a>
+                            <a href="/en/photos/bitcoin/" target="search_log">bitcoin</a>
+                            <a href="/en/photos/cyber%20security/" target="search_log">cyber security</a>
+                            <a href="/en/photos/massage%20therapy/" target="search_log">massage therapy</a>
+                            <a href="/en/photos/office%20space/" target="search_log">office space</a>
+                            <a href="/en/photos/harry%20potter/" target="search_log">harry potter</a>
+                            <a href="/en/photos/advice/" target="search_log">advice</a>
+                            <a href="/en/photos/database/" target="search_log">database</a>
+                            <a href="/en/photos/car%20accident/" target="search_log">car accident</a>
+                            <a href="/en/photos/graduation%20cap/" target="search_log">graduation cap</a>
+                            <a href="/en/photos/coming%20soon/" target="search_log">coming soon</a>
+                            <a href="/en/photos/electrician/" target="search_log">electrician</a>
+                            <a href="/en/photos/prom/" target="search_log">prom</a>
+                            <a href="/en/photos/labour%20day/" target="search_log">labour day</a>
+                            <a href="/en/photos/hair%20salon/" target="search_log">hair salon</a>
+                            <a href="/en/photos/bullying/" target="search_log">bullying</a>
+                            <a href="/en/photos/mistake/" target="search_log">mistake</a>
+                            <a href="/en/photos/secretary/" target="search_log">secretary</a>
+                            <a href="/en/photos/skincare/" target="search_log">skincare</a>
+                            <a href="/en/photos/donald%20trump/" target="search_log">donald trump</a>
+                            <a href="/en/photos/recruitment/" target="search_log">recruitment</a>
+                            <a href="/en/photos/printer/" target="search_log">printer</a>
+                            <a href="/en/photos/air%20conditioner/" target="search_log">air conditioner</a>
+                            <a href="/en/photos/anzac/" target="search_log">anzac</a>
+                            <a href="/en/photos/big%20data/" target="search_log">big data</a>
+                            <a href="/en/photos/linkedin/" target="search_log">linkedin</a>
+                            <a href="/en/photos/stethoscope/" target="search_log">stethoscope</a>
+                            <a href="/en/photos/spider/" target="search_log">spider</a>
+                            <a href="/en/photos/fridge/" target="search_log">fridge</a>
+                            <a href="/en/photos/climate%20change/" target="search_log">climate change</a>
+                            <a href="/en/photos/client/" target="search_log">client</a>
+                            <a href="/en/photos/homework/" target="search_log">homework</a>
+                            <a href="/en/photos/time%20management/" target="search_log">time management</a>
+                            <a href="/en/photos/bored/" target="search_log">bored</a>
+                            <a href="/en/photos/human%20resources/" target="search_log">human resources</a>
+                            <a href="/en/photos/reiki/" target="search_log">reiki</a>
+                            <a href="/en/photos/baby%20shower/" target="search_log">baby shower</a>
+                            <a href="/en/photos/automation/" target="search_log">automation</a>
+                            <a href="/en/photos/old%20couple/" target="search_log">old couple</a>
+                            <a href="/en/photos/broken%20heart/" target="search_log">broken heart</a>
+                            <a href="/en/photos/sweat/" target="search_log">sweat</a>
+                            <a href="/en/photos/acne/" target="search_log">acne</a>
+                            <a href="/en/photos/why/" target="search_log">why</a>
+                            <a href="/en/photos/blood%20pressure/" target="search_log">blood pressure</a>
+                            <a href="/en/photos/laughter/" target="search_log">laughter</a>
+                            <a href="/en/photos/house%20for%20sale/" target="search_log">house for sale</a>
+                            <a href="/en/photos/doctor%20patient/" target="search_log">doctor patient</a>
+                            <a href="/en/photos/whatsapp/" target="search_log">whatsapp</a>
+                            <a href="/en/photos/wedding%20reception/" target="search_log">wedding reception</a>
+                            <a href="/en/photos/minecraft/" target="search_log">minecraft</a>
+                            <a href="/en/photos/thief/" target="search_log">thief</a>
+                            <a href="/en/photos/pilates/" target="search_log">pilates</a>
+                            <a href="/en/photos/results/" target="search_log">results</a>
+                            <a href="/en/photos/monday/" target="search_log">monday</a>
+                            <a href="/en/photos/counseling/" target="search_log">counseling</a>
+                            <a href="/en/photos/anzac%20day/" target="search_log">anzac day</a>
+                            <a href="/en/photos/rugby/" target="search_log">rugby</a>
+                            <a href="/en/photos/turmeric/" target="search_log">turmeric</a>
+                            <a href="/en/photos/purpose/" target="search_log">purpose</a>
+                            <a href="/en/photos/real%20estate%20agent/" target="search_log">real estate agent</a>
+                            <a href="/en/photos/air%20conditioning/" target="search_log">air conditioning</a>
+                            <a href="/en/photos/portfolio/" target="search_log">portfolio</a>
+                            <a href="/en/photos/obesity/" target="search_log">obesity</a>
+                            <a href="/en/photos/grocery%20store/" target="search_log">grocery store</a>
+                            <a href="/en/photos/moving%20boxes/" target="search_log">moving boxes</a>
+                            <a href="/en/photos/brexit/" target="search_log">brexit</a>
+                            <a href="/en/photos/school%20bus/" target="search_log">school bus</a>
+                            <a href="/en/photos/superman/" target="search_log">superman</a>
+                            <a href="/en/photos/lemonade/" target="search_log">lemonade</a>
+                            <a href="/en/photos/asthma/" target="search_log">asthma</a>
+                            <a href="/en/photos/earthquake/" target="search_log">earthquake</a>
+                            <a href="/en/photos/car%20wash/" target="search_log">car wash</a>
+                            <a href="/en/photos/agenda/" target="search_log">agenda</a>
+                            <a href="/en/photos/fail/" target="search_log">fail</a>
+                            <a href="/en/photos/autism/" target="search_log">autism</a>
+                            <a href="/en/photos/pug/" target="search_log">pug</a>
+                            <a href="/en/photos/super%20hero/" target="search_log">super hero</a>
+                            <a href="/en/photos/hip%20hop/" target="search_log">hip hop</a>
+                            <a href="/en/photos/whiteboard/" target="search_log">whiteboard</a>
+                            <a href="/en/photos/coconut%20oil/" target="search_log">coconut oil</a>
+                            <a href="/en/photos/paint%20splatter/" target="search_log">paint splatter</a>
+                            <a href="/en/photos/tshirt/" target="search_log">tshirt</a>
+                            <a href="/en/photos/iot/" target="search_log">iot</a>
+                            <a href="/en/photos/project%20management/" target="search_log">project management</a>
+                            <a href="/en/photos/whisper/" target="search_log">whisper</a>
+                            <a href="/en/photos/webinar/" target="search_log">webinar</a>
+                            <a href="/en/photos/israel%20flag/" target="search_log">israel flag</a>
+                            <a href="/en/photos/register/" target="search_log">register</a>
+                            <a href="/en/photos/karate/" target="search_log">karate</a>
+                            <a href="/en/photos/car%20crash/" target="search_log">car crash</a>
+                            <a href="/en/photos/praise/" target="search_log">praise</a>
+                            <a href="/en/photos/podcast/" target="search_log">podcast</a>
+                            <a href="/en/photos/planner/" target="search_log">planner</a>
+                            <a href="/en/photos/refrigerator/" target="search_log">refrigerator</a>
+                            <a href="/en/photos/ninja/" target="search_log">ninja</a>
+                            <a href="/en/photos/crossfit/" target="search_log">crossfit</a>
+                            <a href="/en/photos/coffe/" target="search_log">coffe</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- conten end -->
+
+    <!-- back to top -->
+    <div class="back">
+        <a href="#" id="back-to-top" class="back-to-top" title="Back to top">▲</a>
+    </div>
+    <!-- end of back to top -->
+    <footer>
+        <div class="footer-wrapper clearfix">
+            <div class="footer-nav pull-left">
+                <ul>
+                    <li>&copy; 2017 Pixabay</li>
+                    <li class="hidden-sm hidden-xs dropup"><a href="#" data-toggle="dropdown">Free Downloads <i class="fa fa-caret-down"> </i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Free Images</a></li>
+                            <li><a href="#">Free photos</a></li>
+                            <li><a href="#">Free vector graphics</a></li>
+                            <li><a href="#">Free illustration</a></li>
+                            <li><a href="">Free Videos</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropup"><a href="#" data-toggle="dropdown">Language <i class="fa fa-caret-down"> </i></a>
+                        <ul class="dropdown-menu dropdown-menu-language">
+                            <li><a href="#">Čeština</a></li>
+                            <li><a href="#">Deutsch</a></li>
+                            <li><a href="#">Español</a></li>
+                            <li><a href="#">Indonesia</a></li>
+                            <li><a href="#">Magyar</a></li>
+                            <li><a href="#">Norsk</a></li>
+                            <li><a href="#">Português</a></li>
+                            <li><a href="#">Slovenčina</a></li>
+                            <li><a href="#">Svenska</a></li>
+                            <li><a href="#">Việt</a></li>
+                            <li><a href="#">Български</a></li>
+                            <li><a href="#">Ελληνική</a></li>
+                            <li><a href="#">한국어</a></li>
+                            <li><a href="#">Dansk</a></li>
+                            <li><a href="#">English</a></li>
+                            <li><a href="#">Français</a></li>
+                            <li><a href="#">Italiano</a></li>
+                            <li><a href="#">Nederlands</a></li>
+                            <li><a href="#">Polski</a></li>
+                            <li><a href="#">Română</a></li>
+                            <li><a href="#">Suomi</a></li>
+                            <li><a href="#">Türkçe</a></li>
+                            <li><a href="#">ไทย</a></li>
+                            <li><a href="#">Русский</a></li>
+                            <li><a href="#">日本語</a></li>
+                            <li><a href="#">简体中文</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropup"><a href="#" data-toggle="dropdown">Service <i class="fa fa-caret-down"> </i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Forum</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Privacy Policys</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">API</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Terms</a></li>
+                </ul>
+            </div>
+            <div class="footer-social pull-right hidden-xs">
+                <ul>
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#resetpassword").click(function() {
+                $("#myModal").modal('show');
+            });
+        });
+    </script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+    <script type="text/javascript">
+        $('.tab_menu li').click(function() {
+            $(this).tab('show');
+        })
+
+        // Select tab by name
+        $('.tab_menu a[href="#home"]').tab('show')
+
+        // Select first tab
+        $('.tab_menu a:first').tab('show')
+
+        // Select last tab
+        $('.tab_menu a:last').tab('show')
+
+        // Select fourth tab (zero-based)
+        $('.tab_menu li:eq(0)').tab('show')
+    </script>
+    <script>
+        // back to top script
+        if ($('#back-to-top').length) {
+            var scrollTrigger = 100, // px
+                backToTop = function() {
+                    var scrollTop = $(window).scrollTop();
+                    if (scrollTop > scrollTrigger) {
+                        $('#back-to-top').addClass('show');
+                    } else {
+                        $('#back-to-top').removeClass('show');
+                    }
+                };
+            backToTop();
+            $(window).on('scroll', function() {
+                backToTop();
+            });
+            $('#back-to-top').on('click', function(e) {
+                e.preventDefault();
+                $('html,body').animate({
+                    scrollTop: 0
+                }, 700);
+            });
+        }
+    </script>
+</body>
+
+</html>
