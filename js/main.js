@@ -1,7 +1,3 @@
 $(document).ready(function() {
-  $('.media').hover(function (){
-    $('.overlay').addClass('show-overlay');
-  }, function() {
-    $('.overlay').removeClass('show-overlay');
-  })
+  $('.flex_grid').flexImages({ rowHeight: 320, maxRows: 22, truncate: true });
 });
