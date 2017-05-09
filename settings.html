@@ -26,7 +26,20 @@
 
 @media only screen and (min-width: 320px)
 {
-
+  .profile_form label {
+      text-align: left !important;
+      margin: 0 0 10px !important;
+      display: block !important;
+      width: 100% !important;
+  }
+  input[type="text"] {
+      width: 100%;
+      max-width: 400px;
+  }
+  textarea, input[type="url"], input[type="email"] {
+    width: 100%;
+    max-width: 400px;
+}
   nav li:first-child {
       margin-right: 0px;
     }
@@ -54,6 +67,8 @@ nav li {
 }
 }
 @media only screen and (min-width: 768px){
+
+
 .mobile-dropdown-menu {
     min-width: auto;
     left: -78px;
@@ -71,6 +86,8 @@ nav li {
       margin-left: 0;
       padding: 8px 0px;
   }
+
+
 }
 
 
@@ -433,7 +450,7 @@ nav li {
                 <div class="pure-control-group">
 
                     <label for="id_username">Username</label>
-                    <input type="text" name="username" value="nathannight" required="" id="id_username" maxlength="25">
+                    <input type="text" name="username" value="" required="" id="id_username" maxlength="25">
                 </div>
                 <div class="pure-control-group">
                     <label style="vertical-align:top">Profile image</label>
@@ -782,7 +799,7 @@ nav li {
                     <div class="pure-control-group">
 
                         <label for="id_email">Email address</label>
-                        <input type="email" name="email" value="nathanstamaria.ns@gmail.com" required="" id="id_email">
+                        <input type="email" name="email" value="" required="" id="id_email">
 
                     </div>
 
@@ -830,10 +847,63 @@ nav li {
                     </div>
 
                     <div class="pure-control-group">
-                        <label style="vertical-align:top;text-transform:capitalize">more</label>
+                        <label style="vertical-align:top;text-transform:capitalize">More</label>
                         <span style="display:inline-block;margin:3px 0 0">
-                            <!-- <a class="modal" data-w="320" href="/accounts/change_password/">Change password</a>
-                            <a style="margin:8px 0 0;display:block" class="modal" href="/accounts/deactivate/nathannight/">Deactivate account</a> -->
+                          <div class="left_side" style="border-color:transparent !important;padding-top:0 !important;margin:0 !important">
+                              <a href="#" id="resetpassword" data-toggle="modal" data-target="#exampleModal" data-w="600">Change password</a>
+                          </div>
+                          <div class="left_side" style="border-color:transparent !important;padding-top:0 !important;margin:0 !important">
+                              <a href="#" id="resetpassword1" data-toggle="modal1" data-target="#exampleModal1" data-w="600">Deactivate account</a>
+                          </div>
+
+
+                                <!-- Modal -->
+                  <div class="modal fade" id="myModal" tSign upabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" style="float:left" id="exampleModalLabel">Change password</h5>
+                          <button type="button"  class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <form class="" action="#" method="post">
+                                  <input type="password"  class="form-control" name="" placeholder="Old password" value="">
+                                  <br>  <br>
+                                  <input type="password"  class="form-control" name="" placeholder="New password" value="">
+                                  <br>  <br>
+                                  <input type="password"  class="form-control" name="" placeholder="New password confirmation" value="">
+                                  <button type="button" class="btn btn-success" name="button" style="margin-top:10px;">Submit</button>
+                          </form>
+
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="modal fade" id="myModal1" tSign upabindex="-1" role="dialog" aria-labelledby="exampleModal1Label" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" style="float:left" id="exampleModalLabel">Are you sure want to deactivate you account ?</h5>
+                          <button type="button"  class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <form class="" action="#" method="post">
+                                  Deactivating your account will anonymize your profile on Pixabay. Shared public domain images will remain online. <br>
+                                  <button type="button" class="btn btn-danger" name="button" style="margin-top:10px;">Deactivate account</button>
+                                  <button type="button" class="btn btn-default" name="button" style="margin-top:10px;" data-dismiss="modal" aria-label="Close">Cancel</button>
+                          </form>
+
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
                         </span>
                     </div>
                 </div>
@@ -931,6 +1001,9 @@ nav li {
 $(document).ready(function(){
     $("#resetpassword").click(function(){
         $("#myModal").modal('show');
+    });
+    $("#resetpassword1").click(function(){
+        $("#myModal1").modal('show');
     });
 });
 </script>

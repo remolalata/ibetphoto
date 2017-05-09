@@ -15,16 +15,14 @@
     <link rel="stylesheet" href="css/nat-mq.css">
       <link rel="stylesheet" href="css/css.css">
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-    <style media="screen">
-    h2 {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 30px 0 15px;
-  padding-top: 30px;
-  border-top: 1px dotted #ccc !important;
+<style media="screen">
+@media only screen and (min-width: 768px)
+{
+footer {
+      position: absolute !important;
 }
-
-    </style>
+}
+</style>
   </head>
   <body>
       <!--[if lt IE 8]>
@@ -309,72 +307,74 @@
       </header>
 
       <!-- content -->
-      <div class="wrapper">
+      <div class="container">
+        <div class="row main-content">
+    <div class="">
+      <div style="padding:20px">
+          <div class="window" style="margin:3% auto 0;max-width:640px;padding-bottom:25px">
+              <h1 style="margin:0 0 15px">Contact</h1>
 
+              <div class="alert alert-success">
+    Check out our <a href="/service/faq/">FAQ</a> first.
+            </div>
+              <form class="pure-form"><div>
+                  <select id="select_topic" class="pure-u-1">
+                      <option>- Select a topic -</option>
+                      <option>Can I use your images?</option>
+                      <option>May Pixabay images be used on Facebook and other social platforms?</option>
+                      <option>Why was my image not accepted?</option>
+                      <option>Can I make a donation without PayPal?</option>
+                      <option>Other</option>
+                  </select>
+              </div></form>
 
+              <div id="selected_topic" style="margin:15px 0 0;line-height:1.5">
+                  <div style="display: block;">You can copy, modify, distribute, and use the images, even for commercial purposes, all without asking for permission or giving credits to the artist. However, depicted content may still be protected by trademarks, publicity or privacy rights. Read more in our <a href="https://pixabay.com/blog/posts/id-4/">blog</a>.</div>
+                  <div style="display: none;">Yes, you may use Pixabay images on social media platforms. Learn more in our <a href="https://pixabay.com/blog/posts/id-29/">blog</a>.</div>
+                  <div style="display: none;">Your image either does not comply with our <a href="https://pixabay.com/blog/posts/id-22/">quality guidelines</a> or the chosen tags do not sufficiently or correctly describe its content.</div>
+                  <div style="display: none;">
+                      <p style="margin:0 0 15px">Image authors can only receive donations through PayPal. If you would like to support Pixabay, please use any of the following options:</p>
+                      <span class="pure-button button-md dd_box">Bank transfer</span>
+                      <div style="position: absolute; top: 439.391px; left: 640px; z-index: 100000; display: none;">
+                          Pixabay
+                          <br>Bank: DAB Bank
+                          <br>IBAN: DE88701204008467201003
+                          <br>BIC/SWIFT: DABBDEMMXXX
+                      </div>
+                      <span class="pure-button button-md" onclick="$('#pp_form').submit();">PayPal</span>
+                      <form id="pp_form" name="_xclick" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display:none">
+                          <input type="hidden" name="cmd" value="_donations">
+                          <input type="hidden" name="return" value="https://pixabay.com/en/service/donated/">
+                          <input type="hidden" name="currency_code" value="USD">
+                          <input type="hidden" name="lc" value="US">
+                          <input type="hidden" name="item_name" value="Support Pixabay">
+                          <input type="hidden" name="business" value="YZWGTDY6PEANJ">
+                          <input type="submit">
+                      </form>
+                      <span class="pure-button button-md" onclick="wopen('https://www.coinbase.com/checkouts/6677abad5a5b3da73dc24a7e52694710', 780, 680);" target="_blank">Bitcoins</span>
+                  </div>
+                  <div style="display: none;">
+                      <form action="." method="post" class="pure-form"><div>
 
-        <div id="faq" style="margin:40px auto 0;padding:0 20px;max-width:1040px;font-size:14px; margin-bottom: 20px;">
-    <h1>FAQ</h1>
-    <h2>What is Pixabay?</h2>
-    <div>On Pixabay you may find and share images free of copyrights. All pictures are released under <a href="/service/terms/#usage">Creative Commons CC0</a> into the public domain.</div>
-
-    <h2>Can I use your images?</h2>
-    <div>You can copy, modify, distribute, and use the images, even for commercial purposes, all without asking for permission or giving credits to the artist. However, depicted content may still be protected by trademarks, publicity or privacy rights. Read more in our <a href="https://pixabay.com/blog/posts/id-4/">blog</a>.</div>
-
-    <h2>May Pixabay images be used on Facebook and other social platforms?</h2>
-    <div>Yes, you may use Pixabay images on social media platforms. Learn more in our <a href="https://pixabay.com/blog/posts/id-29/">blog</a>.</div>
-
-    <h2>Why do I find Shutterstock images on Pixabay?</h2>
-    <div>Sponsored images are shown to finance Pixabay and to provide a choice of professional photos. Those images are marked with the Shutterstock logo.</div>
-
-    <h2>SafeSearch: How can I avoid inappropriate or explicit images?</h2>
-    <div>
-        <p>Please make use of our SafeSearch filter, which can help you block inappropriate or explicit images from your search results. The SafeSearch filter isn't 100% accurate, but it helps you avoid most adult content. You may turn SafeSearch on and off through the settings on search results pages.</p>
-        <label><input type="checkbox" class="toggle_g_rated"> Enable SafeSearch</label>
+                          <p> <input type="text" name="topyenoh" style="position:absolute;left:-9999px" id="id_topyenoh"></p>
+      <p> <input type="text" name="subject" data-autofocus="" maxlength="80" required="" placeholder="Subject" class="pure-input-1" id="id_subject"><div id="answers" class="hover_links" style="display:none;margin:20px 0;font-size:13px;line-height:25px">
+                              <h3 style="margin:0 0 7px">Topics that may already answer your question</h3>
+                              <ul style="list-style-type:disc;padding-left:17px;line-height:22px"></ul>
+                          </div></p>
+      <p> <textarea name="message" style="height: 100px; overflow: hidden; word-wrap: break-word;" rows="10" maxlength="2000" id="id_message" required="" placeholder="Message" cols="40" class="autosize pure-input-1 autosized"></textarea><input type="hidden" name="timestamp" value="1494308620" id="id_timestamp"><input type="hidden" name="security_hash" value="7fef352c74d269f993f01830f3c0920b6405286c" id="id_security_hash"><input type="hidden" name="name" value="nathannight" id="id_name"><input type="hidden" name="email" value="nathanstamaria.ns@gmail.com" id="id_email"><input type="hidden" name="submitted" value="1" id="id_submitted"></p>
+                          <input type="submit" class="pure-button button-green" value="Submit">
+                      </div></form>
+                  </div>
+              </div>
+          </div>
+      </div>
     </div>
-
-    <h2>NO HOTLINKING - what does that mean?</h2>
-    <div>If you want to show Pixabay images on your website, please upload them to your server. Pixabay image URLs don't work on external sites.</div>
-
-    <h2>Why was my image not accepted?</h2>
-    <div>Your image either does not comply with our <a href="https://pixabay.com/blog/posts/id-22/">quality guidelines</a> or the chosen tags do not sufficiently or correctly describe its content.</div>
-
-    <h2>Can I make a donation without PayPal?</h2>
-    <div>
-        <p style="margin:0 0 15px">Image authors can only receive donations through PayPal. If you would like to support Pixabay, please use any of the following options:</p>
-        <span class="pure-button button-sm dd_box" id="buttontohide">Bank transfer</span>
-
-        <div id="hide" style="
-          ">
-            Pixabay
-            <br>Bank: DAB Bank
-            <br>IBAN: DE88701204008467201003
-            <br>BIC/SWIFT: DABBDEMMXXX
         </div>
-        <span class="pure-button button-sm" onclick="$('#pp_form').submit();">PayPal</span>
-        <form id="pp_form" name="_xclick" action="#" method="post" target="_blank" style="display:none">
-            <input type="hidden" name="cmd" value="_donations">
-            <input type="hidden" name="return" value="#">
-            <input type="hidden" name="currency_code" value="USD">
-            <input type="hidden" name="lc" value="US">
-            <input type="hidden" name="item_name" value="Support Pixabay">
-            <input type="hidden" name="business" value="YZWGTDY6PEANJ">
-            <input type="submit">
-        </form>
-        <span class="pure-button button-sm" onclick="wopen('https://www.coinbase.com/checkouts/6677abad5a5b3da73dc24a7e52694710', 780, 680);" target="_blank">Bitcoins</span>
-    </div>
+      </div>
 
-    <h2>How do I delete my account?</h2>
-    <div>A link for this purpose is given on the <a href="/accounts/settings/">settings page</a> inside your account.</div>
-
-    <h2>Does Pixabay offer an API?</h2>
-    <div>Yes, we do have an API. Learn all about it in the <a href="/api/docs/">API documentation</a>.</div>
-</div>
-
-
-        </div>
-
-
+  <svg id="bg_svg" viewBox="0 0 1440 480" preserveAspectRatio="xMidYMid slice"><filter id="blur"><feGaussianBlur stdDeviation="5"></feGaussianBlur></filter>
+    <image xlink:href="img/login/bg.jpg" width="1440" height="480" filter="url(#blur)"></image>
+  </svg>
 
 
       <!-- conten end -->
@@ -479,12 +479,6 @@ $('.tab_menu a:last').tab('show')
 
 // Select fourth tab (zero-based)
 $('.tab_menu li:eq(0)').tab('show')
-</script>
-<script type="text/javascript">
-$("#hide").hide();
-$("#buttontohide").click(function(){
-$("#hide").toggle();
-});
 </script>
     <script>
 
