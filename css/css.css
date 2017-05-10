@@ -1834,12 +1834,12 @@ button, html input[type=button], input[type=reset], input[type=submit] {
 
 input[type="text"] {
     width: 55%;
-    max-width: 400px;
+
 }
 
 textarea, input[type="url"], input[type="email"] {
     width: 55%;
-    max-width: 500px;
+    /*max-width: 500px;*/
 }
 
 .pure-form-aligned .pure-control-group label {

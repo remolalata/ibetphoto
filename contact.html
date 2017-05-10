@@ -315,34 +315,37 @@ footer {
               <h1 style="margin:0 0 15px">Contact</h1>
 
               <div class="alert alert-success">
-    Check out our <a href="/service/faq/">FAQ</a> first.
+    Check out our <a href="FAQ.html">FAQ</a> first.
             </div>
               <form class="pure-form"><div>
                   <select id="select_topic" class="pure-u-1">
-                      <option>- Select a topic -</option>
-                      <option>Can I use your images?</option>
-                      <option>May Pixabay images be used on Facebook and other social platforms?</option>
-                      <option>Why was my image not accepted?</option>
-                      <option>Can I make a donation without PayPal?</option>
-                      <option>Other</option>
+                      <option value="zero">- Select a topic -</option>
+                      <option value="1st">Can I use your images?</option>
+                      <option value="2nd">May Pixabay images be used on Facebook and other social platforms?</option>
+                      <option value="3rd">Why was my image not accepted?</option>
+                      <option value="4th">Can I make a donation without PayPal?</option>
+                      <option value="5th">Other</option>
                   </select>
               </div></form>
 
               <div id="selected_topic" style="margin:15px 0 0;line-height:1.5">
-                  <div style="display: block;">You can copy, modify, distribute, and use the images, even for commercial purposes, all without asking for permission or giving credits to the artist. However, depicted content may still be protected by trademarks, publicity or privacy rights. Read more in our <a href="https://pixabay.com/blog/posts/id-4/">blog</a>.</div>
-                  <div style="display: none;">Yes, you may use Pixabay images on social media platforms. Learn more in our <a href="https://pixabay.com/blog/posts/id-29/">blog</a>.</div>
-                  <div style="display: none;">Your image either does not comply with our <a href="https://pixabay.com/blog/posts/id-22/">quality guidelines</a> or the chosen tags do not sufficiently or correctly describe its content.</div>
-                  <div style="display: none;">
+                  <div id="zero" style="display: block;"></div>
+                  <div id="1st" style="display: none;">You can copy, modify, distribute, and use the images, even for commercial purposes, all without asking for permission or giving credits to the artist. However, depicted content may still be protected by trademarks, publicity or privacy rights. Read more in our <a href="https://pixabay.com/blog/posts/id-4/">blog</a>.</div>
+                  <div id="2nd" style="display: none;">Yes, you may use Pixabay images on social media platforms. Learn more in our <a href="https://pixabay.com/blog/posts/id-29/">blog</a>.</div>
+                  <div id="3rd" style="display: none;">Your image either does not comply with our <a href="https://pixabay.com/blog/posts/id-22/">quality guidelines</a> or the chosen tags do not sufficiently or correctly describe its content.</div>
+                  <div id="4th" style="display: none;">
                       <p style="margin:0 0 15px">Image authors can only receive donations through PayPal. If you would like to support Pixabay, please use any of the following options:</p>
-                      <span class="pure-button button-md dd_box">Bank transfer</span>
-                      <div style="position: absolute; top: 439.391px; left: 640px; z-index: 100000; display: none;">
+                      <span class="pure-button button-sm dd_box" id="buttontohide">Bank transfer</span>
+
+                      <div id="hide" style="
+                        ">
                           Pixabay
                           <br>Bank: DAB Bank
                           <br>IBAN: DE88701204008467201003
                           <br>BIC/SWIFT: DABBDEMMXXX
                       </div>
-                      <span class="pure-button button-md" onclick="$('#pp_form').submit();">PayPal</span>
-                      <form id="pp_form" name="_xclick" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display:none">
+                      <span class="pure-button button-sm dd_box" onclick="">PayPal</span>
+                      <!-- <form id="pp_form" name="_xclick" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display:none">
                           <input type="hidden" name="cmd" value="_donations">
                           <input type="hidden" name="return" value="https://pixabay.com/en/service/donated/">
                           <input type="hidden" name="currency_code" value="USD">
@@ -350,18 +353,24 @@ footer {
                           <input type="hidden" name="item_name" value="Support Pixabay">
                           <input type="hidden" name="business" value="YZWGTDY6PEANJ">
                           <input type="submit">
-                      </form>
-                      <span class="pure-button button-md" onclick="wopen('https://www.coinbase.com/checkouts/6677abad5a5b3da73dc24a7e52694710', 780, 680);" target="_blank">Bitcoins</span>
+                      </form> -->
+                      <span class="pure-button button-sm dd_box" onclick="wopen('https://www.coinbase.com/checkouts/6677abad5a5b3da73dc24a7e52694710', 780, 680);" target="_blank">Bitcoins</span>
                   </div>
-                  <div style="display: none;">
-                      <form action="." method="post" class="pure-form"><div>
+                  <div id="5th" style="display: none;">
+                      <form action="#" method="post" class="pure-form"><div>
 
-                          <p> <input type="text" name="topyenoh" style="position:absolute;left:-9999px" id="id_topyenoh"></p>
-      <p> <input type="text" name="subject" data-autofocus="" maxlength="80" required="" placeholder="Subject" class="pure-input-1" id="id_subject"><div id="answers" class="hover_links" style="display:none;margin:20px 0;font-size:13px;line-height:25px">
+                          <p> <input type="text"name="topyenoh"  style="position:absolute;left:-9999px" id="id_topyenoh"></p>
+   <input type="text"  name="subject" data-autofocus="" maxlength="80" style="width:100%;" required="" placeholder="Subject" class="pure-input-1" id="id_subject">
+   <div id="answers" class="hover_links" style="display:none;margin:20px 0;font-size:13px;line-height:25px">
                               <h3 style="margin:0 0 7px">Topics that may already answer your question</h3>
                               <ul style="list-style-type:disc;padding-left:17px;line-height:22px"></ul>
-                          </div></p>
-      <p> <textarea name="message" style="height: 100px; overflow: hidden; word-wrap: break-word;" rows="10" maxlength="2000" id="id_message" required="" placeholder="Message" cols="40" class="autosize pure-input-1 autosized"></textarea><input type="hidden" name="timestamp" value="1494308620" id="id_timestamp"><input type="hidden" name="security_hash" value="7fef352c74d269f993f01830f3c0920b6405286c" id="id_security_hash"><input type="hidden" name="name" value="nathannight" id="id_name"><input type="hidden" name="email" value="nathanstamaria.ns@gmail.com" id="id_email"><input type="hidden" name="submitted" value="1" id="id_submitted"></p>
+                          </div>
+      <textarea name="message" style="height: 100px; width:100%; margin:10px 0px; overflow: hidden; word-wrap: break-word;"  maxlength="2000" id="id_message" required="" placeholder="Message" cols="40" class="autosize pure-input-1 autosized"></textarea>
+        <input type="hidden" name="timestamp" value="1494308620" id="id_timestamp">
+        <input type="hidden" name="security_hash" value="" id="id_security_hash">
+        <input type="hidden" name="name" value="nathannight" id="id_name"><input type="hidden" name="email" value="" id="id_email">
+        <input type="hidden" name="submitted" value="1" id="id_submitted">
+
                           <input type="submit" class="pure-button button-green" value="Submit">
                       </div></form>
                   </div>
@@ -454,6 +463,58 @@ footer {
 
     <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+    <script type="text/javascript">
+    $("#hide").hide();
+    $("#buttontohide").click(function(){
+    $("#hide").toggle();
+    });
+    </script>
+    <script type="text/javascript">
+    $('#select_topic').on('change', function() {
+if ( this.value == 'zero')
+{
+document.getElementById('zero').style.display = "block";
+}
+else {
+  document.getElementById('zero').style.display = "none";
+}
+if ( this.value == '1st')
+{
+document.getElementById('1st').style.display = "block";
+}
+else {
+  document.getElementById('1st').style.display = "none";
+}
+if ( this.value == '2nd')
+{
+document.getElementById('2nd').style.display = "block";
+}
+else {
+  document.getElementById('2nd').style.display = "none";
+}
+if ( this.value == '3rd')
+{
+document.getElementById('3rd').style.display = "block";
+}
+else {
+  document.getElementById('3rd').style.display = "none";
+}
+if ( this.value == '4th')
+{
+document.getElementById('4th').style.display = "block";
+}
+else {
+  document.getElementById('4th').style.display = "none";
+}
+if ( this.value == '5th')
+{
+document.getElementById('5th').style.display = "block";
+}
+else {
+  document.getElementById('5th').style.display = "none";
+}
+});
+    </script>
     <script type="text/javascript">
 $(document).ready(function(){
     $("#resetpassword").click(function(){
