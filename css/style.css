@@ -140,6 +140,7 @@ nav .glyphicon-option-horizontal {
 .sub-menu a {
   font-size: 14px;
   padding: 10px 13px;
+  white-space: nowrap;
 }
 
 .separator {

@@ -1711,11 +1711,11 @@ table td p{
 #sidebar_box a:focus, a:hover {
     color: #337ab7;
 }
- .profile_image {
-    position: relative;
-    width: 32px;
-    height: 32px;
-    border-radius: 32px;
+.profile_image {
+   position: relative;
+   width: 21px;
+   height: 21px;
+   border-radius: 32px;
 }
 
 #search_logs a:hover {
