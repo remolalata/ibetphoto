@@ -23,6 +23,25 @@
   padding-top: 30px;
   border-top: 1px dotted #ccc !important;
 }
+@media only screen and (min-width: 320px){
+  #team .profile_image {
+      float: none;
+      margin: 0 0 20px;
+      height: auto;
+  width: auto;
+      text-align: center;
+  }
+}
+@media only screen and (min-width: 768px){
+  #team .profile_image {
+      float: left;
+      margin: 0 45px 0 0;
+      height: auto;
+  width: auto;
+      text-align: center;
+  }
+}
+
 
     </style>
   </head>
@@ -313,64 +332,76 @@
 
 
 
-        <div id="faq" style="margin:40px auto 0;padding:0 20px;max-width:1040px;font-size:14px; margin-bottom: 20px;">
-    <h1>FAQ</h1>
-    <h2>What is Pixabay?</h2>
-    <div>On Pixabay you may find and share images free of copyrights. All pictures are released under <a href="/service/terms/#usage">Creative Commons CC0</a> into the public domain.</div>
-
-    <h2>Can I use your images?</h2>
-    <div>You can copy, modify, distribute, and use the images, even for commercial purposes, all without asking for permission or giving credits to the artist. However, depicted content may still be protected by trademarks, publicity or privacy rights. Read more in our <a href="https://pixabay.com/blog/posts/id-4/">blog</a>.</div>
-
-    <h2>May Pixabay images be used on Facebook and other social platforms?</h2>
-    <div>Yes, you may use Pixabay images on social media platforms. Learn more in our <a href="https://pixabay.com/blog/posts/id-29/">blog</a>.</div>
-
-    <h2>Why do I find Shutterstock images on Pixabay?</h2>
-    <div>Sponsored images are shown to finance Pixabay and to provide a choice of professional photos. Those images are marked with the Shutterstock logo.</div>
-
-    <h2>SafeSearch: How can I avoid inappropriate or explicit images?</h2>
+        <div id="about" style="margin:40px auto 0;padding:0 20px;max-width:1040px;font-size:14px">
+    <h1>About Us</h1>
+    <h2>Company</h2>
     <div>
-        <p>Please make use of our SafeSearch filter, which can help you block inappropriate or explicit images from your search results. The SafeSearch filter isn't 100% accurate, but it helps you avoid most adult content. You may turn SafeSearch on and off through the settings on search results pages.</p>
-        <label><input type="checkbox" class="toggle_g_rated"> Enable SafeSearch</label>
+        <p>
+            Braxmeier &amp; Steinberger GbR (VAT Reg.No.: DE297456622)
+            <br>Hans Braxmeier, Donaustraße 13, 89231 Neu-Ulm, Germany
+            <br>Phone: +49 (0)731 / 800 1660, info@pixabay.com
+        </p>
+        <p>
+            <a href="contact.html">Contact</a>
+            &nbsp;|&nbsp;
+            <a href="Privacy.html">Privacy Policy</a>
+            &nbsp;|&nbsp;
+            <a href="Tos.html">Terms of Service</a>
+        </p>
     </div>
-
-    <h2>NO HOTLINKING - what does that mean?</h2>
-    <div>If you want to show Pixabay images on your website, please upload them to your server. Pixabay image URLs don't work on external sites.</div>
-
-    <h2>Why was my image not accepted?</h2>
-    <div>Your image either does not comply with our <a href="https://pixabay.com/blog/posts/id-22/">quality guidelines</a> or the chosen tags do not sufficiently or correctly describe its content.</div>
-
-    <h2>Can I make a donation without PayPal?</h2>
-    <div>
-        <p style="margin:0 0 15px">Image authors can only receive donations through PayPal. If you would like to support Pixabay, please use any of the following options:</p>
-        <span class="pure-button button-sm dd_box" id="buttontohide">Bank transfer</span>
-
-        <div id="hide" style="
-          ">
-            Pixabay
-            <br>Bank: DAB Bank
-            <br>IBAN: DE88701204008467201003
-            <br>BIC/SWIFT: DABBDEMMXXX
+    <div id="team">
+        <div>
+            <div class="profile_image"><img alt="Hans Braxmeier" class="pure-img" src="https://pixabay.com/static/img/staff/hans_braxmeier.jpg"></div>
+            <div>
+                <p style="font-size:16px;margin:10px 0"><b>Hans Braxmeier, Founder, and CEO</b></p>
+                <p>Hans is the founder and CEO of Pixabay - currently living abroad in Switzerland. He has always been interested in new technologies, studied computer science in Ulm (Germany), and has launched several web projects. Hans likes sports, especially running, mountain-biking, and hiking. He is always on the lookout for new challenges.</p>
+            </div>
         </div>
-        <span class="pure-button button-sm" onclick="$('#pp_form').submit();">PayPal</span>
-        <form id="pp_form" name="_xclick" action="#" method="post" target="_blank" style="display:none">
-            <input type="hidden" name="cmd" value="_donations">
-            <input type="hidden" name="return" value="#">
-            <input type="hidden" name="currency_code" value="USD">
-            <input type="hidden" name="lc" value="US">
-            <input type="hidden" name="item_name" value="Support Pixabay">
-            <input type="hidden" name="business" value="YZWGTDY6PEANJ">
-            <input type="submit">
-        </form>
-        <span class="pure-button button-sm" onclick="wopen('https://www.coinbase.com/checkouts/6677abad5a5b3da73dc24a7e52694710', 780, 680);" target="_blank">Bitcoins</span>
+        <div>
+            <div class="profile_image"><img alt="Simon Steinberger" class="pure-img" src="https://pixabay.com/static/img/staff/hans_braxmeier.jpg"></div>
+            <div>
+                <p style="font-size:16px;margin:10px 0"><b>Simon Steinberger, Co-Founder, and CEO</b></p>
+                <p>Simon is the co-founder and CEO of Pixabay. He studied chemistry in Ulm (Germany) and finished his PhD in 2011. During this time, he started working in the IT sector and developed various websites. Simon enjoys rock climbing, mountain-biking, and other adventures around the globe.</p>
+            </div>
+        </div>
+        <div>
+            <div class="profile_image"><img alt="Olga Foma" class="pure-img" src="https://pixabay.com/static/img/staff/hans_braxmeier.jpg"></div>
+            <div>
+                <p style="font-size:16px;margin:10px 0"><b>Iulia Melnicenco, Marketing and Growth Hacking</b></p>
+                <p>
+                    Iulia lives in Chisinau (Moldova) and she has joined our team recently as an online marketer and growth hacker.
+                    Iulia studied linguistics and has over five years experience in content management and internet marketing.
+                    She enjoys travelling, hiking, and any handicraft work in which she can express her imagination.
+                </p>
+            </div>
+        </div>
+        <div>
+            <div class="profile_image"><img alt="Achim Thiemermann" class="pure-img" src="https://pixabay.com/static/img/staff/hans_braxmeier.jpg"></div>
+            <div>
+                <p style="font-size:16px;margin:10px 0"><b>Achim Thiemermann, Social Media Marketing</b></p>
+                <p>
+                    Achim lives in Austin, Texas (USA) and he is our driving force in social networking.
+                    He has over 10 years of internet marketing experience.
+                    Besides Pixabay, he is currently active as community manager on Pagewizz.com and Wizzley.com, two international micro blogging platforms.
+                </p>
+            </div>
+        </div>
+        <!--
+        <div>
+            <div class="profile_image"><img alt="Olga Foma" class="pure-img" src="/static/img/staff/xy.jpg"></div>
+            <div>
+                <p style="font-size:16px;margin:10px 0"><b>X Y, Image Quality Control</b></p>
+                <p>
+                    X (Country) is the latest member in our team. Unstoppable, she is working through the daily flood of new images, evaluating quality factors, tags, and legality of all uploads.
+                    X did this and that. He/She enjoys this and that.
+                </p>
+            </div>
+        </div>
+        -->
     </div>
 
-    <h2>How do I delete my account?</h2>
-    <div>A link for this purpose is given on the <a href="/accounts/settings/">settings page</a> inside your account.</div>
 
-    <h2>Does Pixabay offer an API?</h2>
-    <div>Yes, we do have an API. Learn all about it in the <a href="/api/docs/">API documentation</a>.</div>
 </div>
-
 
         </div>
 

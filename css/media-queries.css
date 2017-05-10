@@ -310,7 +310,7 @@
   .form .btn-search {
     height: 33px;
     position: relative;
-    top: 0px;
+    top: -1px;
     border-radius: 0 2px 2px 0;
   }
 
