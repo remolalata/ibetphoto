@@ -6,4 +6,8 @@ $(document).ready(function() {
   $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
     $('.flex_grid').flexImages({ rowHeight: 320, maxRows: 29, truncate: true });
   })
+
+  $('#id_qs').click(function() {
+    $(this).closest('form').toggleClass('active');
+  });
 });

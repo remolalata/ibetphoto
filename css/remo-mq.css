@@ -1,5 +1,19 @@
 @media only screen and (min-width: 320px)
 {
+  .blog_posts div{
+    min-height: 300px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .blog-footer{
+    margin-bottom: 30px
+  }
+
+  .dropdown-menu-blog{
+    left: 0px;
+    top: 25px
+  }
 }
 
 @media only screen and (min-width: 360px)
@@ -44,6 +58,19 @@
 
 @media only screen and (min-width: 1024px)
 {
+  .blog_posts div{
+    min-height: 350px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .blog-footer{
+    margin-bottom: auto
+  }
+
+  .dropdown-menu-blog{
+    left: 167px
+  }
 }
 
 @media only screen and (min-width: 1200px)
