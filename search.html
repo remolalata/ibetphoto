@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Document</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="https://use.fontawesome.com/f72bb5f718.js"></script>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jquery.flex-images.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media-queries.css">
+    <link rel="stylesheet" href="css/remo-style.css">
+    <link rel="stylesheet" href="css/remo-mq.css">
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+
+<body>
+    <!--[if lt IE 8]>
+          <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+      <![endif]-->
+    <header class="clearfix">
+        <div class="header-wrapper clearfix">
+            <div class="header-logo-form pull-left">
+                <div class="logo"></div>
+                <div class="dropdown form hidden-xs">
+                    <form class="form-inline">
+                        <button class="btn-all-image" data-toggle="dropdown">All Images <i class="fa fa-caret-down"> </i></button>
+                        <div class="dropdown-menu inner-form">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <p>Media type</p>
+                                </div>
+                                <div class="col-md-9">
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="media-type" checked> All Images
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="media-type"> Photos
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="media-type"> Vector graphics
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="media-type"> Illustrations
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="media-type"> Videos
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <p>Orientation</p>
+                                </div>
+                                <div class="col-md-9">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="orientation" checked> Horizontal
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="orientation"> Vertical
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <p>Category</p>
+                                </div>
+                                <div class="col-md-9">
+                                    <select name="category">
+                                        <option value="">Animals</option>
+                                        <option value="">Education</option>
+                                        <option value="">Emotions</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <p>Larger than</p>
+                                </div>
+                                <div class="col-md-9">
+                                    <input type="text" placeholder="Width"> x
+                                    <input type="text" placeholder="Height"> px
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <p>Color</p>
+                                </div>
+                                <div class="col-md-9">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="color"> Transparent
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="color"> Black and White
+                                        </label>
+                                    </div>
+                                    <div class="colors">
+                                        <span class="color red"></span>
+                                        <span class="color orange"></span>
+                                        <span class="color yellow"></span>
+                                        <span class="color green"></span>
+                                        <span class="color turquoise"></span>
+                                        <span class="color blue"></span>
+                                        <span class="color violet"></span>
+                                        <span class="color pink"></span>
+                                        <span class="color white"></span>
+                                        <span class="color gray"></span>
+                                        <span class="color black"></span>
+                                        <span class="color brown"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3"><a href="#innerFormMore" data-toggle="collapse">more...</a></div>
+                                <div class="col-md-9">
+                                    <div class="collapse" id="innerFormMore">
+                                        <div>You can use AND, OR, NOT and () to refine your search results:</div>
+                                        <div>flower AND (red OR blue) NOT rose</div>
+                                        <br>
+
+                                        <div>Search in user portfolios:</div>
+                                        <div>user:stux flower</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="text" class="main-textbox" placeholder="Search images, vectors and videos">
+                        <button type="button" class="btn-search"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="header-nav  pull-right">
+                <nav class="hidden-sm hidden-xs">
+                    <ul class="main-nav">
+                        <li class="top-menu"><a href="#" class="active">Explore <i class="fa fa-caret-down"> </i></a>
+                            <ul class="sub-menu moz-sub-menu-a">
+                                <li><a href="#">Edito's Choice</a></li>
+                                <li><a href="#">Images</a></li>
+                                <li class="separator"><a href="#">Videos</a></li>
+                                <li><a href="#">Photographers</a></li>
+                                <li><a href="#">Cameras</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Sign up</a></li>
+                        <li><a href="#">Log in</a></li>
+                        <li class="top-menu">
+                            <a href="#">
+                                <div class="icon-menu-dots"></div>
+                            </a>
+                            <ul class="sub-menu moz-sub-menu-b nav1024">
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">Forum</a></li>
+                                <li><a href="#">Blog</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+
+                <nav class="hidden-lg hidden-md">
+                    <ul>
+                        <li class="dropdown"><a href="#" data-toggle="dropdown"><i class="fa fa-user"></i></a>
+                            <ul class="mobile-dropdown-menu dropdown-menu">
+                                <li><a href="#">Sign up</a></li>
+                                <li><a href="#">Log in</a></li>
+                            </ul>
+                        </li>
+                        <li class="hidden-sm"><a href="#inner-form2" data-toggle="collapse"><i class="fa fa-search"></i></a></li>
+                        <li class="dropdown"><a href="#" data-toggle="dropdown" class="ms-nav"><i class="fa fa-bars"></i></a>
+                            <ul class="mobile-dropdown-menu mobile-dropdown-menu2 dropdown-menu dropdown-menu-right">
+                                <li><a href="#">Editor's Choice</a></li>
+                                <li><a href="#">Images</a></li>
+                                <li class="separator"><a href="#">Videos</a></li>
+                                <li><a href="#">Photographers</a></li>
+                                <li class="separator"><a href="#">Cameras</a></li>
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">Forum</a></li>
+                                <li><a href="#">Blog</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="collapse hidden-lg hidden-md hidden-sm inner-form2" id="inner-form2">
+            <form class="form-inline">
+                <button type="button" class="btn-all-image" data-toggle="dropdown">All images <i class="fa fa-caret-down"> </i></button>
+                <div class="dropdown-menu inner-form inner2-form2">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <p>Media type</p>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="media-type" checked> All Images
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="media-type"> Photos
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="media-type"> Vector graphics
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="media-type"> Illustrations
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="media-type"> Videos
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <p>Orientation</p>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="orientation" checked> Horizontal
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="orientation"> Vertical
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <p>Category</p>
+                        </div>
+                        <div class="col-md-9">
+                            <select name="category">
+                                <option value="">Animals</option>
+                                <option value="">Education</option>
+                                <option value="">Emotions</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <p>Larger than</p>
+                        </div>
+                        <div class="col-md-9">
+                            <input type="text" placeholder="Width"> x
+                            <input type="text" placeholder="Height"> px
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <p>Color</p>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="color"> Transparent
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="color"> Black and White
+                                </label>
+                            </div>
+                            <div class="colors">
+                                <span class="color red"></span>
+                                <span class="color orange"></span>
+                                <span class="color yellow"></span>
+                                <span class="color green"></span>
+                                <span class="color turquoise"></span>
+                                <span class="color blue"></span>
+                                <span class="color violet"></span>
+                                <span class="color pink"></span>
+                                <span class="color white"></span>
+                                <span class="color gray"></span>
+                                <span class="color black"></span>
+                                <span class="color brown"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3"><a href="#innerFormMore" data-toggle="collapse">more...</a></div>
+                        <div class="col-md-9">
+                            <div class="collapse" id="innerFormMore">
+                                <div>You can use AND, OR, NOT and () to refine your search results:</div>
+                                <div>flower AND (red OR blue) NOT rose</div>
+                                <br>
+
+                                <div>Search in user portfolios:</div>
+                                <div>user:stux flower</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <input type="text" class="main-textbox" placeholder="Search images, vectors and videos">
+                <button type="button" class="btn-search"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+    </header>
+
+    <!-- content -->
+
+    <div class="wrapper">
+        <div class="">
+            <div id="content" class="clearfix">
+                <div class="media_list">
+                    <div style="border-bottom:1px solid #f0f1f4">
+                        <div class="search-container" style="padding-bottom: 0">
+
+                            <div class="hidden-sm hidden-xs">
+                                <div class="paginator" style="float:right;position:relative;left:2px">
+                                    <a style="position:relative;top:4px;margin-right:15px" href="https://pixabay.com/en/photos/?image_type=&amp;cat=&amp;min_width=&amp;min_height=&amp;q=baby&amp;order=popular#" class="dd_box hover_opacity inverted hide-xs"><i class="icon icon_options"></i></a>
+                                    <div>
+                                        <table style="white-space:nowrap">
+                                            <tbody>
+                                                <tr>
+                                                    <td>Per page</td>
+                                                    <td>
+
+                                                        <a href="https://pixabay.com/en/photos/?q=baby&amp;image_type=&amp;cat=&amp;min_height=&amp;min_width=&amp;order=popular&amp;per_page=50">50</a> &nbsp;
+
+                                                        <b>100</b> &nbsp;
+
+                                                        <a href="https://pixabay.com/en/photos/?q=baby&amp;image_type=&amp;cat=&amp;min_height=&amp;min_width=&amp;order=popular&amp;per_page=150">150</a> &nbsp;
+
+                                                    </td>
+                                                </tr>
+                                                <tr title="Exclude inappropriate or explicit images">
+                                                    <td>SafeSearch</td>
+                                                    <td>
+                                                        <input class="toggle_g_rated" type="checkbox">
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <form action="https://pixabay.com/en/photos/" method="get" class="add_search_params pure-form hide-xs hide-sm hide-md" style="display:inline-block">
+                                        <input name="pagi" type="text" value="1" style="width:20px"> / 72&nbsp;
+                                        <input type="hidden" name="q" value="baby">
+                                        <input type="hidden" name="order" value="popular">
+                                    </form>
+                                    <span class="pure-button pure-button-disabled"><i>‹</i></span>
+
+                                    <a href="https://pixabay.com/en/photos/?q=baby&amp;image_type=&amp;cat=&amp;min_height=&amp;min_width=&amp;order=popular&amp;pagi=2" class="pure-button"><i>›</i></a>
+
+                                </div>
+                            </div>
+
+                            <div class="media_filter">
+                              <div class="dropdown media_filter-dropdown">
+                                <button type="button" class="media_filter-btn media_filter-btn-active" data-toggle="dropdown"><strong>Popular</strong> <i class="arrow"></i></button>
+                                <div class="dropdown-menu media-dropdown-menu">
+                                  <ul>
+                                    <li><a href="#">Latest</a></li>
+                                    <li><a href="#">Popular <i class="check">✓</i></a></li>
+                                    <li><a href="#">Editor's Choice</a></li>
+                                  </ul>
+                                </div>
+                              </div>
+
+                              <div class="dropdown  media_filter-dropdown">
+                                <button type="button" class="media_filter-btn" data-toggle="dropdown">All images <i class="arrow"></i></button>
+                                <div class="dropdown-menu media-dropdown-menu">
+                                  <ul>
+                                    <li><a href="#">All Images</a></li>
+                                    <li><a href="#">Photos</a></li>
+                                    <li><a href="#">Vector Graphics</a></li>
+                                    <li><a href="#">Illustrations</a></li>
+                                    <li><a href="#">Videos</a></li>
+                                  </ul>
+                                </div>
+                              </div>
+
+                              <div class="dropdown  media_filter-dropdown hidden-sm hidden-xs">
+                                <button type="button" class="media_filter-btn" data-toggle="dropdown">Orientation <i class="arrow"></i></button>
+                                <div class="dropdown-menu media-dropdown-menu">
+                                  <ul>
+                                    <li><a href="#">Any Orientation<i class="check">✓</i></a></li>
+                                    <li><a href="#">Horizontal</a></li>
+                                    <li><a href="#">Vertical</a></li>
+                                  </ul>
+                                </div>
+                              </div>
+
+                              <div class="dropdown  media_filter-dropdown hidden-sm hidden-xs">
+                                <button type="button" class="media_filter-btn" data-toggle="dropdown">Category <i class="arrow"></i></button>
+                                <div class="dropdown-menu media-dropdown-menu">
+                                  <li><a href="#">All<i class="check">✓</i></a></li>
+                                  <li><a href="#">Animals</a></li>
+                                  <li><a href="#">Architecture/Buildings</a></li>
+                                  <li><a href="#">Backgrounds/Textures</a></li>
+                                  <li><a href="#">Beauty/Fashion</a></li>
+                                  <li><a href="#">Business/Finance</a></li>
+                                  <li><a href="#">Computer/Communication</a></li>
+                                  <li><a href="#">Education</a></li>
+                                  <li><a href="#">Emotions</a></li>
+                                  <li><a href="#">Food/Drink</a></li>
+                                  <li><a href="#">Health/Medical</a></li>
+                                  <li><a href="#">Industry/Craft</a></li>
+                                  <li><a href="#">Music</a></li>
+                                  <li><a href="#">Nature/Landscapes</a></li>
+                                  <li><a href="#">People</a></li>
+                                  <li><a href="#">Places/Monuments</a></li>
+                                  <li><a href="#">Religion</a></li>
+                                  <li><a href="#">Science/Technology</a></li>
+                                  <li><a href="#">Sports</a></li>
+                                  <li><a href="#">Transportation/Traffic</a></li>
+                                  <li><a href="#">Travel/Vacation</a></li>
+                                </div>
+                              </div>
+
+                              <div class="dropdown  media_filter-dropdown hidden-sm hidden-xs">
+                                <button type="button" class="media_filter-btn" data-toggle="dropdown">Size <i class="arrow"></i></button>
+                                <div class="dropdown-menu media-dropdown-menu media-dropdown-menu-size">
+                                  <div style="font-size: 13px">Larger than</div>
+                                  <form action="" class="form-inline">
+                                    <input type="text" class="media_filter-size" placeholder="Width">&nbsp;x&nbsp;
+                                    <input type="text" class="media_filter-size" placeholder="Height">&nbsp;px&nbsp;
+                                    <button type="button" class="pure-button media_filter-size-btn">Go</button>
+                                  </form>
+                                </div>
+                              </div>
+
+                              <div class="dropdown  media_filter-dropdown hidden-sm hidden-xs">
+                                <button type="button" class="media_filter-btn" data-toggle="dropdown">Color <i class="arrow"></i></button>
+                                <div class="dropdown-menu">
+                                  <a href="#">Latest</a>
+                                  <a href="#">Popular<i class="check">✓</i></a>
+                                  <a href="#">Editor's Choice</a>
+                                </div>
+                              </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div style="background:#feffda">
+                        <div class="search-container">
+                            <div style="font-size:13px;color:#b0b17e;margin:0 7px">Sponsored Images</div>
+                            <div class="flex_grid sponsored" style="margin:2px 0 0; padding: 0 0">
+                                <div class="item" data-w="450" data-h="291">
+                                    <a href="#"><img src="img/search/stock-photo-portrait-of-a-crawling-baby-on-the-bed-in-her-room-189429203.jpg"></a>
+                                </div>
+                                <div class="item" data-w="450" data-h="292">
+                                    <a href="#"><img src="img/search/stock-photo-happy-laughing-baby-wearing-yellow-hooded-duck-towel-sitting-on-parents-bed-after-bath-or-shower-390443464.jpg"></a>
+                                </div>
+                                <div class="item" data-w="450" data-h="291">
+                                    <a href="#"><img src="img/search/stock-photo-sleeping-newborn-baby-on-a-blanket-with-a-teddy-374384548.jpg"></a>
+                                </div>
+                                <div class="item" data-w="450" data-h="290">
+                                    <a href="#"><img src="img/search/stock-photo-smiling-baby-girl-lying-on-a-bed-sleeping-on-blue-sheets-420756877.jpg"></a>
+                                </div>
+                                <div class="item" data-w="450" data-h="291">
+                                    <a href="#"><img src="img/search/stock-photo-beautiful-smiling-cute-baby-115992457.jpg"></a>
+                                </div>
+                                <div class="item" data-w="450" data-h="291">
+                                    <a href="#"><img src="img/search/stock-photo-row-of-multiethnic-babies-sitting-side-by-side-looking-away-isolated-on-gray-background-144900970.jpg"></a>
+                                </div>
+                                <div class="item" data-w="450" data-h="291">
+                                    <a href="#"><img src="img/search/stock-photo-adorable-baby-boy-in-white-sunny-bedroom-newborn-child-relaxing-in-bed-nursery-for-young-children-345101900.jpg"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="background:#f7f8fa">
+                        <div class="search-container">
+                            <h1 class="hidden-xs" style="font-size:13px;color:#bbb;margin:0">7,154 Free Images - Photos, Illustrations, Vector graphics: <b>Baby</b></h1>
+                            <div class="flex_grid search-baby credits" style="margin: 4px 0px 0 0px;">
+                                <div class="item" data-w="640" data-h="425">
+                                    <a href="#"><img src="img/search/baby-784608__340.jpg" alt="Baby, Sleeping Baby, Baby Girl" title="Baby, Sleeping Baby, Baby Girl"></a>
+                                    <div>
+                                        <div class="counts hide-xs hide-sm "><em data-href="/en/photos/like/784608/" class="ajax"><i class="icon icon_like"></i> 248</em><em data-href="/en/accounts/favorite/photo/784608/" class="ajax"><i class="icon icon_favorite"></i> 239</em><em data-location="/en/baby-sleeping-baby-baby-girl-784608/#comments"><i class="icon icon_comment"></i> 44</em></div><a href="https://pixabay.com/users/1041483/">TawnyNina</a></div>
+                                </div>
+                                <div class="item" data-w="640" data-h="426">
+                                    <a href="#"><img src="img/search/baby-784607__340.jpg" alt="Baby, Baby Girl, Sleeping Baby" title="Baby, Baby Girl, Sleeping Baby"></a>
+                                    <div>
+                                        <div class="counts hide-xs hide-sm "><em data-href="/en/photos/like/784607/" class="ajax"><i class="icon icon_like"></i> 123</em><em data-href="/en/accounts/favorite/photo/784607/" class="ajax"><i class="icon icon_favorite"></i> 156</em><em data-location="/en/baby-baby-girl-sleeping-baby-784607/#comments"><i class="icon icon_comment"></i> 23</em></div><a href="https://pixabay.com/users/1041483/">TawnyNina</a></div>
+                                </div>
+                                <div class="item" data-w="640" data-h="425">
+                                    <a href="#"><img src="img/search/baby-784609__340.jpg" alt="Baby, Baby Girl, Sleeping Baby" title="Baby, Baby Girl, Sleeping Baby"></a>
+                                    <div>
+                                        <div class="counts hide-xs hide-sm "><em data-href="/en/photos/like/784609/" class="ajax"><i class="icon icon_like"></i> 177</em><em data-href="/en/accounts/favorite/photo/784609/" class="ajax"><i class="icon icon_favorite"></i> 173</em><em data-location="/en/baby-baby-girl-sleeping-baby-784609/#comments"><i class="icon icon_comment"></i> 47</em></div><a href="https://pixabay.com/users/1041483/">TawnyNina</a></div>
+                                </div>
+                                <div class="item" data-w="533" data-h="640">
+                                    <a href="#"><img src="img/search/baby-772453__340.jpg" alt="Baby, Baby Models, Children" title="Baby, Baby Models, Children"></a>
+                                    <div>
+                                        <div class="counts hide-xs hide-sm "><em data-href="/en/photos/like/772453/" class="ajax"><i class="icon icon_like"></i> 124</em><em data-href="/en/accounts/favorite/photo/772453/" class="ajax"><i class="icon icon_favorite"></i> 105</em><em data-location="/en/baby-baby-models-children-772453/#comments"><i class="icon icon_comment"></i> 22</em></div><a href="https://pixabay.com/users/1035352/">kangheungbo</a></div>
+                                </div>
+                                <div class="item" data-w="640" data-h="512">
+                                    <a href="#"><img src="img/search/baby-499976__340.jpg" alt="Baby, Child, Newborn, Arms" title="Baby, Child, Newborn, Arms"></a>
+                                    <div>
+                                        <div class="counts hide-xs hide-sm "><em data-href="/en/photos/like/499976/" class="ajax"><i class="icon icon_like"></i> 151</em><em data-href="/en/accounts/favorite/photo/499976/" class="ajax"><i class="icon icon_favorite"></i> 163</em><em data-location="/en/baby-child-newborn-arms-499976/#comments"><i class="icon icon_comment"></i> 38</em></div><a href="https://pixabay.com/users/526860/">jakobking85</a></div>
+                                </div>
+                                <div class="item" data-w="426" data-h="640">
+                                    <a href="#"><img src="img/search/baby-200760__340.jpg" alt="Baby, Hand, Dad" title="Baby, Hand, Dad"></a>
+                                    <div>
+                                        <div class="counts hide-xs hide-sm "><em data-href="/en/photos/like/200760/" class="ajax"><i class="icon icon_like"></i> 282</em><em data-href="/en/accounts/favorite/photo/200760/" class="ajax"><i class="icon icon_favorite"></i> 255</em><em data-location="/en/baby-hand-dad-200760/#comments"><i class="icon icon_comment"></i> 59</em></div><a href="https://pixabay.com/users/75847/">jelly</a></div>
+                                </div>
+                                <div class="item" data-w="640" data-h="426">
+                                    <a href="#"><img src="img/search/paternity-633453__340.jpg" alt="Paternity, Baby, Child Care" title="Paternity, Baby, Child Care"></a>
+                                    <div>
+                                        <div class="counts hide-xs hide-sm "><em data-href="/en/photos/like/633453/" class="ajax"><i class="icon icon_like"></i> 80</em><em data-href="/en/accounts/favorite/photo/633453/" class="ajax"><i class="icon icon_favorite"></i> 72</em><em data-location="/en/paternity-baby-child-care-633453/#comments"><i class="icon icon_comment"></i> 17</em></div><a href="https://pixabay.com/users/769886/">tel13588006626</a></div>
+                                </div>
+                                <div class="item" data-w="640" data-h="425">
+                                    <a href="#"><img src="img/search/baby-1178539__340.jpg" alt="Baby, Foot, Blanket, Newborn, Child" title="Baby, Foot, Blanket, Newborn, Child"></a>
+                                    <div>
+                                        <div class="counts hide-xs hide-sm "><em data-href="/en/photos/like/1178539/" class="ajax"><i class="icon icon_like"></i> 89</em><em data-href="/en/accounts/favorite/photo/1178539/" class="ajax"><i class="icon icon_favorite"></i> 106</em><em data-location="/en/baby-foot-blanket-newborn-child-1178539/#comments"><i class="icon icon_comment"></i> 19</em></div><a href="https://pixabay.com/users/1946455/">christianabella</a></div>
+                                </div>
+                                <div class="item" data-w="640" data-h="426">
+                                    <a href="#"><img src="img/search/baby-571136__340.jpg" alt="Baby, Cute, Child, Lying, Adorable" title="Baby, Cute, Child, Lying, Adorable"></a>
+                                    <div>
+                                        <div class="counts hide-xs hide-sm "><em data-href="/en/photos/like/571137/" class="ajax"><i class="icon icon_like"></i> 55</em><em data-href="/en/accounts/favorite/photo/571137/" class="ajax"><i class="icon icon_favorite"></i> 50</em><em data-location="/en/baby-cute-child-lying-adorable-571137/#comments"><i class="icon icon_comment"></i> 9</em></div><a href="https://pixabay.com/users/653444/">dinhnguyenungdung0</a></div>
+                                </div>
+                                <div class="item" data-w="640" data-h="426">
+                                    <a href="#"><img src="img/search/gorilla-622056__340.jpg" alt="Gorilla, Baby, Hand, Close, Ape, Animals" title="Gorilla, Baby, Hand, Close, Ape"></a>
+                                    <div>
+                                        <div class="counts hide-xs hide-sm "><em data-href="/en/photos/like/622056/" class="ajax"><i class="icon icon_like"></i> 49</em><em data-href="/en/accounts/favorite/photo/622056/" class="ajax"><i class="icon icon_favorite"></i> 49</em><em data-location="/en/gorilla-baby-hand-close-ape-622056/#comments"><i class="icon icon_comment"></i> 8</em></div><a href="https://pixabay.com/users/741862/">foto-horst</a></div>
+                                </div>
+                                <div class="item" data-w="640" data-h="360">
+                                    <a href="#"><img src="img/search/baby-203048__340.jpg" alt="Baby, Sweet, Happy, Human, Papa, Hands" title="Baby, Sweet, Happy, Human, Papa"></a>
+                                    <div>
+                                        <div class="counts hide-xs hide-sm "><em data-href="/en/photos/like/203048/" class="ajax"><i class="icon icon_like"></i> 165</em><em data-href="/en/accounts/favorite/photo/203048/" class="ajax"><i class="icon icon_favorite"></i> 192</em><em data-location="/en/baby-sweet-happy-human-papa-hands-203048/#comments"><i class="icon icon_comment"></i> 38</em></div><a href="https://pixabay.com/users/47038/">HolgersFotografie</a></div>
+                                </div>
+                                <div class="item" data-w="640" data-h="426">
+                                    <a href="#"><img src="img/search/baby-256857__340.jpg" alt="Baby, Ten, Small, Newborn, Feet, Child" title="Baby, Ten, Small, Newborn, Feet"></a>
+                                    <div>
+                                        <div class="counts hide-xs hide-sm "><em data-href="/en/photos/like/256857/" class="ajax"><i class="icon icon_like"></i> 178</em><em data-href="/en/accounts/favorite/photo/256857/" class="ajax"><i class="icon icon_favorite"></i> 208</em><em data-location="/en/baby-ten-small-newborn-feet-child-256857/#comments"><i class="icon icon_comment"></i> 49</em></div><a href="https://pixabay.com/users/147114/">Rainer_Maiores</a></div>
+                                </div>
+                                <div class="item" data-w="640" data-h="426">
+                                    <a href="#"><img src="img/search/feet-619534__340.jpg" alt="Feet, Ten, Barefoot, Newborn, Baby" title="Feet, Ten, Barefoot, Newborn, Baby"></a>
+                                    <div>
+                                        <div class="counts hide-xs hide-sm "><em data-href="/en/photos/like/619534/" class="ajax"><i class="icon icon_like"></i> 48</em><em data-href="/en/accounts/favorite/photo/619534/" class="ajax"><i class="icon icon_favorite"></i> 66</em><em data-location="/en/feet-ten-barefoot-newborn-baby-619534/#comments"><i class="icon icon_comment"></i> 8</em></div><a href="https://pixabay.com/users/694250/">FeeLoona</a></div>
+                                </div>
+                                <div class="item" data-w="533" data-h="640">
+                                    <a href="#"><img src="img/search/baby-772439__340.jpg" alt="Baby, Twins, Brother And Sister" title="Baby, Twins, Brother And Sister"></a>
+                                    <div>
+                                        <div class="counts hide-xs hide-sm "><em data-href="/en/photos/like/772439/" class="ajax"><i class="icon icon_like"></i> 115</em><em data-href="/en/accounts/favorite/photo/772439/" class="ajax"><i class="icon icon_favorite"></i> 122</em><em data-location="/en/baby-twins-brother-and-sister-772439/#comments"><i class="icon icon_comment"></i> 28</em></div><a href="https://pixabay.com/users/1035352/">kangheungbo</a></div>
+                                </div>
+                                <div class="item" data-w="426" data-h="640">
+                                    <a href="#"><img src="img/search/baby-179378__340.jpg" alt="Baby, Boy, Little Boy, Sweet, Portrait" title="Baby, Boy, Little Boy, Sweet"></a>
+                                    <div>
+                                        <div class="counts hide-xs hide-sm "><em data-href="/en/photos/like/179378/" class="ajax"><i class="icon icon_like"></i> 91</em><em data-href="/en/accounts/favorite/photo/179378/" class="ajax"><i class="icon icon_favorite"></i> 88</em><em data-location="/en/baby-boy-little-boy-sweet-portrait-179378/#comments"><i class="icon icon_comment"></i> 8</em></div><a href="https://pixabay.com/users/52073/">amyelizabethquinn</a></div>
+                                </div>
+                                <div class="item" data-w="640" data-h="451">
+                                    <a href="#"><img src="img/search/baby-933097__340.jpg" alt="Baby, Child, Toddler, Looking, Girl" title="Baby, Child, Toddler, Looking, Girl"></a>
+                                    <div>
+                                        <div class="counts hide-xs hide-sm "><em data-href="/en/photos/like/933097/" class="ajax"><i class="icon icon_like"></i> 102</em><em data-href="/en/accounts/favorite/photo/933097/" class="ajax"><i class="icon icon_favorite"></i> 126</em><em data-location="/en/baby-child-toddler-looking-girl-933097/#comments"><i class="icon icon_comment"></i> 16</em></div><a href="https://pixabay.com/users/1386459/">tookapic</a></div>
+                                </div>
+                                <div class="item" data-w="533" data-h="640">
+                                    <a href="#"><img src="img/search/baby-772441__340.jpg" alt="Baby, Twins, 100 Days Photo" title="Baby, Twins, 100 Days Photo"></a>
+                                    <div>
+                                        <div class="counts hide-xs hide-sm "><em data-href="/en/photos/like/772441/" class="ajax"><i class="icon icon_like"></i> 116</em><em data-href="/en/accounts/favorite/photo/772441/" class="ajax"><i class="icon icon_favorite"></i> 98</em><em data-location="/en/baby-twins-100-days-photo-772441/#comments"><i class="icon icon_comment"></i> 20</em></div><a href="https://pixabay.com/users/1035352/">kangheungbo</a></div>
+                                </div>
+                                <div class="item" data-w="640" data-h="426">
+                                    <a href="#"><img src="img/search/dog-1718242__340.jpg" alt="Dog, Baby, Animal, Small, Canine, Love" title="Dog, Baby, Animal, Small, Canine"></a>
+                                    <div>
+                                        <div class="counts hide-xs hide-sm "><em data-href="/en/photos/like/1718242/" class="ajax"><i class="icon icon_like"></i> 146</em><em data-href="/en/accounts/favorite/photo/1718242/" class="ajax"><i class="icon icon_favorite"></i> 100</em><em data-location="/en/dog-baby-animal-small-canine-love-1718242/#comments"><i class="icon icon_comment"></i> 20</em></div><a href="https://pixabay.com/users/3194556/">karenwarfel</a></div>
+                                </div>
+                                <div class="item" data-w="640" data-h="633">
+                                    <a href="#"><img src="img/search/penguin-48559__340.png" alt="Penguin, Linux, Small, Baby, Bird" title="Penguin, Linux, Small, Baby, Bird"></a>
+                                    <div>
+                                        <div class="counts hide-xs hide-sm "><em data-href="/en/photos/like/48559/" class="ajax"><i class="icon icon_like"></i> 22</em><em data-href="/en/accounts/favorite/photo/48559/" class="ajax"><i class="icon icon_favorite"></i> 26</em><em data-location="/en/penguin-linux-small-baby-bird-48559/#comments"><i class="icon icon_comment"></i> 7</em></div><a href="https://pixabay.com/users/3736/">Clker-Free-Vector-Images</a></div>
+                                </div>
+                                <div class="item" data-w="640" data-h="476">
+                                    <a href="#"><img src="img/search/baby-623417__340.jpg" alt="Baby, Teddy, Bear, Cute, Child, Small" title="Baby, Teddy, Bear, Cute, Child"></a>
+                                    <div>
+                                        <div class="counts hide-xs hide-sm "><em data-href="/en/photos/like/623417/" class="ajax"><i class="icon icon_like"></i> 217</em><em data-href="/en/accounts/favorite/photo/623417/" class="ajax"><i class="icon icon_favorite"></i> 266</em><em data-location="/en/baby-teddy-bear-cute-child-small-623417/#comments"><i class="icon icon_comment"></i> 47</em></div><a href="https://pixabay.com/users/209609/">cherylholt</a></div>
+                                </div>
+                                <div class="item" data-w="428" data-h="640">
+                                    <a href="#"><img src="img/search/girl-757441__340.jpg" alt="Girl, Sitting, Flower, Red, Baby" title="Girl, Sitting, Flower, Red, Baby"></a>
+                                    <div>
+                                        <div class="counts hide-xs hide-sm "><em data-href="/en/photos/like/757441/" class="ajax"><i class="icon icon_like"></i> 47</em><em data-href="/en/accounts/favorite/photo/757441/" class="ajax"><i class="icon icon_favorite"></i> 40</em><em data-location="/en/girl-sitting-flower-red-baby-757441/#comments"><i class="icon icon_comment"></i> 3</em></div><a href="https://pixabay.com/users/2323/">Greyerbaby</a></div>
+                                </div>
+                                <div class="item" data-w="640" data-h="426">
+                                    <a href="#"><img src="img/search/baby-571136__340.jpg" alt="Baby, Cute, Child, Lying, Adorable" title="Baby, Cute, Child, Lying, Adorable"></a>
+                                    <div>
+                                        <div class="counts hide-xs hide-sm "><em data-href="/en/photos/like/571136/" class="ajax"><i class="icon icon_like"></i> 20</em><em data-href="/en/accounts/favorite/photo/571136/" class="ajax"><i class="icon icon_favorite"></i> 25</em><em data-location="/en/baby-cute-child-lying-adorable-571136/#comments"><i class="icon icon_comment"></i> 6</em></div><a href="https://pixabay.com/users/653444/">dinhnguyenungdung0</a></div>
+                                </div>
+                                <div class="item" data-w="426" data-h="640">
+                                    <a href="#"><img src="img/search/baby-560890__340.jpg" alt="Baby, Foot, Hand, Dad, Chiu" title="Baby, Foot, Hand, Dad, Chiu"></a>
+                                    <div>
+                                        <div class="counts hide-xs hide-sm "><em data-href="/en/photos/like/560890/" class="ajax"><i class="icon icon_like"></i> 61</em><em data-href="/en/accounts/favorite/photo/560890/" class="ajax"><i class="icon icon_favorite"></i> 61</em><em data-location="/en/baby-foot-hand-dad-chiu-560890/#comments"><i class="icon icon_comment"></i> 9</em></div><a href="https://pixabay.com/users/634387/">qazyamyam0</a></div>
+                                </div>
+                                <div class="item" data-w="640" data-h="426">
+                                    <a href="#"><img src="img/search/baby-752188__340.jpg" alt="Baby, Girl, Ballerina, Feathers" title="Baby, Girl, Ballerina, Feathers"></a>
+                                    <div>
+                                        <div class="counts hide-xs hide-sm "><em data-href="/en/photos/like/752188/" class="ajax"><i class="icon icon_like"></i> 92</em><em data-href="/en/accounts/favorite/photo/752188/" class="ajax"><i class="icon icon_favorite"></i> 95</em><em data-location="/en/baby-girl-ballerina-feathers-752188/#comments"><i class="icon icon_comment"></i> 14</em></div><a href="https://pixabay.com/users/961641/">Profile</a></div>
+                                </div>
+                                <div class="item" data-w="640" data-h="426">
+                                    <a href="#"><img src="img/search/baby-390555__340.jpg" alt="Baby, Boy, Smiling, Kid, Infant, Happy" title="Baby, Boy, Smiling, Kid, Infant"></a>
+                                    <div>
+                                        <div class="counts hide-xs hide-sm "><em data-href="/en/photos/like/390555/" class="ajax"><i class="icon icon_like"></i> 218</em><em data-href="/en/accounts/favorite/photo/390555/" class="ajax"><i class="icon icon_favorite"></i> 208</em><em data-location="/en/baby-boy-smiling-kid-infant-happy-390555/#comments"><i class="icon icon_comment"></i> 82</em></div><a href="https://pixabay.com/users/2323/">Greyerbaby</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a style="display:block;margin:50px auto;max-width:240px" class="pure-button" href="#">
+                    Next page <i class="single_quot">›</i></a>
+                    <div style="border-top:1px solid #f0f1f4" class="clearfix">
+                        <div class="search-container">
+                            <span id="paginator_clone" style="z-index:999;position:relative;top:-10px"><div class="paginator" style="float:right;position:relative;left:2px">
+                            <a style="position:relative;top:4px;margin-right:15px" href="#" class="dd_box hover_opacity inverted hide-xs"><i class="icon icon_options"></i></a>
+                            <div>
+                                <table style="white-space:nowrap">
+                                    <tbody><tr>
+                                        <td>Per page</td>
+                                        <td>
+
+                                                <a href="#">50</a>
+                                                &nbsp;
+
+                                                <b>100</b>
+                                                &nbsp;
+
+                                                <a href="#">150</a>
+                                                &nbsp;
+
+                                        </td>
+                                    </tr>
+                                    <tr title="Exclude inappropriate or explicit images"><td>SafeSearch</td><td><input class="toggle_g_rated" type="checkbox"></td></tr>
+                                </tbody></table>
+                            </div>
+                            <form action="" method="get" class="add_search_params pure-form hide-xs hide-sm hide-md" style="display:inline-block">
+                                <div style="display: inline-block" class="hidden-sm hidden-xs"><input name="pagi" type="text" value="1" style="width:20px">
+                                / 72&nbsp;</div>
+                            <input type="hidden" name="q" value="baby"><input type="hidden" name="order" value="popular"></form>
+                            <span class="pure-button pure-button-disabled"><i>‹</i></span>
+
+                            <a href="#" class="pure-button"><i>›</i></a>
+
+                        </div>
+                        </span>
+                        <div style="position:relative;top:8px;left:2px;font-size:14px" class="hidden-sm hidden-xs">7,154 Free Images - Photos, Illustrations, Vector graphics: <b>Baby</b></div>
+                        <div>
+                        </div>
+                        <div id="push"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- conten end -->
+
+        <!-- back to top -->
+        <div class="back">
+            <a href="#" id="back-to-top" class="back-to-top" title="Back to top">▲</a>
+        </div>
+        <!-- end of back to top -->
+        <footer>
+            <div class="footer-wrapper clearfix">
+                <div class="footer-nav pull-left">
+                    <ul>
+                        <li>&copy; 2017 Pixabay</li>
+                        <li class="dropdown hidden-sm hidden-xs dropup"><a href="#" data-toggle="dropdown">Free Downloads <i class="fa fa-caret-down"> </i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Free Images</a></li>
+                                <li><a href="#">Free photos</a></li>
+                                <li><a href="#">Free vector graphics</a></li>
+                                <li><a href="#">Free illustration</a></li>
+                                <li><a href="">Free Videos</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown dropup"><a href="#" data-toggle="dropdown">Language <i class="fa fa-caret-down"> </i></a>
+                            <ul class="dropdown-menu dropdown-menu-language">
+                                <li><a href="#">Čeština</a></li>
+                                <li><a href="#">Deutsch</a></li>
+                                <li><a href="#">Español</a></li>
+                                <li><a href="#">Indonesia</a></li>
+                                <li><a href="#">Magyar</a></li>
+                                <li><a href="#">Norsk</a></li>
+                                <li><a href="#">Português</a></li>
+                                <li><a href="#">Slovenčina</a></li>
+                                <li><a href="#">Svenska</a></li>
+                                <li><a href="#">Việt</a></li>
+                                <li><a href="#">Български</a></li>
+                                <li><a href="#">Ελληνική</a></li>
+                                <li><a href="#">한국어</a></li>
+                                <li><a href="#">Dansk</a></li>
+                                <li><a href="#">English</a></li>
+                                <li><a href="#">Français</a></li>
+                                <li><a href="#">Italiano</a></li>
+                                <li><a href="#">Nederlands</a></li>
+                                <li><a href="#">Polski</a></li>
+                                <li><a href="#">Română</a></li>
+                                <li><a href="#">Suomi</a></li>
+                                <li><a href="#">Türkçe</a></li>
+                                <li><a href="#">ไทย</a></li>
+                                <li><a href="#">Русский</a></li>
+                                <li><a href="#">日本語</a></li>
+                                <li><a href="#">简体中文</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown dropup"><a href="#" data-toggle="dropdown">Service <i class="fa fa-caret-down"> </i></a>
+                            <ul class="dropdown-menu dropdown-menu-service">
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Forum</a></li>
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Privacy Policys</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">API</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Terms</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social pull-right hidden-xs">
+                    <ul>
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script>
+            window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')
+        </script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+        <script src="js/jquery.flex-images.min.js"></script>
+        <script src="js/main.js"></script>
+        <script>
+            // back to top script
+            if ($('#back-to-top').length) {
+                var scrollTrigger = 100, // px
+                    backToTop = function() {
+                        var scrollTop = $(window).scrollTop();
+                        if (scrollTop > scrollTrigger) {
+                            $('#back-to-top').addClass('show');
+                        } else {
+                            $('#back-to-top').removeClass('show');
+                        }
+                    };
+                backToTop();
+                $(window).on('scroll', function() {
+                    backToTop();
+                });
+                $('#back-to-top').on('click', function(e) {
+                    e.preventDefault();
+                    $('html,body').animate({
+                        scrollTop: 0
+                    }, 700);
+                });
+            }
+        </script>
+</body>
+
+</html>
