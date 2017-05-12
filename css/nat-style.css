@@ -156,7 +156,10 @@ p {
     box-sizing: content-box;
     overflow: hidden;
 }
-
+.flex_grid.credits .item div a:hover {
+    background: rgba(255, 255, 255, .2);
+      text-decoration: none
+}
 .button-green {
     background-color: #57b057;
     color: #fff;

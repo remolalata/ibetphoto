@@ -16,6 +16,8 @@
       <link rel="stylesheet" href="css/css.css">
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     <style media="screen">
+
+
     h2 {
   font-size: 16px;
   font-weight: bold;
@@ -34,27 +36,19 @@
   }
   input[type="text"] {
       width: 100%;
-      max-width: 400px;
+
   }
   textarea, input[type="url"], input[type="email"] {
     width: 100%;
-    max-width: 400px;
+
 }
-  nav li:first-child {
-      margin-right: 0px;
-    }
+
 
 .main-content{
     min-height: 0px;
 }
 
-nav li {
-    list-style: none;
-    display: inline-block;
-    vertical-align: middle;
-    margin-left: -4px;
-    padding: 10px 0;
-}
+
 .mobile-dropdown-menu{
   min-width: auto;
   left: -4px;
@@ -81,11 +75,6 @@ nav li {
 }
 }
 @media only screen and (min-width: 1024px){
-  .sub-menu li {
-      display: block;
-      margin-left: 0;
-      padding: 8px 0px;
-  }
 
 
 }
@@ -104,15 +93,12 @@ nav li {
     border-left: 1px solid #eee !important;
     box-shadow: 1px 2px 3px rgba(0,0,0,.3) !important;
   }
-  .sub-menu li{
-    display: block;
-    margin-left: 0;
-    padding: 8px 6px;
-  }
-  .sub-menu a {
-    padding: 10px 12px;
-    font-size: 14px;
+
 }
+
+.pull-right {
+    float: right!important;
+    height: 52px !important;
 }
 
     </style>
@@ -240,14 +226,14 @@ nav li {
           <div class="header-nav  pull-right">
             <nav class="hidden-sm hidden-xs">
               <ul>
-                <li class="top-menu"><a href="#">Explore <i class="fa fa-caret-down"> </i></a>
-                  <ul class="sub-menu">
-                    <li><a href="#">Editor's Choice</a></li>
-                    <li><a href="#">Images</a></li>
-                    <li class="separator"><a href="#">Videos</a></li>
-                    <li><a href="#">Photographers</a></li>
-                    <li><a href="#">Cameras</a></li>
-                  </ul>
+                <li class="top-menu"><a href="#" class="active">Explore <i class="fa fa-caret-down"> </i></a>
+                    <ul class="sub-menu moz-sub-menu-a">
+                        <li><a href="#">Editor's Choice</a></li>
+                        <li><a href="#">Images</a></li>
+                        <li class="separator"><a href="#">Videos</a></li>
+                        <li><a href="#">Photographers</a></li>
+                        <li><a href="#">Cameras</a></li>
+                    </ul>
                 </li>
                 <li class="top-menu">
                   <a href="#" class="hidden-lg">
@@ -256,7 +242,7 @@ nav li {
                 <a href="profile.html" class="hidden-md hidden-sm">
                 <img class="profile_image" src="img/profile_image_dummy.svg" alt="">
               </a>
-                  <ul class="sub-menu">
+                <ul class="sub-menu moz-sub-menu-a">
                     <li><a href="myimages.html">My Images</a></li>
                     <li><a href="upload.html">Upload</a></li>
                     <li><a href="favorites.html">Favorites</a></li>
@@ -269,7 +255,7 @@ nav li {
                   </ul>
                 </li>
                 <li class="top-menu"><a href="#"><div class="icon-menu-dots"></div></a>
-                  <ul class="sub-menu">
+                  <ul class="sub-menu moz-sub-menu-b nav1024">
                     <li><a href="#">FAQ</a></li>
                     <li><a href="#">Forum</a></li>
                     <li><a href="#">Blog</a></li>

@@ -1711,11 +1711,11 @@ table td p{
 #sidebar_box a:focus, a:hover {
     color: #337ab7;
 }
- .profile_image {
-    position: relative;
-    width: 32px;
-    height: 32px;
-    border-radius: 32px;
+.profile_image {
+   position: relative;
+   width: 21px;
+   height: 21px;
+   border-radius: 32px;
 }
 
 #search_logs a:hover {
@@ -1921,4 +1921,32 @@ form ul {
 }
 #team > div div {
     overflow: hidden;
+}
+.vote_buttons a {
+    display: inline-block;
+    margin-left: 5px;
+    vertical-align: middle;
+    padding: 0;
+    width: 33px;
+    height: 33px;
+    text-align: center;
+    border-radius: 30px;
+    background: #f7f7f7;
+    border: 1px solid #999;
+}
+.tags {
+    margin: 20px 0 0 -12px;
+    max-width: 640px;
+}
+
+.tags a {
+    display: inline-block;
+    padding: 2px 10px;
+    margin: 0 0 8px 12px;
+    font-size: 13px;
+    color: #777;
+    border: 1px solid #cecece;
+    border-radius: 20px;
+    text-transform: lowercase;
+    transition: .2s;
 }

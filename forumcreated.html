@@ -15,14 +15,10 @@
     <link rel="stylesheet" href="css/nat-mq.css">
       <link rel="stylesheet" href="css/css.css">
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-<style media="screen">
-@media only screen and (min-width: 768px)
-{
-footer {
-      position: absolute !important;
-}
-}
-</style>
+    <style media="screen">
+  
+
+    </style>
   </head>
   <body>
       <!--[if lt IE 8]>
@@ -147,17 +143,34 @@ footer {
           <div class="header-nav  pull-right">
             <nav class="hidden-sm hidden-xs">
               <ul>
-                <li class="top-menu"><a href="#" class="active">Explore <i class="fa fa-caret-down"> </i></a>
+                <li class="top-menu"><a href="#">Explore <i class="fa fa-caret-down"> </i></a>
                   <ul class="sub-menu">
-                    <li><a href="#">Edito's Choice</a></li>
+                    <li><a href="#">Editor's Choice</a></li>
                     <li><a href="#">Images</a></li>
                     <li class="separator"><a href="#">Videos</a></li>
                     <li><a href="#">Photographers</a></li>
                     <li><a href="#">Cameras</a></li>
                   </ul>
                 </li>
-                <li><a href="signup.html">Sign up</a></li>
-                <li><a href="login.html">Log in</a></li>
+                <li class="top-menu">
+                  <a href="#" class="hidden-lg">
+                  <img class="profile_image" src="img/profile_image_dummy.svg" alt="">
+                </a>
+                <a href="profile.html" class="hidden-md hidden-sm">
+                <img class="profile_image" src="img/profile_image_dummy.svg" alt="">
+              </a>
+                  <ul class="sub-menu">
+                    <li><a href="myimages.html">My Images</a></li>
+                    <li><a href="upload.html">Upload</a></li>
+                    <li><a href="favorites.html">Favorites</a></li>
+                    <li><a href="following.html">Following</a></li>
+                    <li><a href="message.html">Messages</a></li>
+                <li class="separator"><a href="settings.html">Settings</a></li>
+                <li class="separator hidden-md hidden-sm" ><a href="quality.html">Quality Rating</a></li>
+                      <li class="separator hidden-lg"><a href="profile.html">My Profile</a></li>
+                            <li><a href="logout.html">Logout</a></li>
+                  </ul>
+                </li>
                 <li class="top-menu"><a href="#"><div class="icon-menu-dots"></div></a>
                   <ul class="sub-menu moz-sub-menu-b nav1024">
                     <li><a href="#">FAQ</a></li>
@@ -170,11 +183,18 @@ footer {
 
             <nav class="hidden-lg hidden-md">
               <ul>
-                <li><a href="#" data-toggle="dropdown"><i class="fa fa-user"></i></a>
-                  <ul class="mobile-dropdown-menu dropdown-menu">
-                    <li><a href="signup.html">Sign up</a></li>
-                    <li><a href="login.html">Log in</a></li>
+                <li><a href="#" data-toggle="dropdown">      <img class="profile_image" src="img/profile_image_dummy.svg" alt=""></a>
+                <ul class="mobile-dropdown-menu dropdown-menu">
+                  <li><a href="myimages.html">My Images</a></li>
+                  <li><a href="upload.html">Upload</a></li>
+                  <li><a href="favorites.html">Favorites</a></li>
+                  <li><a href="following.html">Following</a></li>
+                  <li><a href="message.html">Messages</a></li>
+              <li ><a href="settings.html">Settings</a></li>
+              <li class="separator"><a href="profile.html">My Profile</a></li>
+                          <li><a href="logout.html">Logout</a></li>
                   </ul>
+
                 </li>
                 <li class="hidden-sm"><a href="#inner-form2" data-toggle="collapse"><i class="fa fa-search"></i></a></li>
                 <li><a href="#" data-toggle="dropdown"><i class="fa fa-bars"></i></a>
@@ -307,79 +327,30 @@ footer {
       </header>
 
       <!-- content -->
-      <div class="container">
-        <div class="row main-content">
-    <div class="">
-      <div id="sign_in_out" style="padding:10px">
-    <div class="window" style="padding:0;margin:5% auto 0">
-        <div style="padding:20px 25px">
-            <h1>Log in</h1>
+      <div class="wrapper">
 
+        <div class="main-content">
 
-            <div class="pure-g">
-                <div class="social_auth pure-u-1 pure-u-md-5-12">
-                    <div style="margin-right:25px" class="no-margin-right-md">
-                        <a href="https://www.facebook.com/dialog/oauth?client_id=114593902037957&amp;redirect_uri=https%3A%2F%2Fpixabay.com%2Faccounts%2Fauth%2Ffacebook%2F&amp;scope=email" class="pure-button" style="background-color:#3b5998"><em><i class="icon icon_facebook_fff"></i></em> Facebook</a>
-                        <a href="https://accounts.google.com/o/oauth2/auth?redirect_uri=https%3A%2F%2Fpixabay.com%2Faccounts%2Fauth%2Fgoogle%2F&amp;response_type=code&amp;client_id=575185734362.apps.googleusercontent.com&amp;scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email" class="pure-button" style="background-color:#d73d32"><em><i class="icon icon_google_plus_fff"></i></em> Google</a>
-                        <a href="https://login.live.com/oauth20_authorize.srf?client_id=00000000480E5F42&amp;scope=wl.emails&amp;response_type=code&amp;redirect_uri=http%3A%2F%2Fpixabay.com%2Faccounts%2Fauth%2Fmicrosoft%2F" class="pure-button" style="background-color:#00adef"><em><i class="icon icon_microsoft_fff"></i></em> Microsoft</a>
-                    </div>
-                </div>
-                <div class="pure-u-1 pure-u-md-7-12">
-                    <form spellcheck="false" class="right_side pure-form" action="." method="post">
-                        <p> <input type="text" name="username" data-autofocus="" required="" placeholder="Username or email" id="id_username" maxlength="100"></p>
-<p> <input type="password" name="password" required="" placeholder="Password" id="id_password"></p>
-                        <input type="hidden" name="next" value="">
-                        <div><input style="text-align:center" class="pure-button button-green" type="submit" value="Log in"></div>
-                    </form>
-                </div>
-            </div>
-        </div>
-        <div style="margin:1px;padding:20px 25px;background:#f7f7f7;font-size:13px;line-height:1.7">
-            <div class="pure-g">
-                <div class="pure-u-1 pure-u-md-5-12">
-                    <div style="margin-right:25px" class="no-margin-right-md">
-                        Join Pixabay<br><a href="signup.html">Sign up</a>
-                    </div>
-                </div>
-                <div class="pure-u-1 pure-u-md-7-12">
-                    <div class="right_side" style="border-color:transparent !important;padding-top:0 !important;margin:0 !important">
-                        <a href="#" id="resetpassword" data-toggle="modal" data-target="#exampleModal" data-w="600">Reset your password</a>
-                    </div>
-
-
-                          <!-- Modal -->
-            <div class="modal fade" id="myModal" tSign upabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" style="float:left" id="exampleModalLabel">Reset Password</h5>
-                    <button type="button"  class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <form class="" action="#" method="post">
-                            <input type="text"  class="form-control" name="" placeholder="Email Address" value="">
-                            <button type="button" class="btn btn-success" name="button" style="margin-top:10px;">Submit</button>
-                    </form>
-
+              <div id="account_tabs" class="tab_menu hide-xs hide-sm hide-md" style="margin:30px auto;border-top:0">
+                  <div style="max-width:1440px;margin:auto;padding:0 5px;text-align:left">
+                      <a style="float:right" href="#">My profile</a>
+                      <a href="myimages.html" >My images</a>
+                      <a href="upload.html">Upload</a>
+                      <a href="favorites.html" >Favorites</a>
+                      <a class="selected hide-lg" href="following.html" >Following</a>
+                      <a href="message.html">Messages</a>
+                      <a href="settings.html">Settings</a>
                   </div>
 
-                </div>
-              </div>
-            </div>
-                </div>
-            </div>
-        </div>
-    </div>
+          </div>
+
 </div>
-    </div>
-        </div>
-      </div>
 
-  <svg id="bg_svg" viewBox="0 0 1440 480" preserveAspectRatio="xMidYMid slice"><filter id="blur"><feGaussianBlur stdDeviation="5"></feGaussianBlur></filter>
-    <image xlink:href="img/login/bg.jpg" width="1440" height="480" filter="url(#blur)"></image>
-  </svg>
+
+
+        </div>
+
+
 
 
       <!-- conten end -->
