@@ -332,3 +332,69 @@ table th, table td {
 .media_filter-size-btn{
   padding: 7px 18px;
 }
+
+.media_filter-color .dropdown-menu{
+  padding: 10px 15px ;
+  font-size: 13px;
+  color: #555
+}
+
+.media_filter-color .checkbox{
+  margin-bottom: 3px;
+  margin-top: 3px
+}
+
+.media_filter-color .checkbox label{
+  padding-left: 15px
+}
+
+.media_filter-color .checkbox input[type=checkbox]{
+  margin-left: -15px;
+  margin-top: 2px
+}
+
+.color_filter{
+  margin-top: 15px
+}
+
+.color_filter input {
+  display: none;
+}
+
+.color_filter label {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+    outline: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.flex_grid.credits .item>div {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -15px;
+    padding: 10px 10px 8px;
+    opacity: 0;
+    transition: .25s;
+    background: linear-gradient(to top,rgba(0,0,0,.6) 0,rgba(0,0,0,0) 100%);
+    font-size: 14px;
+    color: #fff;
+}
+
+.flex_grid.credits .item:hover>div {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 1;
+}
+
+.counts-a {
+    display: inline-block;
+    color: #fff;
+    padding: 5px 7px;
+    border-radius: 2px;
+    transition: .2s;
+}
