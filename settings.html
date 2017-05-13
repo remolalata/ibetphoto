@@ -110,7 +110,9 @@
       <header class="clearfix">
         <div class="header-wrapper clearfix">
           <div class="header-logo-form pull-left">
-            <div class="logo"></div>
+            <div class="logo">
+              <a href="index.html"></a>
+            </div>
             <div class="dropdown form hidden-xs">
               <form class="form-inline">
                 <button class="btn-all-image" data-toggle="dropdown">All Images <i class="fa fa-caret-down"> </i></button>
@@ -227,77 +229,53 @@
             <nav class="hidden-sm hidden-xs">
               <ul>
                 <li class="top-menu"><a href="#" class="active">Explore <i class="fa fa-caret-down"> </i></a>
-                    <ul class="sub-menu moz-sub-menu-a">
-                        <li><a href="#">Editor's Choice</a></li>
-                        <li><a href="#">Images</a></li>
-                        <li class="separator"><a href="#">Videos</a></li>
-                        <li><a href="#">Photographers</a></li>
-                        <li><a href="#">Cameras</a></li>
-                    </ul>
-                </li>
-                <li class="top-menu">
-                  <a href="#" class="hidden-lg">
-                  <img class="profile_image" src="img/profile_image_dummy.svg" alt="">
-                </a>
-                <a href="profile.html" class="hidden-md hidden-sm">
-                <img class="profile_image" src="img/profile_image_dummy.svg" alt="">
-              </a>
-                <ul class="sub-menu moz-sub-menu-a">
-                    <li><a href="myimages.html">My Images</a></li>
-                    <li><a href="upload.html">Upload</a></li>
-                    <li><a href="favorites.html">Favorites</a></li>
-                    <li><a href="following.html">Following</a></li>
-                    <li><a href="message.html">Messages</a></li>
-                <li class="separator"><a href="settings.html">Settings</a></li>
-                <li class="separator hidden-md hidden-sm" ><a href="quality.html">Quality Rating</a></li>
-                      <li class="separator hidden-lg"><a href="profile.html">My Profile</a></li>
-                            <li><a href="logout.html">Logout</a></li>
+                  <ul class="sub-menu">
+                    <li><a href="search.html">Editor's Choice</a></li>
+                    <li><a href="search.html">Images</a></li>
+                    <li class="separator"><a href="search.html">Videos</a></li>
+                    <li><a href="search.html">Photographers</a></li>
+                    <li><a href="search.html">Cameras</a></li>
                   </ul>
                 </li>
+                <li><a href="signup.html">Sign up</a></li>
+                <li><a href="login.html">Log in</a></li>
                 <li class="top-menu"><a href="#"><div class="icon-menu-dots"></div></a>
                   <ul class="sub-menu moz-sub-menu-b nav1024">
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Forum</a></li>
-                    <li><a href="#">Blog</a></li>
-                  </ul>
+                    <li><a href="FAQ.html">FAQ</a></li>
+                    <li><a href="forum.html">Forum</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+              </ul>
                 </li>
               </ul>
             </nav>
 
             <nav class="hidden-lg hidden-md">
               <ul>
-                <li><a href="#" data-toggle="dropdown">      <img class="profile_image" src="img/profile_image_dummy.svg" alt=""></a>
-                <ul class="mobile-dropdown-menu dropdown-menu">
-                  <li><a href="myimages.html">My Images</a></li>
-                  <li><a href="upload.html">Upload</a></li>
-                  <li><a href="favorites.html">Favorites</a></li>
-                  <li><a href="following.html">Following</a></li>
-                  <li><a href="message.html">Messages</a></li>
-              <li ><a href="settings.html">Settings</a></li>
-              <li class="separator"><a href="profile.html">My Profile</a></li>
-                          <li><a href="logout.html">Logout</a></li>
+                <li><a href="#" data-toggle="dropdown"><i class="fa fa-user"></i></a>
+                  <ul class="mobile-dropdown-menu dropdown-menu">
+                    <li><a href="signup.html">Sign up</a></li>
+                    <li><a href="login.html">Log in</a></li>
                   </ul>
-
                 </li>
                 <li class="hidden-sm"><a href="#inner-form2" data-toggle="collapse"><i class="fa fa-search"></i></a></li>
                 <li><a href="#" data-toggle="dropdown"><i class="fa fa-bars"></i></a>
                   <ul class="mobile-dropdown-menu mobile-dropdown-menu2 dropdown-menu">
-                    <li><a href="#">Editor's Choice</a></li>
-                    <li><a href="#">Images</a></li>
-                    <li class="separator"><a href="#">Videos</a></li>
-                    <li><a href="#">Photographers</a></li>
-                    <li class="separator"><a href="#">Cameras</a></li>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Forum</a></li>
-                    <li><a href="#">Blog</a></li>
-                  </ul>
+                    <li><a href="search.html">Editor's Choice</a></li>
+                    <li><a href="search.html">Images</a></li>
+                    <li class="separator"><a href="search.html">Videos</a></li>
+                    <li><a href="search.html">Photographers</a></li>
+                    <li class="separator"><a href="search.html">Cameras</a></li>
+                    <li><a href="FAQ.html">FAQ</a></li>
+                    <li><a href="forum.html">Forum</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
                 </li>
               </ul>
             </nav>
           </div>
         </div>
         <div class="collapse hidden-lg hidden-md hidden-sm inner-form2" id="inner-form2">
-          <form class="form-inline">
+      <form class="form-inline" action="search.html" >
             <button type="button" class="btn-all-image" data-toggle="dropdown">All images <i class="fa fa-caret-down"> </i></button>
             <div class="dropdown-menu inner-form inner2-form2">
               <div class="row">
@@ -416,7 +394,7 @@
 
               <div id="account_tabs" class="tab_menu hide-xs hide-sm hide-md" style="margin:30px auto;border-top:0">
                   <div style="max-width:1440px;margin:auto;padding:0 5px;text-align:left">
-                      <a style="float:right" href="#">My profile</a>
+                      <a style="float:right" href="profile.html">My profile</a>
                       <a href="myimages.html" >My images</a>
                       <a href="upload.html">Upload</a>
                       <a href="favorites.html" >Favorites</a>
@@ -913,72 +891,72 @@
 <a href="#" id="back-to-top" class="back-to-top" title="Back to top">▲</a>
 </div>
 <!-- end of back to top -->
-      <footer>
-        <div class="footer-wrapper clearfix">
-          <div class="footer-nav pull-left">
+<footer>
+    <div class="footer-wrapper clearfix">
+        <div class="footer-nav pull-left">
             <ul>
-              <li>&copy; 2017 Pixabay</li>
-              <li class="hidden-sm hidden-xs dropup"><a href="#" data-toggle="dropdown">Free Downloads <i class="fa fa-caret-down"> </i></a>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Free Images</a></li>
-                  <li><a href="#">Free photos</a></li>
-                  <li><a href="#">Free vector graphics</a></li>
-                  <li><a href="#">Free illustration</a></li>
-                  <li><a href="">Free Videos</a></li>
-                </ul>
-              </li>
-              <li class="dropup"><a href="#" data-toggle="dropdown">Language <i class="fa fa-caret-down"> </i></a>
-                <ul class="dropdown-menu dropdown-menu-language">
-                  <li><a href="#">Čeština</a></li>
-                  <li><a href="#">Deutsch</a></li>
-                  <li><a href="#">Español</a></li>
-                  <li><a href="#">Indonesia</a></li>
-                  <li><a href="#">Magyar</a></li>
-                  <li><a href="#">Norsk</a></li>
-                  <li><a href="#">Português</a></li>
-                  <li><a href="#">Slovenčina</a></li>
-                  <li><a href="#">Svenska</a></li>
-                  <li><a href="#">Việt</a></li>
-                  <li><a href="#">Български</a></li>
-                  <li><a href="#">Ελληνική</a></li>
-                  <li><a href="#">한국어</a></li>
-                  <li><a href="#">Dansk</a></li>
-                  <li><a href="#">English</a></li>
-                  <li><a href="#">Français</a></li>
-                  <li><a href="#">Italiano</a></li>
-                  <li><a href="#">Nederlands</a></li>
-                  <li><a href="#">Polski</a></li>
-                  <li><a href="#">Română</a></li>
-                  <li><a href="#">Suomi</a></li>
-                  <li><a href="#">Türkçe</a></li>
-                  <li><a href="#">ไทย</a></li>
-                  <li><a href="#">Русский</a></li>
-                  <li><a href="#">日本語</a></li>
-                  <li><a href="#">简体中文</a></li>
-                </ul>
-              </li>
-              <li class="dropup"><a href="#" data-toggle="dropdown">Service <i class="fa fa-caret-down"> </i></a>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Blog</a></li>
-                  <li><a href="#">Forum</a></li>
-                  <li><a href="#">About Us</a></li>
-                  <li><a href="#">Privacy Policys</a></li>
-                </ul>
-              </li>
-              <li><a href="#">API</a></li>
-              <li><a href="#">FAQ</a></li>
-              <li><a href="#">Terms</a></li>
+                <li>&copy; 2017 Pixabay</li>
+                <li class="dropdown hidden-sm hidden-xs dropup"><a href="#" data-toggle="dropdown">Free Downloads <i class="fa fa-caret-down"> </i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="search.html">Free Images</a></li>
+                        <li><a href="search.html">Free photos</a></li>
+                        <li><a href="search.html">Free vector graphics</a></li>
+                        <li><a href="search.html">Free illustration</a></li>
+                        <li><a href="search.html">Free Videos</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown dropup"><a href="#" data-toggle="dropdown">Language <i class="fa fa-caret-down"> </i></a>
+                    <ul class="dropdown-menu dropdown-menu-language">
+                        <li><a href="#">Čeština</a></li>
+                        <li><a href="#">Deutsch</a></li>
+                        <li><a href="#">Español</a></li>
+                        <li><a href="#">Indonesia</a></li>
+                        <li><a href="#">Magyar</a></li>
+                        <li><a href="#">Norsk</a></li>
+                        <li><a href="#">Português</a></li>
+                        <li><a href="#">Slovenčina</a></li>
+                        <li><a href="#">Svenska</a></li>
+                        <li><a href="#">Việt</a></li>
+                        <li><a href="#">Български</a></li>
+                        <li><a href="#">Ελληνική</a></li>
+                        <li><a href="#">한국어</a></li>
+                        <li><a href="#">Dansk</a></li>
+                        <li><a href="#">English</a></li>
+                        <li><a href="#">Français</a></li>
+                        <li><a href="#">Italiano</a></li>
+                        <li><a href="#">Nederlands</a></li>
+                        <li><a href="#">Polski</a></li>
+                        <li><a href="#">Română</a></li>
+                        <li><a href="#">Suomi</a></li>
+                        <li><a href="#">Türkçe</a></li>
+                        <li><a href="#">ไทย</a></li>
+                        <li><a href="#">Русский</a></li>
+                        <li><a href="#">日本語</a></li>
+                        <li><a href="#">简体中文</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown dropup"><a href="#" data-toggle="dropdown">Service <i class="fa fa-caret-down"> </i></a>
+                    <ul class="dropdown-menu dropdown-menu-service">
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="forum.html">Forum</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="Privacy.html">Privacy Policys</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">API</a></li>
+                <li><a href="FAQ.html">FAQ</a></li>
+                <li><a href="Tos.html">Terms</a></li>
             </ul>
-          </div>
-          <div class="footer-social pull-right hidden-xs">
-            <ul>
-              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-              <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-            </ul>
-          </div>
         </div>
-      </footer>
+        <div class="footer-social pull-right hidden-xs">
+            <ul>
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
 
 
     <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
@@ -1036,6 +1014,12 @@ $('.tab_menu li:eq(0)').tab('show')
           }, 700);
       });
   }
+  </script>
+  <script type="text/javascript">
+  $(".logo").click(function() {
+window.location = $(this).find("a").attr("href");
+return false;
+});
   </script>
   </body>
 </html>
