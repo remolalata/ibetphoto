@@ -157,6 +157,7 @@ nav .glyphicon-option-horizontal {
   margin-top: 13px;
   vertical-align: middle;
   background: url(../img/sprites.svg), none;
+  cursor: pointer;
 }
 
 .form {
