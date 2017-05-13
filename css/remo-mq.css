@@ -14,6 +14,40 @@
     left: 0px;
     top: 25px
   }
+
+  #media_show .left {
+      margin-right: auto;
+  }
+
+  #media_show .left .inside {
+      margin-right: auto;
+      padding-right: auto;
+  }
+
+  #content{
+    padding: 0 20px
+  }
+
+  #media_show{
+    margin-top: 24px;
+  }
+
+  #media_show .right {
+      width: 100%;
+  }
+
+  #media_show .overlay {
+    padding: 10px;
+  }
+
+  .forum-wrapper{
+    padding: 0 20px
+  }
+
+  .forum-inputt, .forum-selectt{
+    width: 100%;
+  }
+
 }
 
 @media only screen and (min-width: 360px)
@@ -70,6 +104,35 @@
 
   .dropdown-menu-blog{
     left: 167px
+  }
+
+  #media_show .left {
+      margin-right: -300px;
+  }
+
+  #media_show .left .inside {
+      margin-right: 300px;
+      padding-right: 50px;
+  }
+
+  #content{
+    padding: 0;
+  }
+
+  #media_show{
+    margin: 32px auto 0
+  }
+
+  #media_show .right {
+      width: 300px;
+  }
+
+  #media_show .overlay {
+    padding: 25px;
+  }
+
+  .forum-wrapper{
+    padding: 0 0
   }
 }
 

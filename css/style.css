@@ -479,15 +479,6 @@ nav .glyphicon-option-horizontal {
   box-shadow: 1px 1px 3px rgba(0, 0, 30, .3);
 }
 
-.overlay {
-  font-size: 16px;
-  position: absolute;
-  display: none;
-  width: 89.5%;
-  transition: all 1s;
-  opacity: 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, .5) 0, rgba(0, 0, 0, 0) 100%);
-}
 
 .show-overlay {
   display: block;
