@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Document</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="https://use.fontawesome.com/f72bb5f718.js"></script>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jquery.flex-images.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media-queries.css">
+    <link rel="stylesheet" href="css/remo-style.css">
+    <link rel="stylesheet" href="css/remo-mq.css">
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <style>
+        h2 {
+            font-size: 18px;
+            font-weight: normal;
+            margin: 0 0 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--[if lt IE 8]>
+          <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+      <![endif]-->
+    <header class="clearfix">
+        <div class="header-wrapper clearfix">
+            <div class="header-logo-form pull-left">
+                <div class="logo"></div>
+                <div class="dropdown form hidden-xs">
+                    <form class="form-inline">
+                        <button class="btn-all-image" data-toggle="dropdown">All Images <i class="fa fa-caret-down"> </i></button>
+                        <div class="dropdown-menu inner-form">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <p>Media type</p>
+                                </div>
+                                <div class="col-md-9">
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="media-type" checked> All Images
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="media-type"> Photos
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="media-type"> Vector graphics
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="media-type"> Illustrations
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="media-type"> Videos
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <p>Orientation</p>
+                                </div>
+                                <div class="col-md-9">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="orientation" checked> Horizontal
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="orientation"> Vertical
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <p>Category</p>
+                                </div>
+                                <div class="col-md-9">
+                                    <select name="category">
+                                        <option value="">Animals</option>
+                                        <option value="">Education</option>
+                                        <option value="">Emotions</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <p>Larger than</p>
+                                </div>
+                                <div class="col-md-9">
+                                    <input type="text" placeholder="Width"> x
+                                    <input type="text" placeholder="Height"> px
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <p>Color</p>
+                                </div>
+                                <div class="col-md-9">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="color"> Transparent
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="color"> Black and White
+                                        </label>
+                                    </div>
+                                    <div class="colors">
+                                        <span class="color red"></span>
+                                        <span class="color orange"></span>
+                                        <span class="color yellow"></span>
+                                        <span class="color green"></span>
+                                        <span class="color turquoise"></span>
+                                        <span class="color blue"></span>
+                                        <span class="color violet"></span>
+                                        <span class="color pink"></span>
+                                        <span class="color white"></span>
+                                        <span class="color gray"></span>
+                                        <span class="color black"></span>
+                                        <span class="color brown"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3"><a href="#innerFormMore" data-toggle="collapse">more...</a></div>
+                                <div class="col-md-9">
+                                    <div class="collapse" id="innerFormMore">
+                                        <div>You can use AND, OR, NOT and () to refine your search results:</div>
+                                        <div>flower AND (red OR blue) NOT rose</div>
+                                        <br>
+
+                                        <div>Search in user portfolios:</div>
+                                        <div>user:stux flower</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="text" class="main-textbox" placeholder="Search images, vectors and videos">
+                        <button type="button" class="btn-search"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="header-nav  pull-right">
+                <nav class="hidden-sm hidden-xs">
+                    <ul class="main-nav">
+                        <li class="top-menu"><a href="#" class="active">Explore <i class="fa fa-caret-down"> </i></a>
+                            <ul class="sub-menu moz-sub-menu-a">
+                                <li><a href="#">Edito's Choice</a></li>
+                                <li><a href="#">Images</a></li>
+                                <li class="separator"><a href="#">Videos</a></li>
+                                <li><a href="#">Photographers</a></li>
+                                <li><a href="#">Cameras</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Sign up</a></li>
+                        <li><a href="#">Log in</a></li>
+                        <li class="top-menu">
+                            <a href="#">
+                                <div class="icon-menu-dots"></div>
+                            </a>
+                            <ul class="sub-menu moz-sub-menu-b nav1024">
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">Forum</a></li>
+                                <li><a href="#">Blog</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+
+                <nav class="hidden-lg hidden-md">
+                    <ul>
+                        <li class="dropdown"><a href="#" data-toggle="dropdown"><i class="fa fa-user"></i></a>
+                            <ul class="mobile-dropdown-menu dropdown-menu">
+                                <li><a href="#">Sign up</a></li>
+                                <li><a href="#">Log in</a></li>
+                            </ul>
+                        </li>
+                        <li class="hidden-sm"><a href="#inner-form2" data-toggle="collapse"><i class="fa fa-search"></i></a></li>
+                        <li class="dropdown"><a href="#" data-toggle="dropdown" class="ms-nav"><i class="fa fa-bars"></i></a>
+                            <ul class="mobile-dropdown-menu mobile-dropdown-menu2 dropdown-menu dropdown-menu-right">
+                                <li><a href="#">Editor's Choice</a></li>
+                                <li><a href="#">Images</a></li>
+                                <li class="separator"><a href="#">Videos</a></li>
+                                <li><a href="#">Photographers</a></li>
+                                <li class="separator"><a href="#">Cameras</a></li>
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">Forum</a></li>
+                                <li><a href="#">Blog</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="collapse hidden-lg hidden-md hidden-sm inner-form2" id="inner-form2">
+            <form class="form-inline">
+                <button type="button" class="btn-all-image" data-toggle="dropdown">All images <i class="fa fa-caret-down"> </i></button>
+                <div class="dropdown-menu inner-form inner2-form2">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <p>Media type</p>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="media-type" checked> All Images
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="media-type"> Photos
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="media-type"> Vector graphics
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="media-type"> Illustrations
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="media-type"> Videos
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <p>Orientation</p>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="orientation" checked> Horizontal
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="orientation"> Vertical
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <p>Category</p>
+                        </div>
+                        <div class="col-md-9">
+                            <select name="category">
+                                <option value="">Animals</option>
+                                <option value="">Education</option>
+                                <option value="">Emotions</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <p>Larger than</p>
+                        </div>
+                        <div class="col-md-9">
+                            <input type="text" placeholder="Width"> x
+                            <input type="text" placeholder="Height"> px
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <p>Color</p>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="color"> Transparent
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="color"> Black and White
+                                </label>
+                            </div>
+                            <div class="colors">
+                                <span class="color red"></span>
+                                <span class="color orange"></span>
+                                <span class="color yellow"></span>
+                                <span class="color green"></span>
+                                <span class="color turquoise"></span>
+                                <span class="color blue"></span>
+                                <span class="color violet"></span>
+                                <span class="color pink"></span>
+                                <span class="color white"></span>
+                                <span class="color gray"></span>
+                                <span class="color black"></span>
+                                <span class="color brown"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3"><a href="#innerFormMore" data-toggle="collapse">more...</a></div>
+                        <div class="col-md-9">
+                            <div class="collapse" id="innerFormMore">
+                                <div>You can use AND, OR, NOT and () to refine your search results:</div>
+                                <div>flower AND (red OR blue) NOT rose</div>
+                                <br>
+
+                                <div>Search in user portfolios:</div>
+                                <div>user:stux flower</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <input type="text" class="main-textbox" placeholder="Search images, vectors and videos">
+                <button type="button" class="btn-search"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+    </header>
+
+    <!-- content -->
+
+    <div class="wrapper">
+
+    </div>
+
+    <div style="margin:40px auto 0;max-width:1040px" class="forum-wrapper">
+        <a style="float:right;position:relative;top:4px;margin-left:20px;z-index:99" class="pure-button button-md button-green" data-go="/en/forum/topic/create/">New topic</a>
+        <div class="tab_menu hidden-xs" style="float:right;border:0;position:relative;z-index:99;font-size: 16px">
+
+            <a class="selected" href="#">Latest</a>
+            <a href="#">Active</a>
+        </div>
+
+        <h1 class="forum-h1" style="margin:0 0 5px;position:relative;top:2px"><a href="#">Forum</a></h1>
+        <div style="border-top:1px solid #f0f1f4;background:#f5f6f7;padding:15px;margin:0 0 30px; padding-bottom: 5px">
+            <form class="pure-form pure-g" action="" method="GET">
+              <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-6">
+                    <div style="">
+                        <div style="position:relative;max-width:300px">
+                            <input id="forum_search_input" type="text" name="qs" value="" class="forum-input forum-inputt" style="font-size:14px;padding-right:30px" placeholder="Search">
+                            <input class="submit_icon hover_opacity inverted" type="submit" value="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-6">
+                    <select name="forum" style="font-size:14px;padding-top:6px;color:#777;max-width:280px;float:right" class="pure-input-1 forum-selectt" onchange="$(&#39;#forum_search_input&#39;).val(&#39;&#39;);$(this).closest(&#39;form&#39;).submit();">
+                        <option value="">- Select a category -</option>
+
+                        <option value="2">Official Pixabay News </option>
+
+                        <option value="24">The Pixabay Mobile App</option>
+
+                        <option value="9">Suggestions and Feature Requests</option>
+
+                        <option value="11">Questions about Pixabay</option>
+
+                        <option value="13">Photography and Image Editing</option>
+
+                        <option value="14">Chitchat - Pixabay-related or not</option>
+
+                    </select>
+                </div>
+              </div>
+            </form>
+        </div>
+
+        <div class="forum_topics hover_links">
+
+            <div>
+                <div class="hidden-xs" style="float:right;font-size:15px">
+                    <span class="views"><span>Views</span>
+                    <br>34</span>
+                    <span class="replies"><span>Replies</span>
+                    <br>0</span>
+                    <span class="last_post hidden-sm">
+                            <span>Last post</span>
+                    <br>
+                    <a href="#" style="display:inline-block">
+                        <img src="img/forum/profile_image_dummy.svg" alt="">
+                        <span>simon4417<br>20 hours ago</span>
+                    </a>
+                    </span>
+                </div>
+                <div style="overflow:hidden">
+                    <p style="margin:0 0 5px">
+                        <a href="#" style="font-size: 16px">API Extension: Date/timestamp</a>
+                    </p>
+                    <p style="margin:0 0 8px;color:#636363;font-size:13px">Hi, would it be possible to also return&nbsp;a timestamp via the API at which time the image was uploaded/added to Pixabay (e.g. a common Unixtimestamp would be perfect)? &nbsp; Thanks Torsten</p>
+                    <div style="color:#777;font-size:12px">
+                        Created 20 hours ago, <a href="#">simon4417</a> &nbsp; <a href="#" class="hidden-sm hidden-xs topic hover_opacity inverted">Suggestions and Feature Requests</a>
+
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="hidden-xs" style="float:right;font-size:15px">
+                    <span class="views"><span>Views</span>
+                    <br>74</span>
+                    <span class="replies"><span>Replies</span>
+                    <br>2</span>
+                    <span class="last_post hidden-sm">
+                            <span>Last post</span>
+                    <br>
+                    <a href="#" style="display:inline-block">
+                        <img src="img/forum/07-37-19-397_48x48.jpg" alt="">
+                        <span>VISHNU_KV<br>3 hours ago</span>
+                    </a>
+                    </span>
+                </div>
+                <div style="overflow:hidden">
+                    <p style="margin:0 0 5px">
+                        <a href="#"style="font-size: 16px">Approved images are not visible to public(not visible in profile)</a>
+                    </p>
+                    <p style="margin:0 0 8px;color:#636363;font-size:13px">Some of the images,that was approved by Pixabay are not visible to public, I can see that approved(pending tag is removed) in "my images". I have waited two days but still the problem is not...</p>
+                    <div style="color:#777;font-size:12px">
+                        Created 1 day ago, <a href="#">VISHNU_KV</a> &nbsp; <a href="#" class="hidden-xs hidden-sm topic hover_opacity inverted">Chitchat - Pixabay-related or not</a>
+
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="hidden-xs" style="float:right;font-size:15px">
+                    <span class="views"><span>Views</span>
+                    <br>48</span>
+                    <span class="replies"><span>Replies</span>
+                    <br>0</span>
+                    <span class="last_post hidden-sm">
+                            <span>Last post</span>
+                    <br>
+                    <a href="#" style="display:inline-block">
+                        <img src="img/forum/10-23-00-347_48x48.png" alt="">
+                        <span>Hans<br>1 day ago</span>
+                    </a>
+                    </span>
+                </div>
+                <div style="overflow:hidden">
+                    <p style="margin:0 0 5px">
+                        <a href="#"style="font-size: 16px">Stockmagic-App - Almost 1 million free images on your Mac</a>
+                    </p>
+                    <p style="margin:0 0 8px;color:#636363;font-size:13px">With our new app you can directly drag and drop images into any Mac app&nbsp;&nbsp;Now&nbsp;it's even more easy for you to find free stock photos: https://www.producthunt.com/posts/stockmagic-for-mac-2</p>
+                    <div style="color:#777;font-size:12px">
+                        Created 1 day ago, <a href="#">Hans</a> &nbsp; <a href="#" class="hidden-sm hidden-xs topic hover_opacity inverted">Official Pixabay News </a>
+
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="hidden-xs" style="float:right;font-size:15px">
+                    <span class="views"><span>Views</span>
+                    <br>113</span>
+                    <span class="replies"><span>Replies</span>
+                    <br>2</span>
+                    <span class="last_post hidden-sm">
+                            <span>Last post</span>
+                    <br>
+                    <a href="#" style="display:inline-block">
+                        <img src="img/forum/11-47-07-191_48x48.jpg" alt="">
+                        <span>sandid<br>22 hours ago</span>
+                    </a>
+                    </span>
+                </div>
+                <div style="overflow:hidden">
+                    <p style="margin:0 0 5px">
+                        <a href="#"style="font-size: 16px">I am trying to buy you a coffee without success</a>
+                    </p>
+                    <p style="margin:0 0 8px;color:#636363;font-size:13px">I have tried several times to sign up to make a modest recurring contribution but am getting nowhere with PayPal. It keeps sending me round in circles. Is there another option? I tried the credit...</p>
+                    <div style="color:#777;font-size:12px">
+                        Created 1 day ago, <a href="#">BrianBollen</a> &nbsp; <a href="#" class="hidden-sm hidden-xs topic hover_opacity inverted">Questions about Pixabay</a>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="hidden-xs" style="float:right;font-size:15px">
+                    <span class="views"><span>Views</span>
+                    <br>101</span>
+                    <span class="replies"><span>Replies</span>
+                    <br>1</span>
+                    <span class="last_post hidden-sm">
+                            <span>Last post</span>
+                    <br>
+                    <a href="#" style="display:inline-block">
+                        <img src="img/forum/11-07-45-560_48x48.jpg" alt="">
+                        <span>Simon<br>2 days ago</span>
+                    </a>
+                    </span>
+                </div>
+                <div style="overflow:hidden">
+                    <p style="margin:0 0 5px">
+                        <a href="#"style="font-size: 16px">I would like to reactivate my account</a>
+                    </p>
+                    <p style="margin:0 0 8px;color:#636363;font-size:13px">https://pixabay.com/users/1559210-1559210/&nbsp;- I closed this account a while back and would like to reopen it if possible?&nbsp;</p>
+                    <div style="color:#777;font-size:12px">
+                        Created 2 days ago, <a href="#">dewdropsfromheaven</a> &nbsp; <a href="#" class="hidden-sm hidden-xs topic hover_opacity inverted">Questions about Pixabay</a>
+
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="hidden-xs" style="float:right;font-size:15px">
+                    <span class="views"><span>Views</span>
+                    <br>201</span>
+                    <span class="replies"><span>Replies</span>
+                    <br>3</span>
+                    <span class="last_post hidden-sm">
+                            <span>Last post</span>
+                    <br>
+                    <a href="#" style="display:inline-block">
+                        <img src="img/forum/07-09-49-15_48x48.jpg" alt="">
+                        <span>Justasurferdude<br>1 day ago</span>
+                    </a>
+                    </span>
+                </div>
+                <div style="overflow:hidden">
+                    <p style="margin:0 0 5px">
+                        <a href="#"style="font-size: 16px">Why are there issues with my images re copyright</a>
+                    </p>
+                    <p style="margin:0 0 8px;color:#636363;font-size:13px">I don't understand this. I uploaded 10 pictures and they were all rejected claiming copyright was unclear. I don't know if I did something wrong or did not mention copyright, but these images were...</p>
+                    <div style="color:#777;font-size:12px">
+                        Created 2 days ago, <a href="#">Justasurferdude</a> &nbsp; <a href="#" class="hidden-sm hidden-xs topic hover_opacity inverted">Questions about Pixabay</a>
+
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="hidden-xs" style="float:right;font-size:15px">
+                    <span class="views"><span>Views</span>
+                    <br>182</span>
+                    <span class="replies"><span>Replies</span>
+                    <br>4</span>
+                    <span class="last_post hidden-sm">
+                            <span>Last post</span>
+                    <br>
+                    <a href="#" style="display:inline-block">
+                        <img src="img/forum/15-27-27-802_48x48.jpg" alt="">
+                        <span>evondue<br>2 days ago</span>
+                    </a>
+                    </span>
+                </div>
+                <div style="overflow:hidden">
+                    <p style="margin:0 0 5px">
+                        <a href="#"style="font-size: 16px">Reporting wrong tags</a>
+                    </p>
+                    <p style="margin:0 0 8px;color:#636363;font-size:13px">Hi, I was looking for images of Florence (Italy), and ran into this image, which is of the island of Burano, Venice, and not of Florence&nbsp;(Fondamenta Pontinello destra is the name of the sidewalk...</p>
+                    <div style="color:#777;font-size:12px">
+                        Created 3 days ago, <a href="#">evondue</a> &nbsp; <a href="#" class="hidden-sm hidden-xs topic hover_opacity inverted">Questions about Pixabay</a>
+
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="hidden-xs" style="float:right;font-size:15px">
+                    <span class="views"><span>Views</span>
+                    <br>399</span>
+                    <span class="replies"><span>Replies</span>
+                    <br>15</span>
+                    <span class="last_post hidden-sm">
+                            <span>Last post</span>
+                    <br>
+                    <a href="#" style="display:inline-block">
+                        <img src="img/forum/10-23-00-347_48x48.png" alt="">
+                        <span>Hans<br>16 hours ago</span>
+                    </a>
+                    </span>
+                </div>
+                <div style="overflow:hidden">
+                    <p style="margin:0 0 5px">
+                        <a href="#"style="font-size: 16px">Rejected images and pictures pending</a>
+                    </p>
+                    <p style="margin:0 0 8px;color:#636363;font-size:13px">I'm new to Pixabay. I uploaded my first 10 images and seven were rejected because they were "framed". My fault, no issues with the decision I perhaps should have realised, so I deleted them and...</p>
+                    <div style="color:#777;font-size:12px">
+                        Created 4 days ago, <a href="#">dpexcel</a> &nbsp; <a href="#" class="hidden-sm hidden-xs topic hover_opacity inverted">Photography and Image Editing</a>
+
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="hidden-xs" style="float:right;font-size:15px">
+                    <span class="views"><span>Views</span>
+                    <br>195</span>
+                    <span class="replies"><span>Replies</span>
+                    <br>2</span>
+                    <span class="last_post hidden-sm">
+                            <span>Last post</span>
+                    <br>
+                    <a href="#" style="display:inline-block">
+                        <img src="img/forum/01-01-34-363_48x48.jpg" alt="">
+                        <span>Kdsphotos<br>4 days ago</span>
+                    </a>
+                    </span>
+                </div>
+                <div style="overflow:hidden">
+                    <p style="margin:0 0 5px">
+                        <a href="#"style="font-size: 16px">How can we take better action against forum spammers?</a>
+                    </p>
+                    <p style="margin:0 0 8px;color:#636363;font-size:13px">Hello people, Regularly, the forum is polluted by spammers. Often on weekends, when the professional pixabay team is free. When reported, adequate action is taken against this vandalism, but...</p>
+                    <div style="color:#777;font-size:12px">
+                        Created 4 days ago, <a href="#">Joenomias</a> &nbsp; <a href="#" class="hidden-sm hidden-xs topic hover_opacity inverted">Suggestions and Feature Requests</a>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="hidden-xs" style="float:right;font-size:15px">
+                    <span class="views"><span>Views</span>
+                    <br>174</span>
+                    <span class="replies"><span>Replies</span>
+                    <br>1</span>
+                    <span class="last_post hidden-sm">
+                            <span>Last post</span>
+                    <br>
+                    <a href="#" style="display:inline-block">
+                        <img src="img/forum/02-50-01-620_48x48.jpg" alt="">
+                        <span>Deedster<br>3 days ago</span>
+                    </a>
+                    </span>
+                </div>
+                <div style="overflow:hidden">
+                    <p style="margin:0 0 5px">
+                        <a href="#"style="font-size: 16px">Can this site be built in wordpress?</a>
+                    </p>
+                    <p style="margin:0 0 8px;color:#636363;font-size:13px">Is there any theme or template in wordpress to create a site something like yours - PIXABAY? I mean with same sign up and social login features... Please revert asap</p>
+                    <div style="color:#777;font-size:12px">
+                        Created 4 days ago, <a href="#">chrisbowman348</a> &nbsp; <a href="#" class="hidden-sm hidden-xs topic hover_opacity inverted">Suggestions and Feature Requests</a>
+
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="hidden-xs" style="float:right;font-size:15px">
+                    <span class="views"><span>Views</span>
+                    <br>166</span>
+                    <span class="replies"><span>Replies</span>
+                    <br>3</span>
+                    <span class="last_post hidden-sm">
+                            <span>Last post</span>
+                    <br>
+                    <a href="#" style="display:inline-block">
+                        <img src="img/forum/11-07-45-560_48x48.jpg" alt="">
+                        <span>Simon<br>4 days ago</span>
+                    </a>
+                    </span>
+                </div>
+                <div style="overflow:hidden">
+                    <p style="margin:0 0 5px">
+                        <a href="#"style="font-size: 16px">Search Filter - Size</a>
+                    </p>
+                    <p style="margin:0 0 8px;color:#636363;font-size:13px">I am trying to search for images of a specific size, but the size filter is puzzling. It only allows to filter for images LARGER than a certain length x width. It's then impossible to find the...</p>
+                    <div style="color:#777;font-size:12px">
+                        Created 5 days ago, <a href="#">dude_madkefka</a> &nbsp; <a href="#" class="hidden-sm hidden-xs topic hover_opacity inverted">Suggestions and Feature Requests</a>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="hidden-xs" style="float:right;font-size:15px">
+                    <span class="views"><span>Views</span>
+                    <br>309</span>
+                    <span class="replies"><span>Replies</span>
+                    <br>6</span>
+                    <span class="last_post hidden-sm">
+                            <span>Last post</span>
+                    <br>
+                    <a href="#" style="display:inline-block">
+                        <img src="img/forum/10-56-55-842_48x48.png" alt="">
+                        <span>ractapopulous<br>5 days ago</span>
+                    </a>
+                    </span>
+                </div>
+                <div style="overflow:hidden">
+                    <p style="margin:0 0 5px">
+                        <a href="#"style="font-size: 16px">Does this help the copyright question?</a>
+                    </p>
+                    <p style="margin:0 0 8px;color:#636363;font-size:13px">Love the images on Pixabay but as one of those people who have been 'fined' for using a stock image illegally in the past I am still very wary of using images that I have not created myself (BTW I...</p>
+                    <div style="color:#777;font-size:12px">
+                        Created 6 days ago, <a href="#">NeillMack</a> &nbsp; <a href="#" class="hidden-sm hidden-xs topic hover_opacity inverted">Questions about Pixabay</a>
+
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="hidden-xs" style="float:right;font-size:15px">
+                    <span class="views"><span>Views</span>
+                    <br>198</span>
+                    <span class="replies"><span>Replies</span>
+                    <br>4</span>
+                    <span class="last_post hidden-sm">
+                            <span>Last post</span>
+                    <br>
+                    <a href="#" style="display:inline-block">
+                        <img src="img/forum/23-36-01-726_48x48.jpg" alt="">
+                        <span>Drumcliff<br>5 days ago</span>
+                    </a>
+                    </span>
+                </div>
+                <div style="overflow:hidden">
+                    <p style="margin:0 0 5px">
+                        <a href="#"style="font-size: 16px">Uploading images</a>
+                    </p>
+                    <p style="margin:0 0 8px;color:#636363;font-size:13px">I uploaded four images (2 each at different times) but consistently, whenever I sign in find they are missing and simply have the Wow! what a clean account. I did not receive any error message...</p>
+                    <div style="color:#777;font-size:12px">
+                        Created 6 days ago, <a href="#">TRRobinson</a> &nbsp; <a href="#" class="hidden-sm hidden-xs topic hover_opacity inverted">Questions about Pixabay</a>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="hidden-xs" style="float:right;font-size:15px">
+                    <span class="views"><span>Views</span>
+                    <br>135</span>
+                    <span class="replies"><span>Replies</span>
+                    <br>1</span>
+                    <span class="last_post hidden-sm">
+                            <span>Last post</span>
+                    <br>
+                    <a href="#" style="display:inline-block">
+                        <img src="img/forum/11-07-45-560_48x48.jpg" alt="">
+                        <span>Simon<br>6 days ago</span>
+                    </a>
+                    </span>
+                </div>
+                <div style="overflow:hidden">
+                    <p style="margin:0 0 5px">
+                        <a href="#"style="font-size: 16px">Combining videos</a>
+                    </p>
+                    <p style="margin:0 0 8px;color:#636363;font-size:13px">&nbsp;Hi, I want to make sure that combining multiple videos is allowed (for commercial purposes). Basically, I like about 3 of the videos and would like to make them shorter and combine them into 1...</p>
+                    <div style="color:#777;font-size:12px">
+                        Created 7 days ago, <a href="#">qdylan123</a> &nbsp; <a href="#" class="hidden-sm hidden-xs topic hover_opacity inverted">Questions about Pixabay</a>
+
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="hidden-xs" style="float:right;font-size:15px">
+                    <span class="views"><span>Views</span>
+                    <br>211</span>
+                    <span class="replies"><span>Replies</span>
+                    <br>1</span>
+                    <span class="last_post hidden-sm">
+                            <span>Last post</span>
+                    <br>
+                    <a href="#" style="display:inline-block">
+                        <img src="img/forum/11-07-45-560_48x48.jpg" alt="">
+                        <span>Simon<br>7 days ago</span>
+                    </a>
+                    </span>
+                </div>
+                <div style="overflow:hidden">
+                    <p style="margin:0 0 5px">
+                        <a href="#"style="font-size: 16px">Improved tags...</a>
+                    </p>
+                    <p style="margin:0 0 8px;color:#636363;font-size:13px">I often choose from this list of photo subjects that Pixabay needs. That's why I put the tag "CAKE" at the first place. I checked on the site, there are actually very few images for this dessert....</p>
+                    <div style="color:#777;font-size:12px">
+                        Created 7 days ago, <a href="#">jackmac34</a> &nbsp; <a href="#" class="hidden-sm hidden-xs topic hover_opacity inverted">Photography and Image Editing</a>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div style="padding:20px 0 0">
+            <div style="float:left;margin:5px 10px 0 0">
+                <a class="pure-button button-md button-green  hidden-sm hidden-xs" data-go="/en/forum/topic/create/">New topic</a>
+            </div>
+            <div style="text-align:center">
+                <div class="paginator"><span class="pure-button">1</span> <a class="pure-button" href="#">2</a> <a class="pure-button" href="#">3</a> <a class="pure-button" href="#">4</a> <a class="pure-button" href="#">5</a>
+                  <a class="pure-button" href="#">6</a> ... <a class="pure-button" href="#">92</a> <a class="pure-button next" href="#"><i>›</i></a></div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="push"></div>
+
+    <!-- conten end -->
+
+    <!-- back to top -->
+    <div class="back">
+        <a href="#" id="back-to-top" class="back-to-top" title="Back to top">▲</a>
+    </div>
+    <!-- end of back to top -->
+    <footer>
+        <div class="footer-wrapper clearfix">
+            <div class="footer-nav pull-left">
+                <ul>
+                    <li>&copy; 2017 Pixabay</li>
+                    <li class="dropdown hidden-sm hidden-xs dropup"><a href="#" data-toggle="dropdown">Free Downloads <i class="fa fa-caret-down"> </i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Free Images</a></li>
+                            <li><a href="#">Free photos</a></li>
+                            <li><a href="#">Free vector graphics</a></li>
+                            <li><a href="#">Free illustration</a></li>
+                            <li><a href="">Free Videos</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown dropup"><a href="#" data-toggle="dropdown">Language <i class="fa fa-caret-down"> </i></a>
+                        <ul class="dropdown-menu dropdown-menu-language">
+                            <li><a href="#">Čeština</a></li>
+                            <li><a href="#">Deutsch</a></li>
+                            <li><a href="#">Español</a></li>
+                            <li><a href="#">Indonesia</a></li>
+                            <li><a href="#">Magyar</a></li>
+                            <li><a href="#">Norsk</a></li>
+                            <li><a href="#">Português</a></li>
+                            <li><a href="#">Slovenčina</a></li>
+                            <li><a href="#">Svenska</a></li>
+                            <li><a href="#">Việt</a></li>
+                            <li><a href="#">Български</a></li>
+                            <li><a href="#">Ελληνική</a></li>
+                            <li><a href="#">한국어</a></li>
+                            <li><a href="#">Dansk</a></li>
+                            <li><a href="#">English</a></li>
+                            <li><a href="#">Français</a></li>
+                            <li><a href="#">Italiano</a></li>
+                            <li><a href="#">Nederlands</a></li>
+                            <li><a href="#">Polski</a></li>
+                            <li><a href="#">Română</a></li>
+                            <li><a href="#">Suomi</a></li>
+                            <li><a href="#">Türkçe</a></li>
+                            <li><a href="#">ไทย</a></li>
+                            <li><a href="#">Русский</a></li>
+                            <li><a href="#">日本語</a></li>
+                            <li><a href="#">简体中文</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown dropup"><a href="#" data-toggle="dropdown">Service <i class="fa fa-caret-down"> </i></a>
+                        <ul class="dropdown-menu dropdown-menu-service">
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Forum</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Privacy Policys</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">API</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Terms</a></li>
+                </ul>
+            </div>
+            <div class="footer-social pull-right hidden-xs">
+                <ul>
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')
+    </script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/jquery.flex-images.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // back to top script
+        if ($('#back-to-top').length) {
+            var scrollTrigger = 100, // px
+                backToTop = function() {
+                    var scrollTop = $(window).scrollTop();
+                    if (scrollTop > scrollTrigger) {
+                        $('#back-to-top').addClass('show');
+                    } else {
+                        $('#back-to-top').removeClass('show');
+                    }
+                };
+            backToTop();
+            $(window).on('scroll', function() {
+                backToTop();
+            });
+            $('#back-to-top').on('click', function(e) {
+                e.preventDefault();
+                $('html,body').animate({
+                    scrollTop: 0
+                }, 700);
+            });
+        }
+    </script>
+</body>
+
+</html>
