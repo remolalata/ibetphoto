@@ -14,10 +14,40 @@
   <link rel="stylesheet" href="css/nat-style.css">
     <link rel="stylesheet" href="css/nat-mq.css">
       <link rel="stylesheet" href="css/css.css">
+
+      <link rel="stylesheet" href="ckeditor/css/samples.css">
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     <style media="screen">
-  
+    .alert-danger {
+      margin: 5px 0 25px;
+      background: #d95353;
+      color: #fff;
+      font-size: 18px;
+      line-height: 1.5;
+      padding: 10px 15px;
+      border-radius: 2px;
+    }
+    .alert-danger a {
+        color: white;
+        text-decoration: underline;
+    }
+    .alert {
+        padding: 15px;
+        margin-bottom: 20px;
+        border: 1px solid transparent;
+        border-radius: 4px;
+    }
+@media only screen and (min-width: 768px){
+  footer{
+    position: absolute;
+  }
+}
 
+@media screen and (width: 1024) , screen and (height: 768px) {
+  footer{
+    position: relative;
+  }
+}
     </style>
   </head>
   <body>
@@ -329,18 +359,35 @@
       <!-- content -->
       <div class="wrapper">
 
-        <div class="main-content">
+        <div class="row main-content" style=" margin-right: 15px;margin-left: 15px;">
+        <div class="col-lg-4 col-lg-offset-2" style="margin-top:50px;">
+            <h1>Forum – New topic</h1>
+            <div class="alert alert-danger">
+            Check out our <a href="FAQ.html">FAQ</a> first.
+            </div>
+            <select name="forum" required="" class="form-control" id="id_forum">
+              <option value="" selected="">- Select a category -</option>
 
-              <div id="account_tabs" class="tab_menu hide-xs hide-sm hide-md" style="margin:30px auto;border-top:0">
-                  <div style="max-width:1440px;margin:auto;padding:0 5px;text-align:left">
-                      <a style="float:right" href="#">My profile</a>
-                      <a href="myimages.html" >My images</a>
-                      <a href="upload.html">Upload</a>
-                      <a href="favorites.html" >Favorites</a>
-                      <a class="selected hide-lg" href="following.html" >Following</a>
-                      <a href="message.html">Messages</a>
-                      <a href="settings.html">Settings</a>
-                  </div>
+              <option value="24">The Pixabay Mobile App</option>
+
+              <option value="9">Suggestions and Feature Requests</option>
+
+              <option value="11">Questions about Pixabay</option>
+
+              <option value="13">Photography and Image Editing</option>
+
+              <option value="14">Chitchat - Pixabay-related or not</option>
+
+            </select>
+      <input type="text" name="subject" data-autofocus="" maxlength="80" style="width:100%; margin-top:10px; margin-bottom:20px;" required="" placeholder="What's your question? Be specific." class="form-control" id="id_subject">
+<div class="">
+  <textarea name="editor1" id="editor1" rows="10" cols="80">
+
+             </textarea>
+</div>
+<div class="" style="margin-top:20px; margin-bottom:20px;">
+<input type="submit" class="pure-button button-green" value="Submit"></div>
+        </div>
 
           </div>
 
@@ -430,6 +477,8 @@
 
     <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+    <script src="ckeditor/ckeditor.js"></script>
+    <script src="ckeditor/js/sample.js"></script>
     <script type="text/javascript">
 $(document).ready(function(){
     $("#resetpassword").click(function(){
@@ -481,5 +530,11 @@ $('.tab_menu li:eq(0)').tab('show')
       });
   }
   </script>
+
+</textarea>
+           <script>
+
+               CKEDITOR.replace( 'editor1' , { removePlugins : 'elementspath' });
+           </script>
   </body>
 </html>

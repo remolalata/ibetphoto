@@ -57,7 +57,7 @@ input,select{
     cursor: pointer;
     position: absolute;
     right: 0;
-    top: 1px;
+      top: 1px;
     padding-left: 20px;
     opacity: .7;
 }
@@ -477,10 +477,11 @@ button, html input[type=button], input[type=reset], input[type=submit] {
         </label>
         <input id="id_qs" class="dirty" type="text"  name="qs" value="" placeholder="Search">
         <input type="submit">
-        <div class="background" id="backgroundsearch">
 
-        </div>
       </form>
+      <div class="background" id="backgroundsearch">
+
+      </div>
         </div>
                     <div style="background:white;margin-top: 20px;">
                       <div class="" style="
@@ -2008,9 +2009,9 @@ button, html input[type=button], input[type=reset], input[type=submit] {
 
 
 $('#id_qs').hide();
+
 $("#backgroundsearch").click(function(){
     $("#id_qs").toggle( "slow", function() {
-    // Animation complete.
   });
 });
         </script>
