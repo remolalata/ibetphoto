@@ -29,310 +29,285 @@
     <!--[if lt IE 8]>
           <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
       <![endif]-->
-    <header class="clearfix">
+      <header class="clearfix">
         <div class="header-wrapper clearfix">
-            <div class="header-logo-form pull-left">
-                <div class="logo"></div>
-                <div class="dropdown form hidden-xs">
-                    <form class="form-inline">
-                        <button class="btn-all-image" data-toggle="dropdown">All Images <i class="fa fa-caret-down"> </i></button>
-                        <div class="dropdown-menu inner-form">
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <p>Media type</p>
-                                </div>
-                                <div class="col-md-9">
-                                    <div class="radio">
-                                        <label>
-                                            <input type="radio" name="media-type" checked> All Images
-                                        </label>
-                                    </div>
-                                    <div class="radio">
-                                        <label>
-                                            <input type="radio" name="media-type"> Photos
-                                        </label>
-                                    </div>
-                                    <div class="radio">
-                                        <label>
-                                            <input type="radio" name="media-type"> Vector graphics
-                                        </label>
-                                    </div>
-                                    <div class="radio">
-                                        <label>
-                                            <input type="radio" name="media-type"> Illustrations
-                                        </label>
-                                    </div>
-                                    <div class="radio">
-                                        <label>
-                                            <input type="radio" name="media-type"> Videos
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <p>Orientation</p>
-                                </div>
-                                <div class="col-md-9">
-                                    <div class="checkbox">
-                                        <label>
-                                            <input type="checkbox" name="orientation" checked> Horizontal
-                                        </label>
-                                    </div>
-                                    <div class="checkbox">
-                                        <label>
-                                            <input type="checkbox" name="orientation"> Vertical
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <p>Category</p>
-                                </div>
-                                <div class="col-md-9">
-                                    <select name="category">
-                                        <option value="">Animals</option>
-                                        <option value="">Education</option>
-                                        <option value="">Emotions</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <p>Larger than</p>
-                                </div>
-                                <div class="col-md-9">
-                                    <input type="text" placeholder="Width"> x
-                                    <input type="text" placeholder="Height"> px
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <p>Color</p>
-                                </div>
-                                <div class="col-md-9">
-                                    <div class="checkbox">
-                                        <label>
-                                            <input type="checkbox" name="color"> Transparent
-                                        </label>
-                                    </div>
-                                    <div class="checkbox">
-                                        <label>
-                                            <input type="checkbox" name="color"> Black and White
-                                        </label>
-                                    </div>
-                                    <div class="colors">
-                                        <span class="color red"></span>
-                                        <span class="color orange"></span>
-                                        <span class="color yellow"></span>
-                                        <span class="color green"></span>
-                                        <span class="color turquoise"></span>
-                                        <span class="color blue"></span>
-                                        <span class="color violet"></span>
-                                        <span class="color pink"></span>
-                                        <span class="color white"></span>
-                                        <span class="color gray"></span>
-                                        <span class="color black"></span>
-                                        <span class="color brown"></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-3"><a href="#innerFormMore" data-toggle="collapse">more...</a></div>
-                                <div class="col-md-9">
-                                    <div class="collapse" id="innerFormMore">
-                                        <div>You can use AND, OR, NOT and () to refine your search results:</div>
-                                        <div>flower AND (red OR blue) NOT rose</div>
-                                        <br>
-
-                                        <div>Search in user portfolios:</div>
-                                        <div>user:stux flower</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <input type="text" class="main-textbox" placeholder="Search images, vectors and videos">
-                        <button type="button" class="btn-search"><i class="fa fa-search"></i></button>
-                    </form>
-                </div>
+          <div class="header-logo-form pull-left">
+            <div class="logo">
+              <a href="index.html"></a>
             </div>
-            <div class="header-nav  pull-right">
-                <nav class="hidden-sm hidden-xs">
-                    <ul class="main-nav">
-                        <li class="top-menu"><a href="#" class="active">Explore <i class="fa fa-caret-down"> </i></a>
-                            <ul class="sub-menu moz-sub-menu-a">
-                                <li><a href="#">Edito's Choice</a></li>
-                                <li><a href="#">Images</a></li>
-                                <li class="separator"><a href="#">Videos</a></li>
-                                <li><a href="#">Photographers</a></li>
-                                <li><a href="#">Cameras</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Sign up</a></li>
-                        <li><a href="#">Log in</a></li>
-                        <li class="top-menu">
-                            <a href="#">
-                                <div class="icon-menu-dots"></div>
-                            </a>
-                            <ul class="sub-menu moz-sub-menu-b nav1024">
-                                <li><a href="#">FAQ</a></li>
-                                <li><a href="#">Forum</a></li>
-                                <li><a href="#">Blog</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
+            <div class="dropdown form hidden-xs">
+        <form class="form-inline" action="search.html" >
+                <button class="btn-all-image" data-toggle="dropdown">All Images <i class="fa fa-caret-down"> </i></button>
+                <div class="dropdown-menu inner-form">
+                  <div class="row">
+                    <div class="col-md-3"><p>Media type</p></div>
+                    <div class="col-md-9">
+                      <div class="radio">
+                        <label>
+                          <input type="radio" name="media-type" checked > All Images
+                        </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                          <input type="radio" name="media-type"> Photos
+                        </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                          <input type="radio" name="media-type"> Vector graphics
+                        </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                          <input type="radio" name="media-type"> Illustrations
+                        </label>
+                      </div>
+                      <div class="radio">
+                        <label>
+                          <input type="radio" name="media-type"> Videos
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-3"><p>Orientation</p></div>
+                    <div class="col-md-9">
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox" name="orientation"checked > Horizontal
+                        </label>
+                      </div>
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox" name="orientation"> Vertical
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-3"><p>Category</p></div>
+                    <div class="col-md-9">
+                      <select name="category">
+                        <option value="">Animals</option>
+                        <option value="">Education</option>
+                        <option value="">Emotions</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-3"><p>Larger than</p></div>
+                    <div class="col-md-9">
+                      <input type="text" placeholder="Width"> x <input type="text" placeholder="Height"> px
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-3"><p>Color</p></div>
+                    <div class="col-md-9">
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox" name="color"> Transparent
+                        </label>
+                      </div>
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox" name="color"> Black and White
+                        </label>
+                      </div>
+                      <div class="colors">
+                        <span class="color red"></span>
+                        <span class="color orange"></span>
+                        <span class="color yellow"></span>
+                        <span class="color green"></span>
+                        <span class="color turquoise"></span>
+                        <span class="color blue"></span>
+                        <span class="color violet"></span>
+                        <span class="color pink"></span>
+                        <span class="color white"></span>
+                        <span class="color gray"></span>
+                        <span class="color black"></span>
+                        <span class="color brown"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-3"><a href="#innerFormMore" data-toggle="collapse">more...</a></div>
+                    <div class="col-md-9">
+                      <div class="collapse" id="innerFormMore">
+                        <div>You can use AND, OR, NOT and () to refine your search results:</div>
+                        <div>flower AND (red OR blue) NOT rose</div><br>
 
-                <nav class="hidden-lg hidden-md">
-                    <ul>
-                        <li class="dropdown"><a href="#" data-toggle="dropdown"><i class="fa fa-user"></i></a>
-                            <ul class="mobile-dropdown-menu dropdown-menu">
-                                <li><a href="#">Sign up</a></li>
-                                <li><a href="#">Log in</a></li>
-                            </ul>
-                        </li>
-                        <li class="hidden-sm"><a href="#inner-form2" data-toggle="collapse"><i class="fa fa-search"></i></a></li>
-                        <li class="dropdown"><a href="#" data-toggle="dropdown" class="ms-nav"><i class="fa fa-bars"></i></a>
-                            <ul class="mobile-dropdown-menu mobile-dropdown-menu2 dropdown-menu dropdown-menu-right">
-                                <li><a href="#">Editor's Choice</a></li>
-                                <li><a href="#">Images</a></li>
-                                <li class="separator"><a href="#">Videos</a></li>
-                                <li><a href="#">Photographers</a></li>
-                                <li class="separator"><a href="#">Cameras</a></li>
-                                <li><a href="#">FAQ</a></li>
-                                <li><a href="#">Forum</a></li>
-                                <li><a href="#">Blog</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-        <div class="collapse hidden-lg hidden-md hidden-sm inner-form2" id="inner-form2">
-            <form class="form-inline">
-                <button type="button" class="btn-all-image" data-toggle="dropdown">All images <i class="fa fa-caret-down"> </i></button>
-                <div class="dropdown-menu inner-form inner2-form2">
-                    <div class="row">
-                        <div class="col-md-3">
-                            <p>Media type</p>
-                        </div>
-                        <div class="col-md-9">
-                            <div class="radio">
-                                <label>
-                                    <input type="radio" name="media-type" checked> All Images
-                                </label>
-                            </div>
-                            <div class="radio">
-                                <label>
-                                    <input type="radio" name="media-type"> Photos
-                                </label>
-                            </div>
-                            <div class="radio">
-                                <label>
-                                    <input type="radio" name="media-type"> Vector graphics
-                                </label>
-                            </div>
-                            <div class="radio">
-                                <label>
-                                    <input type="radio" name="media-type"> Illustrations
-                                </label>
-                            </div>
-                            <div class="radio">
-                                <label>
-                                    <input type="radio" name="media-type"> Videos
-                                </label>
-                            </div>
-                        </div>
+                        <div>Search in user portfolios:</div>
+                        <div>user:stux flower</div>
+                      </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-3">
-                            <p>Orientation</p>
-                        </div>
-                        <div class="col-md-9">
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" name="orientation" checked> Horizontal
-                                </label>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" name="orientation"> Vertical
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-3">
-                            <p>Category</p>
-                        </div>
-                        <div class="col-md-9">
-                            <select name="category">
-                                <option value="">Animals</option>
-                                <option value="">Education</option>
-                                <option value="">Emotions</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-3">
-                            <p>Larger than</p>
-                        </div>
-                        <div class="col-md-9">
-                            <input type="text" placeholder="Width"> x
-                            <input type="text" placeholder="Height"> px
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-3">
-                            <p>Color</p>
-                        </div>
-                        <div class="col-md-9">
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" name="color"> Transparent
-                                </label>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" name="color"> Black and White
-                                </label>
-                            </div>
-                            <div class="colors">
-                                <span class="color red"></span>
-                                <span class="color orange"></span>
-                                <span class="color yellow"></span>
-                                <span class="color green"></span>
-                                <span class="color turquoise"></span>
-                                <span class="color blue"></span>
-                                <span class="color violet"></span>
-                                <span class="color pink"></span>
-                                <span class="color white"></span>
-                                <span class="color gray"></span>
-                                <span class="color black"></span>
-                                <span class="color brown"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-3"><a href="#innerFormMore" data-toggle="collapse">more...</a></div>
-                        <div class="col-md-9">
-                            <div class="collapse" id="innerFormMore">
-                                <div>You can use AND, OR, NOT and () to refine your search results:</div>
-                                <div>flower AND (red OR blue) NOT rose</div>
-                                <br>
-
-                                <div>Search in user portfolios:</div>
-                                <div>user:stux flower</div>
-                            </div>
-                        </div>
-                    </div>
+                  </div>
                 </div>
                 <input type="text" class="main-textbox" placeholder="Search images, vectors and videos">
-                <button type="button" class="btn-search"><i class="fa fa-search"></i></button>
-            </form>
+                <button type="submit" class="btn-search"><i class="fa fa-search"></i></button>
+              </form>
+            </div>
+          </div>
+          <div class="header-nav  pull-right">
+            <nav class="hidden-sm hidden-xs">
+              <ul>
+                <li class="top-menu"><a href="#" class="active">Explore <i class="fa fa-caret-down"> </i></a>
+                  <ul class="sub-menu">
+                    <li><a href="search.html">Editor's Choice</a></li>
+                    <li><a href="search.html">Images</a></li>
+                    <li class="separator"><a href="search.html">Videos</a></li>
+                    <li><a href="search.html">Photographers</a></li>
+                    <li><a href="search.html">Cameras</a></li>
+                  </ul>
+                </li>
+                <li><a href="signup.html">Sign up</a></li>
+                <li><a href="login.html">Log in</a></li>
+                <li class="top-menu"><a href="#"><div class="icon-menu-dots"></div></a>
+                  <ul class="sub-menu moz-sub-menu-b nav1024">
+                    <li><a href="FAQ.html">FAQ</a></li>
+                    <li><a href="forum.html">Forum</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+              </ul>
+                </li>
+              </ul>
+            </nav>
+
+            <nav class="hidden-lg hidden-md">
+              <ul>
+                <li><a href="#" data-toggle="dropdown"><i class="fa fa-user"></i></a>
+                  <ul class="mobile-dropdown-menu dropdown-menu">
+                    <li><a href="signup.html">Sign up</a></li>
+                    <li><a href="login.html">Log in</a></li>
+                  </ul>
+                </li>
+                <li class="hidden-sm"><a href="#inner-form2" data-toggle="collapse"><i class="fa fa-search"></i></a></li>
+                <li><a href="#" data-toggle="dropdown"><i class="fa fa-bars"></i></a>
+                  <ul class="mobile-dropdown-menu mobile-dropdown-menu2 dropdown-menu">
+                    <li><a href="search.html">Editor's Choice</a></li>
+                    <li><a href="search.html">Images</a></li>
+                    <li class="separator"><a href="search.html">Videos</a></li>
+                    <li><a href="search.html">Photographers</a></li>
+                    <li class="separator"><a href="search.html">Cameras</a></li>
+                    <li><a href="FAQ.html">FAQ</a></li>
+                    <li><a href="forum.html">Forum</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+                </li>
+              </ul>
+            </nav>
+          </div>
         </div>
-    </header>
+        <div class="collapse hidden-lg hidden-md hidden-sm inner-form2" id="inner-form2">
+      <form class="form-inline" action="search.html" >
+            <button type="button" class="btn-all-image" data-toggle="dropdown">All images <i class="fa fa-caret-down"> </i></button>
+            <div class="dropdown-menu inner-form inner2-form2">
+              <div class="row">
+                <div class="col-md-3"><p>Media type</p></div>
+                <div class="col-md-9">
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="media-type" checked > All Images
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="media-type"> Photos
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="media-type"> Vector graphics
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="media-type"> Illustrations
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" name="media-type"> Videos
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-3"><p>Orientation</p></div>
+                <div class="col-md-9">
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox" name="orientation"checked > Horizontal
+                    </label>
+                  </div>
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox" name="orientation"> Vertical
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-3"><p>Category</p></div>
+                <div class="col-md-9">
+                  <select name="category">
+                    <option value="">Animals</option>
+                    <option value="">Education</option>
+                    <option value="">Emotions</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-3"><p>Larger than</p></div>
+                <div class="col-md-9">
+                  <input type="text" placeholder="Width"> x <input type="text" placeholder="Height"> px
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-3"><p>Color</p></div>
+                <div class="col-md-9">
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox" name="color"> Transparent
+                    </label>
+                  </div>
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox" name="color"> Black and White
+                    </label>
+                  </div>
+                  <div class="colors">
+                    <span class="color red"></span>
+                    <span class="color orange"></span>
+                    <span class="color yellow"></span>
+                    <span class="color green"></span>
+                    <span class="color turquoise"></span>
+                    <span class="color blue"></span>
+                    <span class="color violet"></span>
+                    <span class="color pink"></span>
+                    <span class="color white"></span>
+                    <span class="color gray"></span>
+                    <span class="color black"></span>
+                    <span class="color brown"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-3"><a href="#innerFormMore" data-toggle="collapse">more...</a></div>
+                <div class="col-md-9">
+                  <div class="collapse" id="innerFormMore">
+                    <div>You can use AND, OR, NOT and () to refine your search results:</div>
+                    <div>flower AND (red OR blue) NOT rose</div><br>
+
+                    <div>Search in user portfolios:</div>
+                    <div>user:stux flower</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <input type="text" class="main-textbox" placeholder="Search images, vectors and videos">
+            <button type="button" class="btn-search"><i class="fa fa-search"></i></button>
+          </form>
+        </div>
+      </header>
 
     <!-- content -->
 
@@ -679,11 +654,11 @@
                     <li>&copy; 2017 Pixabay</li>
                     <li class="dropdown hidden-sm hidden-xs dropup"><a href="#" data-toggle="dropdown">Free Downloads <i class="fa fa-caret-down"> </i></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Free Images</a></li>
-                            <li><a href="#">Free photos</a></li>
-                            <li><a href="#">Free vector graphics</a></li>
-                            <li><a href="#">Free illustration</a></li>
-                            <li><a href="">Free Videos</a></li>
+                            <li><a href="search.html">Free Images</a></li>
+                            <li><a href="search.html">Free photos</a></li>
+                            <li><a href="search.html">Free vector graphics</a></li>
+                            <li><a href="search.html">Free illustration</a></li>
+                            <li><a href="search.html">Free Videos</a></li>
                         </ul>
                     </li>
                     <li class="dropdown dropup"><a href="#" data-toggle="dropdown">Language <i class="fa fa-caret-down"> </i></a>
@@ -718,15 +693,15 @@
                     </li>
                     <li class="dropdown dropup"><a href="#" data-toggle="dropdown">Service <i class="fa fa-caret-down"> </i></a>
                         <ul class="dropdown-menu dropdown-menu-service">
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Forum</a></li>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Privacy Policys</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="forum.html">Forum</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="Privacy.html">Privacy Policys</a></li>
                         </ul>
                     </li>
                     <li><a href="#">API</a></li>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Terms</a></li>
+                    <li><a href="FAQ.html">FAQ</a></li>
+                    <li><a href="Tos.html">Terms</a></li>
                 </ul>
             </div>
             <div class="footer-social pull-right hidden-xs">
@@ -806,6 +781,12 @@
                 }, 700);
             });
         }
+    </script>
+    <script type="text/javascript">
+    $(".logo").click(function() {
+  window.location = $(this).find("a").attr("href");
+  return false;
+  });
     </script>
 </body>
 
