@@ -1,6 +1,6 @@
 .cover {
     position: relative;
-    background-image: url('../img/cover.jpg');
+    background-image: url('..img/cover.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -301,8 +301,8 @@ a:hover {
     position: relative;
     display: inline-block;
     padding: 0;
-    background-image: url(../img/sprites.png);
-    background-image: url(../img/sprites.svg), none;
+    background-image: url(..img/sprites.png);
+    background-image: url(..img/sprites.svg), none;
     background-repeat: no-repeat;
     cursor: pointer;
 }
